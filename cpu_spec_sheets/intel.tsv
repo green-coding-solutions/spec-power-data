@@ -1,0 +1,854 @@
+Product Name    Launch Date    Total Cores    Max Turbo Frequency    Processor Base Frequency    Cache    TDP
+Intel® Xeon® 6960E+ processor    Q2'26    144    3.2 GHz    2.4 GHz    432 MB    330 W
+Intel® Xeon® 6970E+ processor    Q2'26    192    3.2 GHz    2.3 GHz    480 MB    400 W
+Intel® Xeon® 6980E+ processor    Q2'26    264    3.2 GHz    2.1 GHz    528 MB    400 W
+Intel® Xeon® 6990E+ processor    Q2'26    288    3.2 GHz    2.2 GHz    576 MB    450 W
+Intel® Xeon® 6377P Processor    Q2'26    12    5.7 GHz    3.1 GHz    36 MB    95 W
+Intel® Xeon® 6503P processor    Q2'26    8    4.3 GHz    2.8 GHz    48 MB    135 W
+Intel Atom® P6922-3 Processor    Q1'26    8        2.2 GHz    8 MB    50 W
+Intel Atom® P6942-3 Processor    Q1'26    16        2.2 GHz    16 MB    66 W
+Intel Atom® P6942-5 Processor    Q1'26    16        2.6 GHz    16 MB    70 W
+Intel Atom® P6952-3 Processor    Q1'26    20        2.2 GHz    20 MB    74 W
+Intel Atom® P6962-3 Processor    Q1'26    24        2.2 GHz    24 MB    82 W
+Intel Atom® P6962-5 Processor    Q1'26    24        2.6 GHz    24 MB    86 W
+Intel® Xeon® 634 Processor    Q1'26    12    4.6 GHz    2.7 GHz    48 MB    150 W
+Intel® Xeon® 636 Processor    Q1'26    12    4.7 GHz    3.5 GHz    48 MB    170 W
+Intel® Xeon® 638 Processor    Q1'26    16    4.8 GHz    3.2 GHz    72 MB    180 W
+Intel® Xeon® 654 Processor    Q1'26    18    4.8 GHz    3.1 GHz    72 MB    200 W
+Intel® Xeon® 656 Processor    Q1'26    20    4.8 GHz    2.9 GHz    72 MB    210 W
+Intel® Xeon® 658X Processor    Q1'26    24    4.9 GHz    3 GHz    144 MB    250 W
+Intel® Xeon® 674X Processor    Q1'26    28    4.9 GHz    3 GHz    144 MB    270 W
+Intel® Xeon® 676X Processor    Q1'26    32    4.9 GHz    2.8 GHz    144 MB    275 W
+Intel® Xeon® 678X Processor    Q1'26    48    4.9 GHz    2.4 GHz    192 MB    300 W
+Intel® Xeon® 696X Processor    Q1'26    64    4.8 GHz    2.4 GHz    336 MB    350 W
+Intel® Xeon® 698X Processor    Q1'26    86    4.8 GHz    2 GHz    336 MB    350 W
+Intel® Xeon® 6756P-B Processor    Q4'25    64    3.5 GHz    2.2 GHz    256 MB    325 W
+Intel® Xeon® 6766P-B Processor    Q4'25    64    3.5 GHz    2.3 GHz    256 MB    305 W
+Intel® Xeon® 6768P-B Processor    Q4'25    64    3.5 GHz    2.2 GHz    256 MB    325 W
+Intel® Xeon® 6776P-B Processor    Q4'25    72    3.5 GHz    2.3 GHz    288 MB    325 W
+Intel® Xeon® 6518P-B Processor    Q4'25    20    3.5 GHz    2 GHz    80 MB    150 W
+Intel® Xeon® 6544P-B Processor    Q4'25    32    3.3 GHz    2 GHz    128 MB    170 W
+Intel® Xeon® 6548P-B Processor    Q4'25    32    3.5 GHz    2 GHz    128 MB    195 W
+Intel® Xeon® 6718P-B Processor    Q4'25    40    3.5 GHz    2.5 GHz    160 MB    235 W
+Intel® Xeon® 6725P Processor    Q3'25    16    4.8 GHz    3.7 GHz    192 MB    235 W
+Intel Atom® x7433FE Processor    Q3'25    4    3.4 GHz        6 MB    9 W
+Intel Atom® x7835FE Processor    Q3'25    8    3.6 GHz        6 MB    12 W
+Intel® Xeon® 6532P-B Processor    Q3'25    32    3.9 GHz    2.2 GHz    128 MB    205 W
+Intel® Xeon® 6962P Processor    Q3'25    72    3.9 GHz    2.7 GHz    432 MB    500 W
+Intel® Xeon® 6978P Processor    Q3'25    120    3.9 GHz    2.1 GHz    504 MB    500 W
+Intel® Xeon® 6732P Processor    Q2'25    32    4.3 GHz    3.8 GHz    144 MB    350 W
+Intel® Xeon® 6774P Processor    Q2'25    64    3.9 GHz    2.5 GHz    336 MB    350 W
+Intel® Xeon® 6776P Processor    Q2'25    64    3.9 GHz    2.3 GHz    336 MB    350 W
+Intel® Xeon® 6716P-B Processor    Q2'25    40    3.5 GHz    2.5 GHz    160 MB    235 W
+Intel® Xeon® 6745P Processor    Q1'25    32    4.3 GHz    3.1 GHz    336 MB    300 W
+Intel® Xeon® 6513P-B Processor    Q1'25    20    3.3 GHz    2 GHz    80 MB    130 W
+Intel® Xeon® 6543P-B Processor    Q1'25    32    3.3 GHz    2 GHz    128 MB    160 W
+Intel® Xeon® 6546P-B Processor    Q1'25    32    3.5 GHz    2.3 GHz    128 MB    195 W
+Intel® Xeon® 6553P-B Processor    Q1'25    36    4 GHz    2.6 GHz    144 MB    235 W
+Intel® Xeon® 6556P-B Processor    Q1'25    36    3.5 GHz    2.3 GHz    144 MB    215 W
+Intel® Xeon® 6563P-B Processor    Q1'25    38    4 GHz    2.4 GHz    152 MB    235 W
+Intel® Xeon® 6706P-B Processor    Q1'25    40    3.5 GHz    2.5 GHz    160 MB    235 W
+Intel® Xeon® 6724P Processor    Q1'25    16    4.3 GHz    3.6 GHz    72 MB    210 W
+Intel® Xeon® 6315P Processor    Q1'25    4    4.7 GHz    2.8 GHz    12 MB    55 W
+Intel® Xeon® 6325P Processor    Q1'25    4    5.2 GHz    3.5 GHz    12 MB    55 W
+Intel® Xeon® 6333P Processor    Q1'25    6    5.2 GHz    3.1 GHz    18 MB    65 W
+Intel® Xeon® 6337P Processor    Q1'25    6    5.3 GHz    3.5 GHz    18 MB    80 W
+Intel® Xeon® 6349P Processor    Q1'25    6    5.7 GHz    3.6 GHz    18 MB    95 W
+Intel® Xeon® 6353P Processor    Q1'25    8    5.4 GHz    2.7 GHz    24 MB    65 W
+Intel® Xeon® 6357P Processor    Q1'25    8    5.4 GHz    3 GHz    24 MB    80 W
+Intel® Xeon® 6369P Processor    Q1'25    8    5.7 GHz    3.3 GHz    24 MB    95 W
+Intel® Xeon® 6503P-B Processor    Q1'25    12    3.5 GHz    2 GHz    48 MB    110 W
+Intel® Xeon® 6505P Processor    Q1'25    12    4.1 GHz    2.2 GHz    48 MB    150 W
+Intel® Xeon® 6507P Processor    Q1'25    8    4.3 GHz    3.5 GHz    48 MB    150 W
+Intel® Xeon® 6511P Processor    Q1'25    16    4.2 GHz    2.3 GHz    72 MB    150 W
+Intel® Xeon® 6515P Processor    Q1'25    16    3.8 GHz    2.3 GHz    72 MB    150 W
+Intel® Xeon® 6516P-B Processor    Q1'25    20    3.5 GHz    2.3 GHz    80 MB    145 W
+Intel® Xeon® 6517P Processor    Q1'25    16    4.2 GHz    3.2 GHz    72 MB    190 W
+Intel® Xeon® 6520P Processor    Q1'25    24    4 GHz    2.4 GHz    144 MB    210 W
+Intel® Xeon® 6521P Processor    Q1'25    24    4.1 GHz    2.6 GHz    144 MB    225 W
+Intel® Xeon® 6523P-B Processor    Q1'25    24    3.9 GHz    2.5 GHz    96 MB    175 W
+Intel® Xeon® 6527P Processor    Q1'25    24    4.2 GHz    3 GHz    144 MB    255 W
+Intel® Xeon® 6530P Processor    Q1'25    32    4.1 GHz    2.3 GHz    144 MB    225 W
+Intel® Xeon® 6533P-B Processor    Q1'25    32    3.9 GHz    2.2 GHz    128 MB    205 W
+Intel® Xeon® 6714P Processor    Q1'25    8    4.3 GHz    4 GHz    48 MB    165 W
+Intel® Xeon® 6726P-B Processor    Q1'25    42    3.5 GHz    2.3 GHz    168 MB    235 W
+Intel® Xeon® 6728P Processor    Q1'25    24    4.1 GHz    2.7 GHz    144 MB    210 W
+Intel® Xeon® 6730P Processor    Q1'25    32    3.8 GHz    2.5 GHz    288 MB    250 W
+Intel® Xeon® 6731P Processor    Q1'25    32    4.1 GHz    2.5 GHz    144 MB    245 W
+Intel® Xeon® 6736P Processor    Q1'25    36    4.1 GHz    2 GHz    144 MB    205 W
+Intel® Xeon® 6737P Processor    Q1'25    32    4 GHz    2.9 GHz    144 MB    270 W
+Intel® Xeon® 6738P Processor    Q1'25    32    4.2 GHz    2.9 GHz    144 MB    270 W
+Intel® Xeon® 6740P Processor    Q1'25    48    3.8 GHz    2.1 GHz    288 MB    270 W
+Intel® Xeon® 6741P Processor    Q1'25    48    3.8 GHz    2.5 GHz    288 MB    300 W
+Intel® Xeon® 6747P Processor    Q1'25    48    3.9 GHz    2.7 GHz    288 MB    330 W
+Intel® Xeon® 6748P Processor    Q1'25    48    4.1 GHz    2.5 GHz    192 MB    300 W
+Intel® Xeon® 6760P Processor    Q1'25    64    3.8 GHz    2.2 GHz    320 MB    330 W
+Intel® Xeon® 6761P Processor    Q1'25    64    3.9 GHz    2.5 GHz    336 MB    350 W
+Intel® Xeon® 6767P Processor    Q1'25    64    3.9 GHz    2.4 GHz    336 MB    350 W
+Intel® Xeon® 6768P Processor    Q1'25    64    3.9 GHz    2.4 GHz    336 MB    330 W
+Intel® Xeon® 6781P Processor    Q1'25    80    3.8 GHz    2 GHz    336 MB    350 W
+Intel® Xeon® 6787P Processor    Q1'25    86    3.8 GHz    2 GHz    336 MB    350 W
+Intel® Xeon® 6788P Processor    Q1'25    86    3.8 GHz    2 GHz    336 MB    350 W
+Intel® Xeon® 6944P Processor    Q1'25    72    3.9 GHz    1.8 GHz    432 MB    350 W
+Intel® Xeon® 6952P Processor    Q3'24    96    3.9 GHz    2.1 GHz    480 MB    400 W
+Intel® Xeon® 6960P Processor    Q3'24    72    3.9 GHz    2.7 GHz    432 MB    500 W
+Intel® Xeon® 6972P Processor    Q3'24    96    3.9 GHz    2.4 GHz    480 MB    500 W
+Intel® Xeon® 6979P Processor    Q3'24    120    3.9 GHz    2.1 GHz    504 MB    500 W
+Intel® Xeon® 6980P Processor    Q3'24    128    3.9 GHz    2 GHz    504 MB    500 W
+Intel® Core™ i5 processor 14401E    Q3'24    6    4.7 GHz        24 MB Intel® Smart Cache    65 W
+Intel® Core™ i5 processor 14501E    Q3'24    6    5.2 GHz        24 MB Intel® Smart Cache    65 W
+Intel® Core™ i7 processor 14701TE    Q3'24    8    5.2 GHz        33 MB Intel® Smart Cache    45 W
+Intel® Core™ i9 processor 14901E    Q3'24    8    5.6 GHz        36 MB Intel® Smart Cache    65 W
+Intel® Core™ i5 processor 14401TE    Q3'24    6    4.5 GHz        24 MB Intel® Smart Cache    45 W
+Intel® Core™ i5 processor 14501TE    Q3'24    6    5.1 GHz        24 MB Intel® Smart Cache    45 W
+Intel® Core™ i7 processor 14701E    Q3'24    8    5.4 GHz        33 MB Intel® Smart Cache    65 W
+Intel® Core™ i9 processor 14901TE    Q3'24    8    5.5 GHz        36 MB Intel® Smart Cache    45 W
+Intel® Xeon® 6710E Processor    Q2'24    64    3.2 GHz    2.4 GHz    96 MB    205 W
+Intel® Xeon® 6731E Processor    Q2'24    96    3.1 GHz    2.2 GHz    96 MB    250 W
+Intel® Xeon® 6740E Processor    Q2'24    96    3.2 GHz    2.4 GHz    96 MB    250 W
+Intel® Xeon® 6746E Processor    Q2'24    112    2.7 GHz    2 GHz    96 MB    250 W
+Intel® Xeon® 6756E Processor    Q2'24    128    2.6 GHz    1.8 GHz    96 MB    225 W
+Intel® Xeon® 6766E Processor    Q2'24    144    2.7 GHz    1.9 GHz    108 MB    250 W
+Intel® Xeon® 6780E Processor    Q2'24    144    3 GHz    2.2 GHz    108 MB    330 W
+Intel Atom® x7203C Processor    Q2'24    2    3.2 GHz        6 MB    9 W
+Intel Atom® x7211RE Processor    Q2'24    2    3.2 GHz        6 MB    6 W
+Intel Atom® x7213RE Processor    Q2'24    2    3.4 GHz        6 MB    9 W
+Intel Atom® x7405C Processor    Q2'24    4    3.4 GHz        6 MB    12 W
+Intel Atom® x7433RE Processor    Q2'24    4    3.4 GHz        6 MB    9 W
+Intel Atom® x7809C Processor    Q2'24    8    3.6 GHz        6 MB    25 W
+Intel Atom® x7835RE Processor    Q2'24    8    3.6 GHz        6 MB    12 W
+Intel® Xeon® Bronze 3508U Processor    Q4'23    8    2.2 GHz    2.10 GHz    22.5 MB    125 W
+Intel® Xeon® Gold 5512U Processor    Q4'23    28    3.7 GHz    2.1 GHz    52.5 MB    185 W
+Intel® Xeon® Gold 5515+ Processor    Q4'23    8    4.1 GHz    3.2 GHz    22.5 MB    165 W
+Intel® Xeon® Gold 5520+ Processor    Q4'23    28    4 GHz    2.2 GHz    52.5 MB    205 W
+Intel® Xeon® Gold 6526Y Processor    Q4'23    16    3.9 GHz    2.8 GHz    37.5 MB    195 W
+Intel® Xeon® Gold 6530 Processor    Q4'23    32    4 GHz    2.1 GHz    160 MB    270 W
+Intel® Xeon® Gold 6534 Processor    Q4'23    8    4.2 GHz    3.9 GHz    22.5 MB    195 W
+Intel® Xeon® Gold 6538N Processor    Q4'23    32    4.1 GHz    2.1 GHz    60 MB    205 W
+Intel® Xeon® Gold 6538Y+ Processor    Q4'23    32    4 GHz    2.2 GHz    60 MB    225 W
+Intel® Xeon® Gold 6542Y Processor    Q4'23    24    4.1 GHz    2.9 GHz    60 MB    250 W
+Intel® Xeon® Gold 6544Y Processor    Q4'23    16    4.1 GHz    3.6 GHz    45 MB    270 W
+Intel® Xeon® Gold 6548N Processor    Q4'23    32    4.1 GHz    2.8 GHz    60 MB    250 W
+Intel® Xeon® Gold 6548Y+ Processor    Q4'23    32    4.1 GHz    2.5 GHz    60 MB    250 W
+Intel® Xeon® Gold 6554S Processor    Q4'23    36    4 GHz    2.2 GHz    180 MB    270 W
+Intel® Xeon® Gold 6558Q Processor    Q4'23    32    4.1 GHz    3.2 GHz    60 MB    350 W
+Intel® Xeon® Platinum 8558 Processor    Q4'23    48    4 GHz    2.1 GHz    260 MB    330 W
+Intel® Xeon® Platinum 8558P Processor    Q4'23    48    4 GHz    2.7 GHz    260 MB    350 W
+Intel® Xeon® Platinum 8558U Processor    Q4'23    48    4 GHz    2 GHz    260 MB    300 W
+Intel® Xeon® Platinum 8562Y+ Processor    Q4'23    32    4.1 GHz    2.8 GHz    60 MB    300 W
+Intel® Xeon® Platinum 8568Y+ Processor    Q4'23    48    4 GHz    2.3 GHz    300 MB    350 W
+Intel® Xeon® Platinum 8570 Processor    Q4'23    56    4 GHz    2.1 GHz    300 MB    350 W
+Intel® Xeon® Platinum 8571N Processor    Q4'23    52    4 GHz    2.4 GHz    300 MB    300 W
+Intel® Xeon® Platinum 8580 Processor    Q4'23    60    4 GHz    2 GHz    300 MB    350 W
+Intel® Xeon® Platinum 8581V Processor    Q4'23    60    3.9 GHz    2 GHz    300 MB    270 W
+Intel® Xeon® Platinum 8592+ Processor    Q4'23    64    3.9 GHz    1.9 GHz    320 MB    350 W
+Intel® Xeon® Platinum 8592V Processor    Q4'23    64    3.9 GHz    2 GHz    320 MB    330 W
+Intel® Xeon® Platinum 8593Q Processor    Q4'23    64    3.9 GHz    2.2 GHz    320 MB    385 W
+Intel® Xeon® Silver 4509Y Processor    Q4'23    8    4.1 GHz    2.60 GHz    22.5 MB    125 W
+Intel® Xeon® Silver 4510 Processor    Q4'23    12    4.1 GHz    2.40 GHz    30 MB    150 W
+Intel® Xeon® Silver 4510T Processor    Q4'23    12    3.7 GHz    2.00 GHz    30 MB    115 W
+Intel® Xeon® Silver 4514Y Processor    Q4'23    16    3.4 GHz    2 GHz    30 MB    150 W
+Intel® Xeon® Silver 4516Y+ Processor    Q4'23    24    3.7 GHz    2.2 GHz    45 MB    185 W
+Intel® Xeon® D-1813NT Processor    Q4'23    4    2.4 GHz    2.20 GHz    10240    42 W
+Intel® Xeon® D-1823NT Processor    Q4'23    6    3.5 GHz    2.80 GHz    10240    55 W
+Intel® Xeon® D-1834 Processor    Q4'23    8    2.9 GHz    1.80 GHz    15360    42 W
+Intel® Xeon® D-1844NT Processor    Q4'23    10    3.1 GHz    2.00 GHz    15360    55 W
+Intel® Xeon® D-1846 Processor    Q4'23    10    3.1 GHz    2.00 GHz    15360    55 W
+Intel® Xeon® D-1848TER Processor    Q4'23    10    3.1 GHz    2.00 GHz    15360    57 W
+Intel® Xeon® D-2832NT Processor    Q4'23    8    3.2 GHz    2.10 GHz    15 MB    70 W
+Intel® Xeon® D-2843NT Processor    Q4'23    10    3.2 GHz    2.00 GHz    15 MB    80 W
+Intel® Xeon® D-2876NT Processor    Q4'23    16    3.1 GHz    2.00 GHz    20 MB    100 W
+Intel® Xeon® D-2896NT Processor    Q4'23    20    3.2 GHz    2.00 GHz    30 MB    117 W
+Intel® Xeon® D-2896TER Processor    Q4'23    20    3.2 GHz    2.00 GHz    30 MB    110 W
+Intel® Xeon® D-2899NT Processor    Q4'23    22    3.1 GHz    2.20 GHz    30 MB    135 W
+Intel® Xeon® E-2414 Processor    Q4'23    4    4.50 GHz    2.60 GHz    12 MB    55 W
+Intel® Xeon® E-2434 Processor    Q4'23    4    5.00 GHz    3.40 GHz    12 MB    55 W
+Intel® Xeon® E-2436 Processor    Q4'23    6    5.00 GHz    2.90 GHz    18 MB    65 W
+Intel® Xeon® E-2456 Processor    Q4'23    6    5.10 GHz    3.30 GHz    18 MB    80 W
+Intel® Xeon® E-2468 Processor    Q4'23    8    5.2 GHz    2.6 GHz    24 MB    65 W
+Intel® Xeon® E-2478 Processor    Q4'23    8    5.20 GHz    2.8 GHz    24 MB    80 W
+Intel® Xeon® E-2486 Processor    Q4'23    6    5.6 GHz    3.5 GHz    18 MB    95 W
+Intel® Xeon® E-2488 Processor    Q4'23    8    5.60 GHz    3.20 GHz    24 MB    95 W
+Intel® Xeon® Gold 5403N Processor    Q4'23    12    3.9 GHz    2 GHz    22.5 MB    115 W
+Intel® Xeon® Gold 6403N Processor    Q3'23    24    3.60 GHz    1.90 GHz    45 MB    185 W
+Intel® Xeon® Gold 6423N Processor    Q3'23    28    3.60 GHz    2.00 GHz    52.5 MB    195 W
+Intel® Xeon® Gold 6433N Processor    Q3'23    32    3.60 GHz    2.00 GHz    60 MB    205 W
+Intel® Xeon® Gold 6433NE Processor    Q3'23    32    3.60 GHz    2.00 GHz    60 MB    205 W
+Intel® Xeon® Gold 6443N Processor    Q3'23    32    3.60 GHz    2.00 GHz    60 MB    195 W
+Intel® Xeon® Platinum 8444H Processor    Q1'23    16    4.00 GHz    2.90 GHz    45 MB    270 W
+Intel® Xeon® Platinum 8450H Processor    Q1'23    28    3.50 GHz    2.00 GHz    75 MB    250 W
+Intel® Xeon® Platinum 8452Y Processor    Q1'23    36    3.20 GHz    2.00 GHz    67.5 MB    300 W
+Intel® Xeon® Platinum 8454H Processor    Q1'23    32    3.40 GHz    2.10 GHz    82.5 MB    270 W
+Intel® Xeon® Platinum 8458P Processor    Q1'23    44    3.80 GHz    2.70 GHz    82.5 MB    350 W
+Intel® Xeon® Platinum 8460H Processor    Q1'23    40    3.80 GHz    2.20 GHz    105 MB    330 W
+Intel® Xeon® Platinum 8460Y+ Processor    Q1'23    40    3.70 GHz    2.00 GHz    105 MB    300 W
+Intel® Xeon® Platinum 8461V Processor    Q1'23    48    3.70 GHz    2.20 GHz    97.5 MB    300 W
+Intel® Xeon® Platinum 8462Y+ Processor    Q1'23    32    4.10 GHz    2.80 GHz    60 MB    300 W
+Intel® Xeon® Platinum 8468 Processor    Q1'23    48    3.80 GHz    2.10 GHz    105 MB    350 W
+Intel® Xeon® Platinum 8468H Processor    Q1'23    48    3.80 GHz    2.10 GHz    105 MB    330 W
+Intel® Xeon® Platinum 8468V Processor    Q1'23    48    3.80 GHz    2.40 GHz    97.5 MB    330 W
+Intel® Xeon® Platinum 8470 Processor    Q1'23    52    3.80 GHz    2.00 GHz    105 MB    350 W
+Intel® Xeon® Platinum 8470N Processor    Q1'23    52    3.60 GHz    1.70 GHz    97.5 MB    300 W
+Intel® Xeon® Platinum 8470Q Processor    Q1'23    52    3.80 GHz    2.10 GHz    105 MB    350 W
+Intel® Xeon® Platinum 8471N Processor    Q1'23    52    3.60 GHz    1.80 GHz    97.5 MB    300 W
+Intel® Xeon® Platinum 8480+ Processor    Q1'23    56    3.80 GHz    2.00 GHz    105 MB    350 W
+Intel® Xeon® Platinum 8490H Processor    Q1'23    60    3.50 GHz    1.90 GHz    112.5 MB    350 W
+Intel® Xeon® Gold 5420+ Processor    Q1'23    28    4.10 GHz    2.00 GHz    52.5 MB    205 W
+Intel® Xeon® Gold 5423N Processor    Q1'23    20    4.00 GHz    2.10 GHz    37.5 MB    145 W
+Intel® Xeon® Gold 5433N Processor    Q1'23    20    4.10 GHz    2.30 GHz    37.5 MB    160 W
+Intel® Xeon® Gold 6430 Processor    Q1'23    32    3.40 GHz    2.10 GHz    60 MB    270 W
+Intel® Xeon® Gold 6438M Processor    Q1'23    32    3.90 GHz    2.20 GHz    60 MB    205 W
+Intel® Xeon® Gold 6438N Processor    Q1'23    32    3.60 GHz    2.00 GHz    60 MB    205 W
+Intel® Xeon® Gold 5411N Processor    Q1'23    24    3.90 GHz    1.90 GHz    45 MB    165 W
+Intel® Xeon® Gold 5412U Processor    Q1'23    24    3.90 GHz    2.10 GHz    45 MB    185 W
+Intel® Xeon® Gold 5415+ Processor    Q1'23    8    4.10 GHz    2.90 GHz    22.5 MB    150 W
+Intel® Xeon® Gold 5416S Processor    Q1'23    16    4.00 GHz    2.00 GHz    30 MB    150 W
+Intel® Xeon® Gold 5418N Processor    Q1'23    24    3.80 GHz    1.80 GHz    45 MB    165 W
+Intel® Xeon® Gold 5418Y Processor    Q1'23    24    3.80 GHz    2.00 GHz    45 MB    185 W
+Intel® Xeon® Gold 6414U Processor    Q1'23    32    3.40 GHz    2.00 GHz    60 MB    250 W
+Intel® Xeon® Gold 6416H Processor    Q1'23    18    4.20 GHz    2.20 GHz    45 MB    165 W
+Intel® Xeon® Gold 6418H Processor    Q1'23    24    4.00 GHz    2.10 GHz    60 MB    185 W
+Intel® Xeon® Gold 6421N Processor    Q1'23    32    3.60 GHz    1.80 GHz    60 MB    185 W
+Intel® Xeon® Gold 6426Y Processor    Q1'23    16    4.10 GHz    2.50 GHz    37.5 MB    185 W
+Intel® Xeon® Gold 6428N Processor    Q1'23    32    3.80 GHz    1.80 GHz    60 MB    185 W
+Intel® Xeon® Gold 6434 Processor    Q1'23    8    4.10 GHz    3.70 GHz    22.5 MB    195 W
+Intel® Xeon® Gold 6434H Processor    Q1'23    8    4.10 GHz    3.70 GHz    22.5 MB    195 W
+Intel® Xeon® Gold 6438Y+ Processor    Q1'23    32    4.00 GHz    2.00 GHz    60 MB    205 W
+Intel® Xeon® Gold 6442Y Processor    Q1'23    24    4.00 GHz    2.60 GHz    60 MB    225 W
+Intel® Xeon® Gold 6444Y Processor    Q1'23    16    4.00 GHz    3.60 GHz    45 MB    270 W
+Intel® Xeon® Gold 6448H Processor    Q1'23    32    4.10 GHz    2.40 GHz    60 MB    250 W
+Intel® Xeon® Gold 6448Y Processor    Q1'23    32    4.10 GHz    2.10 GHz    60 MB    225 W
+Intel® Xeon® Gold 6454S Processor    Q1'23    32    3.40 GHz    2.20 GHz    60 MB    270 W
+Intel® Xeon® Gold 6458Q Processor    Q1'23    32    4.00 GHz    3.10 GHz    60 MB    350 W
+Intel® Xeon® Silver 4410T Processor    Q1'23    10    4.00 GHz    2.70 GHz    26.25 MB    150 W
+Intel® Xeon® Silver 4410Y Processor    Q1'23    12    3.90 GHz    2.00 GHz    30 MB    150 W
+Intel® Xeon® Silver 4416+ Processor    Q1'23    20    3.90 GHz    2.00 GHz    37.5 MB    165 W
+Intel® Xeon® Bronze 3408U Processor    Q1'23    8    1.90 GHz    1.80 GHz    22.5 MB    125 W
+Intel® Xeon® CPU Max 9460 Processor    Q1'23    40    3.50 GHz    2.20 GHz    97.5 MB    350 W
+Intel® Xeon® CPU Max 9462 Processor    Q1'23    32    3.50 GHz    2.70 GHz    75 MB    350 W
+Intel® Xeon® CPU Max 9468 Processor    Q1'23    48    3.50 GHz    2.10 GHz    105 MB    350 W
+Intel® Xeon® CPU Max 9470 Processor    Q1'23    52    3.50 GHz    2.00 GHz    105 MB    350 W
+Intel® Xeon® CPU Max 9480 Processor    Q1'23    56    3.50 GHz    1.90 GHz    112.5 MB    350 W
+Intel Atom® x7211E Processor    Q1'23    2    3.20 GHz        6 MB    6 W
+Intel Atom® x7213E Processor    Q1'23    2    3.20 GHz        6 MB    10 W
+Intel Atom® x7425E Processor    Q1'23    4    3.40 GHz        6 MB    12 W
+Intel® Core™ i3-13100TE Processor    Q1'23    4    4.10 GHz    2.40 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-1315UE Processor    Q1'23    6    4.50 GHz    1.20 GHz    10 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-1315URE Processor    Q1'23    6    4.50 GHz    1.20 GHz    10 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-N300 Processor    Q1'23    8    3.80 GHz        6 MB Intel® Smart Cache    7 W
+Intel® Core™ i3-N305 Processor    Q1'23    8    3.80 GHz        6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-13400E Processor    Q1'23    10    4.60 GHz    2.40 GHz    20 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-1345UE Processor    Q1'23    10    4.60 GHz    1.40 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1345URE Processor    Q1'23    10    4.60 GHz    1.40 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-13500E Processor    Q1'23    14    4.60 GHz    2.40 GHz    24 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-13500TE Processor    Q1'23    14    4.50 GHz    1.30 GHz    24 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-1365UE Processor    Q1'23    10    4.90 GHz    1.70 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-13700TE Processor    Q1'23    16    4.80 GHz    1.10 GHz    30 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-1375PRE Processor    Q1'23    14    4.8 GHz    1.90 GHz    24 MB Intel® Smart Cache    28 W
+Intel® Core™ i9-13900E Processor    Q1'23    24    5.20 GHz    1.80 GHz    36 MB Intel® Smart Cache    65 W
+Intel® Processor N100    Q1'23    4    3.40 GHz        6 MB Intel® Smart Cache    6 W
+Intel® Processor N200    Q1'23    4    3.70 GHz        6 MB Intel® Smart Cache    6 W
+Intel® Processor N97    Q1'23    4    3.60 GHz        6 MB Intel® Smart Cache    12 W
+Intel Atom® x6214RE Processor    Q1'23    2        1.40 GHz    1.5 MB L2 Cache    6 W
+Intel Atom® x6416RE Processor    Q1'23    4        1.70 GHz    1.5 MB L2 Cache    9 W
+Intel® Core™ i3-13100E Processor    Q1'23    4    4.40 GHz    3.30 GHz    12 MB Intel® Smart Cache    60 W
+Intel® Core™ i3-1320PE Processor    Q1'23    8    4.50 GHz    1.70 GHz    12 MB Intel® Smart Cache    28 W
+Intel® Core™ i3-13300HE Processor    Q1'23    8    4.6 GHz    2.1 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-13700E Processor    Q1'23    16    5.10 GHz    1.90 GHz    30 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-1370PE Processor    Q1'23    14    4.80 GHz    1.90 GHz    24 MB Intel® Smart Cache    28 W
+Intel® Core™ i7-13800HE Processor    Q1'23    14    5.00 GHz    2.50 GHz    24 MB Intel® Smart Cache    45 W
+Intel® Core™ i9-13900TE Processor    Q1'23    24    5.00 GHz    1.00 GHz    36 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-1320PRE Processor    Q1'23    8    4.50 GHz    1.70 GHz    12 MB Intel® Smart Cache    28 W
+Intel® Core™ i3-13300HRE Processor    Q1'23    8    4.60 GHz    2.10 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-1350PRE Processor    Q1'23    12    4.60 GHz    1.80 GHz    12 MB Intel® Smart Cache    28 W
+Intel® Core™ i5-13600HRE Processor    Q1'23    12    4.80 GHz    2.70 GHz    18 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-13800HRE Processor    Q1'23    14    5.00 GHz    2.50 GHz    24 MB Intel® Smart Cache    45 W
+Intel® Celeron® Processor 7305L    Q3'22    5    1.1 GHz    1.1 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-1215UL Processor    Q3'22    6    4.40 GHz    1.20 GHz    10 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1235UL Processor    Q3'22    10    4.40 GHz    1.30 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1245UL Processor    Q3'22    10    4.40 GHz    1.60 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-1255UL Processor    Q3'22    10    4.70 GHz    1.70 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-1265UL Processor    Q3'22    10    4.80 GHz    1.80 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Xeon® D-2745NX Processor    Q3'22    10    3.50 GHz    2.40 GHz    17.5 MB    96 W
+Intel® Xeon® D-2757NX Processor    Q3'22    12    3.50 GHz    2.50 GHz    20 MB    107 W
+Intel® Xeon® D-2777NX Processor    Q3'22    16    3.30 GHz    2.20 GHz    25 MB    116 W
+Intel® Xeon® D-2798NX Processor    Q3'22    20    3.10 GHz    2.10 GHz    30 MB    126 W
+Intel Atom® Processor C5115    Q2'22    4        2.80 GHz    9 MB    43 W
+Intel Atom® Processor C5125    Q2'22    8        2.80 GHz    9 MB    50 W
+Intel Atom® Processor C5310    Q2'22    4        1.60 GHz    9 MB    32 W
+Intel Atom® Processor C5315    Q2'22    4        2.40 GHz    9 MB    38 W
+Intel Atom® Processor C5320    Q2'22    8        2.40 GHz    9 MB    41 W
+Intel Atom® Processor C5325    Q2'22    8        2.40 GHz    9 MB    41 W
+Intel Atom® Processor C5335C1    Q2'22    12        2.4 GHz    13.5 MB    50 W
+Intel Atom® Processor P5322    Q2'22    8        2.20 GHz    9 MB    55 W
+Intel Atom® Processor P5332    Q2'22    12        2.20 GHz    13.5 MB    61 W
+Intel Atom® Processor P5342    Q2'22    16        2.20 GHz    18 MB    71 W
+Intel Atom® Processor P5352    Q2'22    20        2.20 GHz    22.5 MB    78 W
+Intel Atom® Processor P5362    Q2'22    24        2.20 GHz    27 MB    83 W
+Intel Atom® Processor P5721    Q2'22    8        2.20 GHz    9 MB    48 W
+Intel Atom® Processor P5731    Q2'22    12        2.20 GHz    13.5 MB    54.5 W
+Intel Atom® Processor P5742    Q2'22    16        2.20 GHz    18 MB    67 W
+Intel Atom® Processor P5752    Q2'22    20        2.20 GHz    22.5 MB    74.5 W
+Intel® Xeon® D-2739NT Processor    Q1'22    8    3.5 GHz    2.50 GHz    15 MB    97 W
+Intel® Xeon® D-2752NTE Processor    Q1'22    12    3.00 GHz    1.90 GHz    20 MB    84 W
+Intel® Xeon® D-2752TER Processor    Q1'22    12    2.80 GHz    1.80 GHz    20 MB    77 W
+Intel® Xeon® D-2753NT Processor    Q1'22    12    3.10 GHz    2.00 GHz    20 MB    87 W
+Intel® Xeon® D-2775TE Processor    Q1'22    16    3.10 GHz    2.00 GHz    25 MB    100 W
+Intel® Xeon® D-2786NTE Processor    Q1'22    18    3.10 GHz    2.10 GHz    27.5 MB    118 W
+Intel® Xeon® D-2796NT Processor    Q1'22    20    3.10 GHz    2.00 GHz    30 MB    120 W
+Intel® Xeon® D-2796TE Processor    Q1'22    20    3.10 GHz    2.00 GHz    30 MB    118 W
+Intel® Xeon® D-2798NT Processor    Q1'22    20    3.10 GHz    2.10 GHz    30 MB    125 W
+Intel® Xeon® D-2799 Processor    Q1'22    20    3.40 GHz    2.40 GHz    30 MB    129 W
+Intel® Xeon® D-1702 Processor    Q1'22    2    1.70 GHz    1.60 GHz    5 MB    25 W
+Intel® Xeon® D-1712TR Processor    Q1'22    4    3.10 GHz    2.00 GHz    10 MB    40 W
+Intel® Xeon® D-1713NT Processor    Q1'22    4    3.50 GHz    2.20 GHz    10 MB    45 W
+Intel® Xeon® D-1713NTE Processor    Q1'22    4    3.30 GHz    2.20 GHz    10 MB    45 W
+Intel® Xeon® D-1714 Processor    Q1'22    4    3.40 GHz    2.30 GHz    10 MB    38 W
+Intel® Xeon® D-1715TER Processor    Q1'22    4    3.50 GHz    2.40 GHz    10 MB    50 W
+Intel® Xeon® D-1718T Processor    Q1'22    4    3.50 GHz    2.60 GHz    10 MB    46 W
+Intel® Xeon® D-1722NE Processor    Q1'22    6    2.70 GHz    1.70 GHz    10 MB    36 W
+Intel® Xeon® D-1726 Processor    Q1'22    6    3.50 GHz    2.90 GHz    10 MB    70 W
+Intel® Xeon® D-1732TE Processor    Q1'22    8    3.00 GHz    1.90 GHz    15 MB    52 W
+Intel® Xeon® D-1733NT Processor    Q1'22    8    3.10 GHz    2.00 GHz    15 MB    53 W
+Intel® Xeon® D-1734NT Processor    Q1'22    8    3.10 GHz    2.00 GHz    15 MB    50 W
+Intel® Xeon® D-1735TR Processor    Q1'22    8    3.40 GHz    2.20 GHz    15 MB    59 W
+Intel® Xeon® D-1736 Processor    Q1'22    8    3.40 GHz    2.30 GHz    15 MB    55 W
+Intel® Xeon® D-1736NT Processor    Q1'22    8    3.50 GHz    2.70 GHz    15 MB    67 W
+Intel® Xeon® D-1739 Processor    Q1'22    8    3.50 GHz    3.00 GHz    15 MB    83 W
+Intel® Xeon® D-1746TER Processor    Q1'22    10    3.10 GHz    2.00 GHz    15 MB    67 W
+Intel® Xeon® D-1747NTE Processor    Q1'22    10    3.50 GHz    2.50 GHz    15 MB    80 W
+Intel® Xeon® D-1748TE Processor    Q1'22    10    3.40 GHz    2.30 GHz    15 MB    65 W
+Intel® Xeon® D-1749NT Processor    Q1'22    10    3.50 GHz    3.00 GHz    15 MB    90 W
+Intel® Xeon® D-2712T Processor    Q1'22    4    3.00 GHz    1.90 GHz    15 MB    65 W
+Intel® Xeon® D-2733NT Processor    Q1'22    8    3.20 GHz    2.10 GHz    15 MB    80 W
+Intel® Xeon® D-2738 Processor    Q1'22    8    3.50 GHz    2.50 GHz    15 MB    88 W
+Intel® Xeon® D-2766NT Processor    Q1'22    14    3.10 GHz    2.00 GHz    20 MB    97 W
+Intel® Xeon® D-2776NT Processor    Q1'22    16    3.20 GHz    2.10 GHz    25 MB    117 W
+Intel® Xeon® D-2779 Processor    Q1'22    16    3.40 GHz    2.50 GHz    25 MB    126 W
+Intel® Xeon® D-2795NT Processor    Q1'22    20    3.10 GHz    2.00 GHz    30 MB    110 W
+Intel® Xeon® D-1731NTE Processor    Q1'22    8    2.8 GHz    1.70 GHz    15 MB    45 W
+Intel® Xeon® E-2314 Processor    Q3'21    4    4.50 GHz    2.80 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Xeon® E-2324G Processor    Q3'21    4    4.60 GHz    3.10 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Xeon® E-2334 Processor    Q3'21    4    4.80 GHz    3.40 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Xeon® E-2336 Processor    Q3'21    6    4.80 GHz    2.90 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Xeon® E-2356G Processor    Q3'21    6    5.00 GHz    3.20 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2374G Processor    Q3'21    4    5.00 GHz    3.70 GHz    8 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2378 Processor    Q3'21    8    4.80 GHz    2.60 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Xeon® E-2378G Processor    Q3'21    8    5.10 GHz    2.80 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2386G Processor    Q3'21    6    5.10 GHz    3.50 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Xeon® E-2388G Processor    Q3'21    8    5.10 GHz    3.20 GHz    16 MB Intel® Smart Cache    95 W
+Intel® Celeron® 6600HE Processor    Q3'21    2        2.60 GHz    8 MB Intel® Smart Cache    35 W
+Intel® Xeon® W-11155MLE Processor    Q3'21    4    3.10 GHz    1.80 GHz    8 MB Intel® Smart Cache    25 W
+Intel® Xeon® W-11555MLE Processor    Q3'21    6    4.40 GHz    1.90 GHz    12 MB Intel® Smart Cache    25 W
+Intel® Xeon® W-11865MLE Processor    Q3'21    8    4.50 GHz    1.50 GHz    24 MB Intel® Smart Cache    25 W
+Intel® Xeon® W-3323 Processor    Q3'21    12    3.90 GHz    3.50 GHz    21 MB    220 W
+Intel® Xeon® W-3335 Processor    Q3'21    16    4.00 GHz    3.40 GHz    24 MB    250 W
+Intel® Xeon® W-3345 Processor    Q3'21    24    4.00 GHz    3.00 GHz    36 MB    250 W
+Intel® Xeon® W-3365 Processor    Q3'21    32    4.00 GHz    2.70 GHz    48 MB    270 W
+Intel® Xeon® W-3375 Processor    Q3'21    38    4.00 GHz    2.50 GHz    57 MB    270 W
+Intel® Xeon® W-1350 Processor    Q2'21    6    5.00 GHz    3.30 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1350P Processor    Q2'21    6    5.10 GHz    4.00 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1370 Processor    Q2'21    8    5.10 GHz    2.90 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1370P Processor    Q2'21    8    5.20 GHz    3.60 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1390 Processor    Q2'21    8    5.20 GHz    2.80 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1390P Processor    Q2'21    8    5.30 GHz    3.50 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1390T Processor    Q2'21    8    4.90 GHz    1.50 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Xeon® Gold 5315Y Processor    Q2'21    8    3.60 GHz    3.20 GHz    12 MB    140 W
+Intel® Xeon® Gold 5317 Processor    Q2'21    12    3.60 GHz    3.00 GHz    18 MB    150 W
+Intel® Xeon® Gold 5318N Processor    Q2'21    24    3.40 GHz    2.10 GHz    36 MB    150 W
+Intel® Xeon® Gold 5318S Processor    Q2'21    24    3.40 GHz    2.10 GHz    36 MB    165 W
+Intel® Xeon® Gold 5318Y Processor    Q2'21    24    3.40 GHz    2.10 GHz    36 MB    165 W
+Intel® Xeon® Gold 5320 Processor    Q2'21    26    3.40 GHz    2.20 GHz    39 MB    185 W
+Intel® Xeon® Gold 5320T Processor    Q2'21    20    3.50 GHz    2.30 GHz    30 MB    150 W
+Intel® Xeon® Gold 6312U Processor    Q2'21    24    3.60 GHz    2.40 GHz    36 MB    185 W
+Intel® Xeon® Gold 6314U Processor    Q2'21    32    3.40 GHz    2.30 GHz    48 MB    205 W
+Intel® Xeon® Gold 6326 Processor    Q2'21    16    3.50 GHz    2.90 GHz    24 MB    185 W
+Intel® Xeon® Gold 6330 Processor    Q2'21    28    3.10 GHz    2.00 GHz    42 MB    205 W
+Intel® Xeon® Gold 6330N Processor    Q2'21    28    3.40 GHz    2.20 GHz    42 MB    165 W
+Intel® Xeon® Gold 6334 Processor    Q2'21    8    3.70 GHz    3.60 GHz    18 MB    165 W
+Intel® Xeon® Gold 6336Y Processor    Q2'21    24    3.60 GHz    2.40 GHz    36 MB    185 W
+Intel® Xeon® Gold 6338 Processor    Q2'21    32    3.20 GHz    2.00 GHz    48 MB    205 W
+Intel® Xeon® Gold 6338N Processor    Q2'21    32    3.50 GHz    2.20 GHz    48 MB    185 W
+Intel® Xeon® Gold 6338T Processor    Q2'21    24    3.40 GHz    2.10 GHz    36 MB    165 W
+Intel® Xeon® Gold 6342 Processor    Q2'21    24    3.50 GHz    2.80 GHz    36 MB    230 W
+Intel® Xeon® Gold 6346 Processor    Q2'21    16    3.60 GHz    3.10 GHz    36 MB    205 W
+Intel® Xeon® Gold 6348 Processor    Q2'21    28    3.50 GHz    2.60 GHz    42 MB    235 W
+Intel® Xeon® Gold 6354 Processor    Q2'21    18    3.60 GHz    3.00 GHz    39 MB    205 W
+Intel® Xeon® Platinum 8351N Processor    Q2'21    36    3.50 GHz    2.40 GHz    54 MB    225 W
+Intel® Xeon® Platinum 8352M Processor    Q2'21    32    3.50 GHz    2.30 GHz    48 MB    185 W
+Intel® Xeon® Platinum 8352S Processor    Q2'21    32    3.40 GHz    2.20 GHz    48 MB    205 W
+Intel® Xeon® Platinum 8352V Processor    Q2'21    36    3.50 GHz    2.10 GHz    54 MB    195 W
+Intel® Xeon® Platinum 8352Y Processor    Q2'21    32    3.40 GHz    2.20 GHz    48 MB    205 W
+Intel® Xeon® Platinum 8358 Processor    Q2'21    32    3.40 GHz    2.60 GHz    48 MB    250 W
+Intel® Xeon® Platinum 8358P Processor    Q2'21    32    3.40 GHz    2.60 GHz    48 MB    240 W
+Intel® Xeon® Platinum 8360Y Processor    Q2'21    36    3.50 GHz    2.40 GHz    54 MB    250 W
+Intel® Xeon® Platinum 8362 Processor    Q2'21    32    3.60 GHz    2.80 GHz    48 MB    265 W
+Intel® Xeon® Platinum 8368 Processor    Q2'21    38    3.40 GHz    2.40 GHz    57 MB    270 W
+Intel® Xeon® Platinum 8368Q Processor    Q2'21    38    3.70 GHz    2.60 GHz    57 MB    270 W
+Intel® Xeon® Platinum 8380 Processor    Q2'21    40    3.40 GHz    2.30 GHz    60 MB    270 W
+Intel® Xeon® Silver 4309Y Processor    Q2'21    8    3.60 GHz    2.80 GHz    12 MB    105 W
+Intel® Xeon® Silver 4310 Processor    Q2'21    12    3.30 GHz    2.10 GHz    18 MB    120 W
+Intel® Xeon® Silver 4310T Processor    Q2'21    10    3.40 GHz    2.30 GHz    15 MB    105 W
+Intel® Xeon® Silver 4314 Processor    Q2'21    16    3.40 GHz    2.40 GHz    24 MB    135 W
+Intel® Xeon® Silver 4316 Processor    Q2'21    20    3.40 GHz    2.30 GHz    30 MB    150 W
+Intel® Core™ i5-11500 Processor    Q1'21    6    4.60 GHz    2.70 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-11600 Processor    Q1'21    6    4.80 GHz    2.80 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-11600K Processor    Q1'21    6    4.90 GHz    3.90 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Core™ i5-11600KF Processor    Q1'21    6    4.90 GHz    3.90 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Core™ i5-11600T Processor    Q1'21    6    4.10 GHz    1.70 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-11700 Processor    Q1'21    8    4.90 GHz    2.50 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-11900K Processor    Q1'21    8    5.30 GHz    3.50 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i9-11900KF Processor    Q1'21    8    5.30 GHz    3.50 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i3-10105 Processor    Q1'21    4    4.40 GHz    3.70 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10105F Processor    Q1'21    4    4.40 GHz    3.70 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10105T Processor    Q1'21    4    3.90 GHz    3.00 GHz    6 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-10305 Processor    Q1'21    4    4.50 GHz    3.80 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10305T Processor    Q1'21    4    4.00 GHz    3.00 GHz    8 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-10325 Processor    Q1'21    4    4.70 GHz    3.90 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10505 Processor    Q1'21    6    4.60 GHz    3.20 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-11400 Processor    Q1'21    6    4.40 GHz    2.60 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-11400F Processor    Q1'21    6    4.40 GHz    2.60 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-11400T Processor    Q1'21    6    3.70 GHz    1.30 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-11500T Processor    Q1'21    6    3.90 GHz    1.50 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-11700F Processor    Q1'21    8    4.90 GHz    2.50 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-11700K Processor    Q1'21    8    5.00 GHz    3.60 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i7-11700KF Processor    Q1'21    8    5.00 GHz    3.60 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i7-11700T Processor    Q1'21    8    4.60 GHz    1.40 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Core™ i9-11900 Processor    Q1'21    8    5.20 GHz    2.50 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-11900F Processor    Q1'21    8    5.20 GHz    2.50 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-11900T Processor    Q1'21    8    4.90 GHz    1.50 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6405 Processor    Q1'21    2        4.10 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G6405T Processor    Q1'21    2        3.50 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6505 Processor    Q1'21    2        4.20 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G6505T Processor    Q1'21    2        3.60 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6605 Processor    Q1'21    2        4.30 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Celeron® Processor J6412    Q1'21    4        2.00 GHz    4 MB L3 Cache    10 W
+Intel® Celeron® Processor N6210    Q1'21    2        1.20 GHz    1.5 MB L2 Cache    6.5 W
+Intel® Core™ i3-10100Y Processor    Q1'21    2    3.90 GHz    1.30 GHz    4 MB Intel® Smart Cache    5 W
+Intel® Pentium® Gold 6500Y Processor    Q1'21    2    3.40 GHz    1.10 GHz    4 MB Intel® Smart Cache    5 W
+Intel® Celeron® Processor N4500    Q1'21    2        1.10 GHz    4 MB Intel® Smart Cache    6 W
+Intel® Celeron® Processor N4505    Q1'21    2        2.00 GHz    4 MB Intel® Smart Cache    10 W
+Intel® Celeron® Processor N5100    Q1'21    4        1.10 GHz    4 MB Intel® Smart Cache    6 W
+Intel® Celeron® Processor N5105    Q1'21    4        2.00 GHz    4 MB Intel® Smart Cache    10 W
+Intel® Pentium® Silver N6000 Processor    Q1'21    4        1.10 GHz    4 MB Intel® Smart Cache    6 W
+Intel® Pentium® Silver N6005 Processor    Q1'21    4        2.00 GHz    4 MB Intel® Smart Cache    10 W
+Intel® Core™ i5-10500H Processor    Q4'20    6    4.50 GHz    2.50 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Celeron® 6305E Processor    Q4'20    2        1.80 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Pentium® Processor 6805    Q4'20    2    3.00 GHz    1.10 GHz    4 MB    15 W
+Intel® Core™ i3-10100F Processor    Q4'20    4    4.30 GHz    3.60 GHz    6 MB Intel® Smart Cache    65 W
+Intel Atom® x6200FE Processor    Q1'21    2        1.00 GHz    1.5 MB    4.5 W
+Intel Atom® x6211E Processor    Q1'21    2        1.30 GHz    1.5 MB L2 Cache    6 W
+Intel Atom® x6212RE Processor    Q1'21    2        1.20 GHz    1.5 MB L2 Cache    6 W
+Intel Atom® x6414RE Processor    Q1'21    4        1.50 GHz    1.5 MB L2 Cache    9 W
+Intel Atom® x6425E Processor    Q1'21    4        2.00 GHz    1.5 MB L2 Cache    12 W
+Intel Atom® x6425RE Processor    Q1'21    4        1.90 GHz    1.5 MB L2 Cache    12 W
+Intel Atom® x6427FE Processor    Q1'21    4        1.90 GHz    1.5 MB L2 Cache    12 W
+Intel® Celeron® Processor N6211    Q1'21    2        1.20 GHz    1.5 MB L2 Cache    6.5 W
+Intel® Core™ i3-1115GRE Processor    Q3'20    2    3.90 GHz    2.20 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1145GRE Processor    Q3'20    4    4.10 GHz    1.50 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-1185G7E Processor    Q3'20    4    4.40 GHz    1.80 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Pentium® Processor J6426    Q1'21    4        2.00 GHz    1.5 MB L2 Cache    10 W
+Intel® Pentium® Processor N6415    Q1'21    4        1.20 GHz    1.5 MB L2 Cache    6.5 W
+Intel Atom® x6413E Processor    Q1'21    4        1.50 GHz    1.5 MB L2 Cache    9 W
+Intel® Celeron® Processor J6413    Q1'21    4        1.80 GHz    1.5 MB L2 Cache    10 W
+Intel® Core™ i3-1115G4E Processor    Q3'20    2    3.90 GHz    2.20 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1145G7E Processor    Q3'20    4    4.10 GHz    1.50 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-1185GRE Processor    Q3'20    4    4.40 GHz    1.80 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-10870H Processor    Q3'20    8    5.00 GHz    2.20 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Xeon® Gold 6330H Processor    Q3'20    24    3.70 GHz    2.00 GHz    33 MB    150 W
+Intel® Xeon® Platinum 8356H Processor    Q3'20    8    4.40 GHz    3.90 GHz    35.75 MB    190 W
+Intel® Xeon® Platinum 8360H Processor    Q3'20    24    4.20 GHz    3.00 GHz    33 MB    225 W
+Intel® Xeon® Platinum 8360HL Processor    Q3'20    24    4.20 GHz    3.00 GHz    33 MB    225 W
+Intel® Core™ i5-10200H Processor    Q3'20    4    4.10 GHz    2.40 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Celeron® Processor G5905    Q3'20    2        3.50 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Celeron® Processor G5905T    Q3'20    2        3.30 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Celeron® Processor G5925    Q3'20    2        3.60 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Core™ i9-10850K Processor    Q3'20    10    5.20 GHz    3.60 GHz    20 MB Intel® Smart Cache    125 W
+Intel® Xeon® Gold 5318H Processor    Q2'20    18    3.80 GHz    2.50 GHz    24.75 MB    150 W
+Intel® Xeon® Gold 5320H Processor    Q2'20    20    4.20 GHz    2.40 GHz    27.5 MB    150 W
+Intel® Xeon® Gold 6328H Processor    Q2'20    16    4.30 GHz    2.80 GHz    22 MB    165 W
+Intel® Xeon® Gold 6328HL Processor    Q2'20    16    4.30 GHz    2.80 GHz    22 MB    165 W
+Intel® Xeon® Gold 6348H Processor    Q2'20    24    4.20 GHz    2.30 GHz    33 MB    165 W
+Intel® Xeon® Platinum 8353H Processor    Q2'20    18    3.80 GHz    2.50 GHz    24.75 MB    150 W
+Intel® Xeon® Platinum 8354H Processor    Q2'20    18    4.30 GHz    3.10 GHz    24.75 MB    205 W
+Intel® Xeon® Platinum 8376H Processor    Q2'20    28    4.30 GHz    2.60 GHz    38.5 MB    205 W
+Intel® Xeon® Platinum 8376HL Processor    Q2'20    28    4.30 GHz    2.60 GHz    38.5 MB    205 W
+Intel® Xeon® Platinum 8380H Processor    Q2'20    28    4.30 GHz    2.90 GHz    38.5 MB    250 W
+Intel® Xeon® Platinum 8380HL Processor    Q2'20    28    4.30 GHz    2.90 GHz    38.5 MB    250 W
+Intel Atom® Processor C3338R    Q2'20    2    2.20 GHz    1.80 GHz    4 MB    10.5 W
+Intel Atom® Processor C3436L    Q2'20    4        1.30 GHz    8 MB    10.75 W
+Intel Atom® Processor C3558R    Q2'20    4        2.40 GHz    8 MB    17 W
+Intel Atom® Processor C3758R    Q2'20    8        2.40 GHz    16 MB    26 W
+Intel® Celeron® Processor 5305U    Q2'20    2        2.30 GHz    2 MB    15 W
+Intel® Core™ i5-10310U Processor    Q2'20    4    4.40 GHz    1.70 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-10610U Processor    Q2'20    4    4.90 GHz    1.80 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-10810U Processor    Q2'20    6    4.90 GHz    1.10 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i9-10885H Processor    Q2'20    8    5.30 GHz    2.40 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Xeon® W-10855M Processor    Q2'20    6    5.10 GHz    2.80 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Xeon® W-10885M Processor    Q2'20    8    5.30 GHz    2.40 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Xeon® W-1250 Processor    Q2'20    6    4.70 GHz    3.30 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1250E Processor    Q2'20    6    4.70 GHz    3.50 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1250P Processor    Q2'20    6    4.80 GHz    4.10 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1250TE Processor    Q2'20    6    3.80 GHz    2.40 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Xeon® W-1270 Processor    Q2'20    8    5.00 GHz    3.40 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1270E Processor    Q2'20    8    4.80 GHz    3.40 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1270P Processor    Q2'20    8    5.10 GHz    3.80 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1270TE Processor    Q2'20    8    4.40 GHz    2.00 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Xeon® W-1290 Processor    Q2'20    10    5.20 GHz    3.20 GHz    20 MB Intel® Smart Cache    80 W
+Intel® Xeon® W-1290E Processor    Q2'20    10    4.80 GHz    3.50 GHz    20 MB Intel® Smart Cache    95 W
+Intel® Xeon® W-1290P Processor    Q2'20    10    5.30 GHz    3.70 GHz    20 MB Intel® Smart Cache    125 W
+Intel® Xeon® W-1290T Processor    Q2'20    10    4.70 GHz    1.90 GHz    20 MB Intel® Smart Cache    35 W
+Intel® Xeon® W-1290TE Processor    Q2'20    10    4.50 GHz    1.80 GHz    20 MB Intel® Smart Cache    35 W
+Intel® Celeron® Processor G5900    Q2'20    2        3.40 GHz    2 MB Intel® Smart Cache    58 W
+Intel® Celeron® Processor G5900E    Q2'20    2        3.20 GHz    2 MB Intel® Smart Cache    58 W
+Intel® Celeron® Processor G5900T    Q2'20    2        3.20 GHz    2 MB Intel® Smart Cache    35 W
+Intel® Celeron® Processor G5900TE    Q2'20    2        3.00 GHz    2 MB Intel® Smart Cache    35 W
+Intel® Celeron® Processor G5920    Q2'20    2        3.50 GHz    2 MB Intel® Smart Cache    58 W
+Intel® Core™ i3-10100 Processor    Q2'20    4    4.30 GHz    3.60 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10100E Processor    Q2'20    4    3.80 GHz    3.20 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10100T Processor    Q2'20    4    3.80 GHz    3.00 GHz    6 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-10100TE Processor    Q2'20    4    3.60 GHz    2.30 GHz    6 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-10300 Processor    Q2'20    4    4.40 GHz    3.70 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-10300T Processor    Q2'20    4    3.90 GHz    3.00 GHz    8 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-10320 Processor    Q2'20    4    4.60 GHz    3.80 GHz    8 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10400 Processor    Q2'20    6    4.30 GHz    2.90 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10400F Processor    Q2'20    6    4.30 GHz    2.90 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10400T Processor    Q2'20    6    3.60 GHz    2.00 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-10500 Processor    Q2'20    6    4.50 GHz    3.10 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10500E Processor    Q2'20    6    4.20 GHz    3.10 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10500T Processor    Q2'20    6    3.80 GHz    2.30 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-10500TE Processor    Q2'20    6    3.70 GHz    2.30 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-10600 Processor    Q2'20    6    4.80 GHz    3.30 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-10600K Processor    Q2'20    6    4.80 GHz    4.10 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Core™ i5-10600KF Processor    Q2'20    6    4.80 GHz    4.10 GHz    12 MB Intel® Smart Cache    125 W
+Intel® Core™ i5-10600T Processor    Q2'20    6    4.00 GHz    2.40 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-10700 Processor    Q2'20    8    4.80 GHz    2.90 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-10700E Processor    Q2'20    8    4.50 GHz    2.90 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-10700F Processor    Q2'20    8    4.80 GHz    2.90 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-10700K Processor    Q2'20    8    5.10 GHz    3.80 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i7-10700KF Processor    Q2'20    8    5.10 GHz    3.80 GHz    16 MB Intel® Smart Cache    125 W
+Intel® Core™ i7-10700T Processor    Q2'20    8    4.50 GHz    2.00 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-10700TE Processor    Q2'20    8    4.40 GHz    2.00 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Core™ i9-10900 Processor    Q2'20    10    5.20 GHz    2.80 GHz    20 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-10900E Processor    Q2'20    10    4.70 GHz    2.80 GHz    20 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-10900F Processor    Q2'20    10    5.20 GHz    2.80 GHz    20 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-10900K Processor    Q2'20    10    5.30 GHz    3.70 GHz    20 MB Intel® Smart Cache    125 W
+Intel® Core™ i9-10900KF Processor    Q2'20    10    5.30 GHz    3.70 GHz    20 MB Intel® Smart Cache    125 W
+Intel® Core™ i9-10900T Processor    Q2'20    10    4.60 GHz    1.90 GHz    20 MB Intel® Smart Cache    35 W
+Intel® Core™ i9-10900TE Processor    Q2'20    10    4.50 GHz    1.80 GHz    20 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6400 Processor    Q2'20    2        4.00 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G6400E Processor    Q2'20    2        3.80 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G6400T Processor    Q2'20    2        3.40 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6400TE Processor    Q2'20    2        3.20 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6500 Processor    Q2'20    2        4.10 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G6500T Processor    Q2'20    2        3.50 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G6600 Processor    Q2'20    2        4.20 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Core™ i5-10300H Processor    Q2'20    4    4.50 GHz    2.50 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-10400H Processor    Q2'20    4    4.60 GHz    2.60 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-10750H Processor    Q2'20    6    5.00 GHz    2.60 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-10850H Processor    Q2'20    6    5.10 GHz    2.70 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-10875H Processor    Q2'20    8    5.10 GHz    2.30 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Core™ i9-10980HK Processor    Q2'20    8    5.30 GHz    2.40 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Xeon® Bronze 3206R Processor    Q1'20    8    1.90 GHz    1.90 GHz    11 MB    85 W
+Intel® Xeon® Gold 5218R Processor    Q1'20    20    4.00 GHz    2.10 GHz    27.5 MB    125 W
+Intel® Xeon® Gold 5220R Processor    Q1'20    24    4.00 GHz    2.20 GHz    35.75 MB    150 W
+Intel® Xeon® Gold 6208U Processor    Q1'20    16    3.90 GHz    2.90 GHz    22 MB    150 W
+Intel® Xeon® Gold 6226R Processor    Q1'20    16    3.90 GHz    2.90 GHz    22 MB    150 W
+Intel® Xeon® Gold 6230R Processor    Q1'20    26    4.00 GHz    2.10 GHz    35.75 MB    150 W
+Intel® Xeon® Gold 6238R Processor    Q1'20    28    4.00 GHz    2.20 GHz    38.5 MB    165 W
+Intel® Xeon® Gold 6240R Processor    Q1'20    24    4.00 GHz    2.40 GHz    35.75 MB    165 W
+Intel® Xeon® Gold 6242R Processor    Q1'20    20    4.10 GHz    3.10 GHz    35.75 MB    205 W
+Intel® Xeon® Gold 6246R Processor    Q1'20    16    4.10 GHz    3.40 GHz    35.75 MB    205 W
+Intel® Xeon® Gold 6248R Processor    Q1'20    24    4.00 GHz    3.00 GHz    35.75 MB    205 W
+Intel® Xeon® Gold 6250 Processor    Q1'20    8    4.50 GHz    3.90 GHz    35.75 MB    185 W
+Intel® Xeon® Gold 6250L Processor    Q1'20    8    4.50 GHz    3.90 GHz    35.75 MB    185 W
+Intel® Xeon® Gold 6256 Processor    Q1'20    12    4.50 GHz    3.60 GHz    33 MB    205 W
+Intel® Xeon® Gold 6258R Processor    Q1'20    28    4.00 GHz    2.70 GHz    38.5 MB    205 W
+Intel® Xeon® Silver 4210R Processor    Q1'20    10    3.20 GHz    2.40 GHz    13.75 MB    100 W
+Intel® Xeon® Silver 4210T Processor    Q1'20    10    3.20 GHz    2.30 GHz    13.75 MB    95 W
+Intel® Xeon® Silver 4214R Processor    Q1'20    12    3.50 GHz    2.40 GHz    16.5 MB    100 W
+Intel® Xeon® Silver 4215R Processor    Q1'20    8    4.00 GHz    3.20 GHz    11 MB    130 W
+Intel® Celeron® Processor J4025    Q4'19    2        2.00 GHz    4 MB    10 W
+Intel® Celeron® Processor J4125    Q4'19    4        2.00 GHz    4 MB    10 W
+Intel® Celeron® Processor N4020    Q4'19    2        1.10 GHz    4 MB    6 W
+Intel® Celeron® Processor N4120    Q4'19    4        1.10 GHz    4 MB    6 W
+Intel® Pentium® Silver J5040 Processor    Q4'19    4        2.00 GHz    4 MB    10 W
+Intel® Pentium® Silver N5030 Processor    Q4'19    4        1.10 GHz    4 MB    6 W
+Intel® Core™ i9-9900KS Processor    Q4'19    8    5.00 GHz    4.00 GHz    16 MB Intel® Smart Cache    127 W
+Intel® Core™ i9-10900X X-series Processor    Q4'19    10    4.50 GHz    3.70 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-10920X X-series Processor    Q4'19    12    4.60 GHz    3.50 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-10940X X-series Processor    Q4'19    14    4.60 GHz    3.30 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-10980XE Extreme Edition Processor    Q4'19    18    4.60 GHz    3.00 GHz    24.75 MB Intel® Smart Cache    165 W
+Intel® Xeon® W-2223 Processor    Q4'19    4    3.90 GHz    3.60 GHz    8.25 MB    120 W
+Intel® Xeon® W-2225 Processor    Q4'19    4    4.60 GHz    4.10 GHz    8.25 MB    105 W
+Intel® Xeon® W-2235 Processor    Q4'19    6    4.60 GHz    3.80 GHz    8.25 MB    130 W
+Intel® Xeon® W-2245 Processor    Q4'19    8    4.50 GHz    3.90 GHz    16.5 MB    155 W
+Intel® Xeon® W-2255 Processor    Q4'19    10    4.50 GHz    3.70 GHz    19.25 MB    165 W
+Intel® Xeon® W-2265 Processor    Q4'19    12    4.60 GHz    3.50 GHz    19.25 MB    165 W
+Intel® Xeon® W-2275 Processor    Q4'19    14    4.60 GHz    3.30 GHz    19.25 MB    165 W
+Intel® Xeon® W-2295 Processor    Q4'19    18    4.60 GHz    3.00 GHz    24.75 MB    165 W
+Intel® Celeron® Processor 5205U    Q4'19    2        1.90 GHz    2 MB    15 W
+Intel® Core™ i3-8140U Processor    Q4'19    2    3.90 GHz    2.10 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-8260U Processor    Q4'19    4    3.90 GHz    1.60 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Pentium® Gold 6405U Processor    Q4'19    2        2.40 GHz    2 MB    15 W
+Intel® Core™ i3-10110U Processor    Q3'19    2    4.10 GHz    2.10 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-10110Y Processor    Q3'19    2    4.00 GHz    1.00 GHz    4 MB Intel® Smart Cache    7 W
+Intel® Core™ i5-10210U Processor    Q3'19    4    4.20 GHz    1.60 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-10210Y Processor    Q3'19    4    4.00 GHz    1.00 GHz    6 MB Intel® Smart Cache    7 W
+Intel® Core™ i5-10310Y Processor    Q3'19    4    4.10 GHz    1.10 GHz    6 MB Intel® Smart Cache    7 W
+Intel® Core™ i7-10510U Processor    Q3'19    4    4.90 GHz    1.80 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-10510Y Processor    Q3'19    4    4.50 GHz    1.20 GHz    8 MB Intel® Smart Cache    7 W
+Intel® Core™ i7-10710U Processor    Q3'19    6    4.70 GHz    1.10 GHz    12 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-1005G1 Processor    Q3'19    2    3.40 GHz    1.20 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1035G1 Processor    Q3'19    4    3.60 GHz    1.00 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1035G4 Processor    Q3'19    4    3.70 GHz    1.10 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-1035G7 Processor    Q3'19    4    3.70 GHz    1.20 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-1065G7 Processor    Q3'19    4    3.90 GHz    1.30 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Xeon® Platinum 9221 Processor    Q3'19    32    3.70 GHz    2.30 GHz    71.5 MB    250 W
+Intel® Xeon® Platinum 9222 Processor    Q3'19    32    3.70 GHz    2.30 GHz    71.5 MB    250 W
+Intel® Celeron® Processor J3355E    Q3'19    2    2.50 GHz    2.00 GHz    2 MB    10 W
+Intel® Celeron® Processor J3455E    Q3'19    4    2.30 GHz    1.50 GHz    2 MB    10 W
+Intel® Celeron® Processor N3350E    Q3'19    2    2.40 GHz    1.10 GHz    2 MB    6 W
+Intel® Pentium® Processor N4200E    Q3'19    4    2.50 GHz    1.10 GHz    2 MB    6 W
+Intel® Core™ i5-8257U Processor    Q3'19    4    3.90 GHz    1.40 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-8557U Processor    Q3'19    4    4.50 GHz    1.70 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Celeron® Processor G4930E    Q2'19    2    2.40 GHz    2.40 GHz    2 MB    35 W
+Intel® Celeron® Processor G4932E    Q2'19    2    1.90 GHz    1.90 GHz    2 MB    25 W
+Intel® Core™ i3-9100E Processor    Q2'19    4    3.70 GHz    3.10 GHz    6 MB    65 W
+Intel® Core™ i3-9100HL Processor    Q2'19    4    2.90 GHz    1.60 GHz    6 MB    25 W
+Intel® Core™ i3-9100TE Processor    Q2'19    4    3.20 GHz    2.20 GHz    6 MB    35 W
+Intel® Core™ i5-9500E Processor    Q2'19    6    4.20 GHz    3.00 GHz    9 MB    65 W
+Intel® Core™ i7-9700E Processor    Q2'19    8    4.40 GHz    2.60 GHz    12 MB    65 W
+Intel® Core™ i7-9700TE Processor    Q2'19    8    3.80 GHz    1.80 GHz    12 MB    35 W
+Intel® Core™ i7-9850HE Processor    Q2'19    6    4.40 GHz    2.70 GHz    9 MB    45 W
+Intel® Core™ i7-9850HL Processor    Q2'19    6    4.10 GHz    1.90 GHz    9 MB    25 W
+Intel® Xeon® E-2226GE Processor    Q2'19    6    4.60 GHz    3.40 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2254ME Processor    Q2'19    4    3.80 GHz    2.60 GHz    8 MB    45 W
+Intel® Xeon® E-2254ML Processor    Q2'19    4    3.50 GHz    1.70 GHz    8 MB    25 W
+Intel® Xeon® E-2276ME Processor    Q2'19    6    4.50 GHz    2.80 GHz    12 MB    45 W
+Intel® Xeon® E-2276ML Processor    Q2'19    6    4.20 GHz    2.00 GHz    12 MB    25 W
+Intel® Xeon® E-2278GE Processor    Q2'19    8    4.70 GHz    3.30 GHz    16 MB    80 W
+Intel® Xeon® E-2278GEL Processor    Q2'19    8    3.90 GHz    2.00 GHz    16 MB    35 W
+Intel® Xeon® W-3223 Processor    Q2'19    8    4.00 GHz    3.50 GHz    16.5 MB    160 W
+Intel® Xeon® W-3225 Processor    Q2'19    8    4.30 GHz    3.70 GHz    16.5 MB    160 W
+Intel® Xeon® W-3235 Processor    Q2'19    12    4.40 GHz    3.30 GHz    19.25 MB    180 W
+Intel® Xeon® W-3245 Processor    Q2'19    16    4.40 GHz    3.20 GHz    22 MB    205 W
+Intel® Xeon® W-3245M Processor    Q2'19    16    4.40 GHz    3.20 GHz    22 MB    205 W
+Intel® Xeon® W-3265 Processor    Q2'19    24    4.40 GHz    2.70 GHz    33 MB    205 W
+Intel® Xeon® W-3265M Processor    Q2'19    24    4.40 GHz    2.70 GHz    33 MB    205 W
+Intel® Xeon® W-3275 Processor    Q2'19    28    4.40 GHz    2.50 GHz    38.5 MB    205 W
+Intel® Xeon® W-3275M Processor    Q2'19    28    4.40 GHz    2.50 GHz    38.5 MB    205 W
+Intel® Xeon® E-2224 Processor    Q2'19    4    4.60 GHz    3.40 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2224G Processor    Q2'19    4    4.70 GHz    3.50 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2226G Processor    Q2'19    6    4.70 GHz    3.40 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2234 Processor    Q2'19    4    4.80 GHz    3.60 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2236 Processor    Q2'19    6    4.80 GHz    3.40 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2246G Processor    Q2'19    6    4.80 GHz    3.60 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2274G Processor    Q2'19    4    4.90 GHz    4.00 GHz    8 MB Intel® Smart Cache    83 W
+Intel® Xeon® E-2276G Processor    Q2'19    6    4.90 GHz    3.80 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2278G Processor    Q2'19    8    5.00 GHz    3.40 GHz    16 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2286G Processor    Q2'19    6    4.90 GHz    4.00 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Xeon® E-2288G Processor    Q2'19    8    5.00 GHz    3.70 GHz    16 MB Intel® Smart Cache    95 W
+Intel® Xeon® E-2244G Processor    Q2'19    4    4.80 GHz    3.80 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2276M Processor    Q2'19    6    4.70 GHz    2.80 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Xeon® E-2286M Processor    Q2'19    8    5.00 GHz    2.40 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-8279U Processor    Q2'19    4    4.10 GHz    2.40 GHz    6 MB Intel® Smart Cache    28 W
+Intel® Core™ i7-8569U Processor    Q2'19    4    4.70 GHz    2.80 GHz    8 MB Intel® Smart Cache    28 W
+Intel® Celeron® Processor G4930    Q2'19    2        3.20 GHz    2 MB Intel® Smart Cache    54 W
+Intel® Celeron® Processor G4930T    Q2'19    2        3.00 GHz    2 MB Intel® Smart Cache    35 W
+Intel® Celeron® Processor G4950    Q2'19    2        3.30 GHz    2 MB Intel® Smart Cache    54 W
+Intel® Core™ i3-9100 Processor    Q2'19    4    4.20 GHz    3.60 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-9100F Processor    Q2'19    4    4.20 GHz    3.60 GHz    6 MB Intel® Smart Cache    65 W
+Intel® Core™ i3-9100T Processor    Q2'19    4    3.70 GHz    3.10 GHz    6 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-9300 Processor    Q2'19    4    4.30 GHz    3.70 GHz    8 MB Intel® Smart Cache    62 W
+Intel® Core™ i3-9300T Processor    Q2'19    4    3.80 GHz    3.20 GHz    8 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-9320 Processor    Q2'19    4    4.40 GHz    3.70 GHz    8 MB Intel® Smart Cache    62 W
+Intel® Core™ i3-9350K Processor    Q2'19    4    4.60 GHz    4.00 GHz    8 MB Intel® Smart Cache    91 W
+Intel® Core™ i5-9300H Processor    Q2'19    4    4.10 GHz    2.40 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-9400H Processor    Q2'19    4    4.30 GHz    2.50 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-9400T Processor    Q2'19    6    3.40 GHz    1.80 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-9500 Processor    Q2'19    6    4.40 GHz    3.00 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-9500F Processor    Q2'19    6    4.40 GHz    3.00 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-9500T Processor    Q2'19    6    3.70 GHz    2.20 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-9600 Processor    Q2'19    6    4.60 GHz    3.10 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-9600T Processor    Q2'19    6    3.90 GHz    2.30 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-9700 Processor    Q2'19    8    4.70 GHz    3.00 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-9700F Processor    Q2'19    8    4.70 GHz    3.00 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-9700T Processor    Q2'19    8    4.30 GHz    2.00 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-9750H Processor    Q2'19    6    4.50 GHz    2.60 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-9750HF Processor    Q2'19    6    4.50 GHz    2.60 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-9850H Processor    Q2'19    6    4.60 GHz    2.60 GHz    12 MB    45 W
+Intel® Core™ i9-9880H Processor    Q2'19    8    4.80 GHz    2.30 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Core™ i9-9900 Processor    Q2'19    8    5.00 GHz    3.10 GHz    16 MB Intel® Smart Cache    65 W
+Intel® Core™ i9-9900T Processor    Q2'19    8    4.40 GHz    2.10 GHz    16 MB Intel® Smart Cache    35 W
+Intel® Core™ i9-9980HK Processor    Q2'19    8    5.00 GHz    2.40 GHz    16 MB Intel® Smart Cache    45 W
+Intel® Pentium® Gold G5420 Processor    Q2'19    2        3.80 GHz    4 MB Intel® Smart Cache    54 W
+Intel® Pentium® Gold G5420T Processor    Q2'19    2        3.20 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G5600T Processor    Q2'19    2        3.30 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G5620 Processor    Q2'19    2        4.00 GHz    4 MB Intel® Smart Cache    54 W
+Intel® Celeron® Processor 4305U    Q2'19    2        2.20 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-8365U Processor    Q2'19    4    4.10 GHz    1.60 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-8665U Processor    Q2'19    4    4.80 GHz    1.90 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Xeon® Bronze 3204 Processor    Q2'19    6    1.90 GHz    1.90 GHz    8.25 MB    85 W
+Intel® Xeon® D-1602 Processor    Q2'19    2    3.20 GHz    2.50 GHz    3 MB    27 W
+Intel® Xeon® D-1622 Processor    Q2'19    4    3.20 GHz    2.60 GHz    6 MB    40 W
+Intel® Xeon® D-1623N Processor    Q2'19    4    3.20 GHz    2.40 GHz    6 MB    35 W
+Intel® Xeon® D-1653N Processor    Q2'19    8    3.20 GHz    2.80 GHz    12 MB    65 W
+Intel® Xeon® Gold 5218B Processor    Q2'19    16    3.90 GHz    2.30 GHz    22 MB    125 W
+Intel® Xeon® Gold 5220 Processor    Q2'19    18    3.90 GHz    2.20 GHz    24.75 MB    125 W
+Intel® Xeon® Silver 4209T Processor    Q2'19    8    3.20 GHz    2.20 GHz    11 MB    70 W
+Intel® Xeon® Silver 4210 Processor    Q2'19    10    3.20 GHz    2.20 GHz    13.75 MB    85 W
+Intel® Xeon® Silver 4214 Processor    Q2'19    12    3.20 GHz    2.20 GHz    16.5 MB    85 W
+Intel® Xeon® D-1627 Processor    Q2'19    4    3.20 GHz    2.90 GHz    6 MB    45 W
+Intel® Xeon® D-1633N Processor    Q2'19    6    3.20 GHz    2.50 GHz    9 MB    45 W
+Intel® Xeon® D-1637 Processor    Q2'19    6    3.20 GHz    2.90 GHz    9 MB    55 W
+Intel® Xeon® D-1649N Processor    Q2'19    8    3.00 GHz    2.30 GHz    12 MB    45 W
+Intel® Xeon® Gold 5215 Processor    Q2'19    10    3.40 GHz    2.50 GHz    13.75 MB    85 W
+Intel® Xeon® Gold 5215L Processor    Q2'19    10    3.40 GHz    2.50 GHz    13.75 MB    85 W
+Intel® Xeon® Gold 5217 Processor    Q2'19    8    3.70 GHz    3.00 GHz    11 MB    115 W
+Intel® Xeon® Gold 5218 Processor    Q2'19    16    3.90 GHz    2.30 GHz    22 MB    125 W
+Intel® Xeon® Gold 5218N Processor    Q2'19    16    3.70 GHz    2.30 GHz    22 MB    110 W
+Intel® Xeon® Gold 5218T Processor    Q2'19    16    3.80 GHz    2.10 GHz    22 MB    105 W
+Intel® Xeon® Gold 5220S Processor    Q2'19    18    3.90 GHz    2.70 GHz    24.75 MB    125 W
+Intel® Xeon® Gold 5220T Processor    Q2'19    18    3.90 GHz    1.90 GHz    24.75 MB    105 W
+Intel® Xeon® Gold 5222 Processor    Q2'19    4    3.90 GHz    3.80 GHz    16.5 MB    105 W
+Intel® Xeon® Gold 6209U Processor    Q2'19    20    3.90 GHz    2.10 GHz    27.5 MB    125 W
+Intel® Xeon® Gold 6210U Processor    Q2'19    20    3.90 GHz    2.50 GHz    27.5 MB    150 W
+Intel® Xeon® Gold 6212U Processor    Q2'19    24    3.90 GHz    2.40 GHz    35.75 MB    165 W
+Intel® Xeon® Gold 6222V Processor    Q2'19    20    3.60 GHz    1.80 GHz    27.5 MB    115 W
+Intel® Xeon® Gold 6226 Processor    Q2'19    12    3.70 GHz    2.70 GHz    19.25 MB    125 W
+Intel® Xeon® Gold 6230 Processor    Q2'19    20    3.90 GHz    2.10 GHz    27.5 MB    125 W
+Intel® Xeon® Gold 6230N Processor    Q2'19    20    3.50 GHz    2.30 GHz    27.5 MB    125 W
+Intel® Xeon® Gold 6230T Processor    Q2'19    20    3.90 GHz    2.10 GHz    27.5 MB    125 W
+Intel® Xeon® Gold 6234 Processor    Q2'19    8    4.00 GHz    3.30 GHz    24.75 MB    130 W
+Intel® Xeon® Gold 6238 Processor    Q2'19    22    3.70 GHz    2.10 GHz    30.25 MB    140 W
+Intel® Xeon® Gold 6238L Processor    Q2'19    22    3.70 GHz    2.10 GHz    30.25 MB    140 W
+Intel® Xeon® Gold 6238T Processor    Q2'19    22    3.70 GHz    1.90 GHz    30.25 MB    125 W
+Intel® Xeon® Gold 6240 Processor    Q2'19    18    3.90 GHz    2.60 GHz    24.75 MB    150 W
+Intel® Xeon® Gold 6240L Processor    Q2'19    18    3.90 GHz    2.60 GHz    24.75 MB    150 W
+Intel® Xeon® Gold 6240Y Processor    Q2'19    18    3.90 GHz    2.60 GHz    24.75 MB    150 W
+Intel® Xeon® Gold 6242 Processor    Q2'19    16    3.90 GHz    2.80 GHz    22 MB    150 W
+Intel® Xeon® Gold 6244 Processor    Q2'19    8    4.40 GHz    3.60 GHz    24.75 MB    150 W
+Intel® Xeon® Gold 6246 Processor    Q2'19    12    4.20 GHz    3.30 GHz    24.75 MB    165 W
+Intel® Xeon® Gold 6248 Processor    Q2'19    20    3.90 GHz    2.50 GHz    27.5 MB    150 W
+Intel® Xeon® Gold 6252 Processor    Q2'19    24    3.70 GHz    2.10 GHz    35.75 MB    150 W
+Intel® Xeon® Gold 6252N Processor    Q2'19    24    3.60 GHz    2.30 GHz    35.75 MB    150 W
+Intel® Xeon® Gold 6254 Processor    Q2'19    18    4.00 GHz    3.10 GHz    24.75 MB    200 W
+Intel® Xeon® Gold 6262V Processor    Q2'19    24    3.60 GHz    1.90 GHz    33 MB    135 W
+Intel® Xeon® Platinum 8253 Processor    Q2'19    16    3.00 GHz    2.20 GHz    22 MB    125 W
+Intel® Xeon® Platinum 8256 Processor    Q2'19    4    3.90 GHz    3.80 GHz    16.5 MB    105 W
+Intel® Xeon® Platinum 8260 Processor    Q2'19    24    3.90 GHz    2.40 GHz    35.75 MB    165 W
+Intel® Xeon® Platinum 8260L Processor    Q2'19    24    3.90 GHz    2.40 GHz    35.75 MB    165 W
+Intel® Xeon® Platinum 8276 Processor    Q2'19    28    4.00 GHz    2.20 GHz    38.5 MB    165 W
+Intel® Xeon® Platinum 8276L Processor    Q2'19    28    4.00 GHz    2.20 GHz    38.5 MB    165 W
+Intel® Xeon® Platinum 8280 Processor    Q2'19    28    4.00 GHz    2.70 GHz    38.5 MB    205 W
+Intel® Xeon® Platinum 8280L Processor    Q2'19    28    4.00 GHz    2.70 GHz    38.5 MB    205 W
+Intel® Xeon® Platinum 9242 Processor    Q2'19    48    3.80 GHz    2.30 GHz    71.5 MB Intel® Smart Cache    350 W
+Intel® Xeon® Platinum 9282 Processor    Q2'19    56    3.80 GHz    2.60 GHz    77 MB Intel® Smart Cache    400 W
+Intel® Xeon® Silver 4208 Processor    Q2'19    8    3.20 GHz    2.10 GHz    11 MB    85 W
+Intel® Xeon® Silver 4214Y Processor    Q2'19    12    3.20 GHz    2.20 GHz    16.5 MB    85 W
+Intel® Xeon® Silver 4215 Processor    Q2'19    8    3.50 GHz    2.50 GHz    11 MB    85 W
+Intel® Xeon® Silver 4216 Processor    Q2'19    16    3.20 GHz    2.10 GHz    22 MB    100 W
+Intel® Xeon® Platinum 8260Y Processor    Q2'19    24    3.90 GHz    2.40 GHz    35.75 MB    165 W
+Intel® Xeon® Platinum 8268 Processor    Q2'19    24    3.90 GHz    2.90 GHz    35.75 MB    205 W
+Intel® Xeon® Platinum 8270 Processor    Q2'19    26    4.00 GHz    2.70 GHz    35.75 MB    205 W
+Intel® Core™ i5-9300HF Processor    Q2'19    4    4.10 GHz    2.40 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Xeon® W-3175X Processor    Q4'18    28    3.80 GHz    3.10 GHz    38.5 MB    255 W
+Intel® Core™ i3-9350KF Processor    Q1'19    4    4.60 GHz    4.00 GHz    8 MB Intel® Smart Cache    91 W
+Intel® Core™ i5-9400 Processor    Q1'19    6    4.10 GHz    2.90 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-9400F Processor    Q1'19    6    4.10 GHz    2.90 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-9600KF Processor    Q1'19    6    4.60 GHz    3.70 GHz    9 MB Intel® Smart Cache    95 W
+Intel® Core™ i7-9700KF Processor    Q1'19    8    4.90 GHz    3.60 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Core™ i9-9900KF Processor    Q1'19    8    5.00 GHz    3.60 GHz    16 MB Intel® Smart Cache    95 W
+Intel® Celeron® Processor 3867U    Q1'19    2        1.80 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Celeron® Processor 4205U    Q1'19    2        1.80 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Pentium® Gold 5405U Processor    Q1'19    2        2.30 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Pentium® Gold Processor 4417U    Q1'19    2        2.30 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Pentium® Gold Processor 4425Y    Q1'19    2        1.70 GHz    2 MB    6 W
+Intel® Xeon® Processor D-1524N    Q4'18    4    2.6 GHz    2.00 GHz    6 MB    45 W
+Intel® Core™ i5-9600K Processor    Q4'18    6    4.60 GHz    3.70 GHz    9 MB Intel® Smart Cache    95 W
+Intel® Core™ i7-9700K Processor    Q4'18    8    4.90 GHz    3.60 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Core™ i7-9800X X-series Processor    Q4'18    8    4.40 GHz    3.80 GHz    16.5 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9820X X-series Processor    Q4'18    10    4.10 GHz    3.30 GHz    16.5 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9900K Processor    Q4'18    8    5.00 GHz    3.60 GHz    16 MB Intel® Smart Cache    95 W
+Intel® Core™ i9-9900X X-series Processor    Q4'18    10    4.40 GHz    3.50 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9920X X-series Processor    Q4'18    12    4.40 GHz    3.50 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9940X X-series Processor    Q4'18    14    4.40 GHz    3.30 GHz    19.25 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9960X X-series Processor    Q4'18    16    4.40 GHz    3.10 GHz    22 MB Intel® Smart Cache    165 W
+Intel® Core™ i9-9980XE Extreme Edition Processor    Q4'18    18    4.40 GHz    3.00 GHz    24.75 MB Intel® Smart Cache    165 W
+Intel® Celeron® Processor 4305UE    Q3'18    2        2.00 GHz    2 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-8145UE Processor    Q3'18    2    3.90 GHz    2.20 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-8365UE Processor    Q3'18    4    4.10 GHz    1.60 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-8665UE Processor    Q3'18    4    4.40 GHz    1.70 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-8100B Processor    Q3'18    4        3.60 GHz    6 MB Intel® Smart Cache    65 W
+Intel Atom® Processor C3336    Q3'18    2        1.50 GHz    4 MB    11 W
+Intel® Core™ i5-8210Y Processor    Q1'19    2    3.60 GHz    1.60 GHz    4 MB Intel® Smart Cache    7 W
+Intel® Core™ i3-8145U Processor    Q3'18    2    3.90 GHz    2.10 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Core™ i5-8200Y Processor    Q3'18    2    3.90 GHz    1.30 GHz    4 MB Intel® Smart Cache    5 W
+Intel® Core™ i5-8265U Processor    Q3'18    4    3.90 GHz    1.60 GHz    6 MB Intel® Smart Cache    15 W
+Intel® Core™ i7-8500Y Processor    Q1'19    2    4.20 GHz    1.50 GHz    4 MB Intel® Smart Cache    5 W
+Intel® Core™ i7-8565U Processor    Q3'18    4    4.60 GHz    1.80 GHz    8 MB Intel® Smart Cache    15 W
+Intel® Core™ m3-8100Y Processor    Q3'18    2    3.40 GHz    1.10 GHz    4 MB Intel® Smart Cache    5 W
+Intel® Xeon® E-2124 Processor    Q3'18    4    4.30 GHz    3.30 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2124G Processor    Q3'18    4    4.50 GHz    3.40 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2126G Processor    Q3'18    6    4.50 GHz    3.30 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2134 Processor    Q3'18    4    4.50 GHz    3.50 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2136 Processor    Q3'18    6    4.50 GHz    3.30 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2144G Processor    Q3'18    4    4.50 GHz    3.60 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2146G Processor    Q3'18    6    4.50 GHz    3.50 GHz    12 MB Intel® Smart Cache    80 W
+Intel® Xeon® E-2174G Processor    Q3'18    4    4.70 GHz    3.80 GHz    8 MB Intel® Smart Cache    71 W
+Intel® Xeon® E-2186G Processor    Q3'18    6    4.70 GHz    3.80 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Core™ i7-8086K Processor    Q2'18    6    5.00 GHz    4.00 GHz    12 MB Intel® Smart Cache    95 W
+Intel® Xeon® Gold 6138P Processor    Q2'18    20    3.70 GHz    2.00 GHz    27.5 MB L3 Cache    195 W
+Intel® Celeron® G4900 Processor    Q2'18    2        3.10 GHz    2 MB Intel® Smart Cache    54 W
+Intel® Celeron® G4900T Processor    Q2'18    2        2.90 GHz    2 MB Intel® Smart Cache    35 W
+Intel® Celeron® G4920 Processor    Q2'18    2        3.20 GHz    2 MB Intel® Smart Cache    54 W
+Intel® Core™ i3-8100T Processor    Q2'18    4        3.10 GHz    6 MB Intel® Smart Cache    35 W
+Intel® Core™ i3-8109U Processor    Q2'18    2    3.60 GHz    3.00 GHz    4 MB Intel® Smart Cache    28 W
+Intel® Core™ i3-8300 Processor    Q2'18    4        3.70 GHz    8 MB Intel® Smart Cache    62 W
+Intel® Core™ i3-8300T Processor    Q2'18    4        3.20 GHz    8 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-8259U Processor    Q2'18    4    3.80 GHz    2.30 GHz    6 MB Intel® Smart Cache    28 W
+Intel® Core™ i5-8269U Processor    Q2'18    4    4.20 GHz    2.60 GHz    6 MB Intel® Smart Cache    28 W
+Intel® Core™ i5-8300H Processor    Q2'18    4    4.00 GHz    2.30 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i5+8400 Processor
+(9M Cache, up to 4.00 GHz) includes Intel® Optane™ Memory    Q2'18    6    4.00 GHz    2.80 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-8400B Processor    Q2'18    6    4.00 GHz    2.80 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-8400H Processor    Q2'18    4    4.20 GHz    2.50 GHz    8 MB Intel® Smart Cache    45 W
+Intel® Core™ i5-8400T Processor    Q2'18    6    3.30 GHz    1.70 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-8500 Processor    Q2'18    6    4.10 GHz    3.00 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5+8500 Processor
+(9M Cache, up to 4.10 GHz) includes Intel® Optane™ Memory    Q2'18    6    4.10 GHz    3.00 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-8500B Processor    Q2'18    6    4.10 GHz    3.00 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-8500T Processor    Q2'18    6    3.50 GHz    2.10 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i5-8600 Processor    Q2'18    6    4.30 GHz    3.10 GHz    9 MB Intel® Smart Cache    65 W
+Intel® Core™ i5-8600T Processor    Q2'18    6    3.70 GHz    2.30 GHz    9 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-8559U Processor    Q2'18    4    4.50 GHz    2.70 GHz    8 MB Intel® Smart Cache    28 W
+Intel® Core™ i7+8700 Processor
+(12M Cache, up to 4.60 GHz) includes Intel® Optane™ Memory    Q2'18    6    4.60 GHz    3.20 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-8700B Processor    Q2'18    6    4.60 GHz    3.20 GHz    12 MB Intel® Smart Cache    65 W
+Intel® Core™ i7-8700T Processor    Q2'18    6    4.00 GHz    2.40 GHz    12 MB Intel® Smart Cache    35 W
+Intel® Core™ i7-8750H Processor    Q2'18    6    4.10 GHz    2.20 GHz    9 MB Intel® Smart Cache    45 W
+Intel® Core™ i7-8850H Processor    Q2'18    6    4.30 GHz    2.60 GHz    9 MB Intel® Smart Cache    45 W
+Intel® Core™ i9-8950HK Processor    Q2'18    6    4.80 GHz    2.90 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Pentium® Gold G5400 Processor    Q2'18    2        3.70 GHz    4 MB Intel® Smart Cache    58 W
+Intel® Pentium® Gold G5400T Processor    Q2'18    2        3.10 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G5500 Processor    Q2'18    2        3.80 GHz    4 MB Intel® Smart Cache    54 W
+Intel® Pentium® Gold G5500T Processor    Q2'18    2        3.20 GHz    4 MB Intel® Smart Cache    35 W
+Intel® Pentium® Gold G5600 Processor    Q2'18    2        3.90 GHz    4 MB Intel® Smart Cache    54 W
+Intel® Xeon® E-2176M Processor    Q2'18    6    4.40 GHz    2.70 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Xeon® E-2186M Processor    Q2'18    6    4.80 GHz    2.90 GHz    12 MB Intel® Smart Cache    45 W
+Intel® Core™ i3-7020U Processor    Q2'18    2        2.30 GHz    3 MB Intel® Smart Cache    15 W
+Intel® Core™ i3-8130U Processor    Q1'18    2    3.40 GHz    2.20 GHz    4 MB Intel® Smart Cache    15 W
+Intel® Xeon® D-2123IT Processor    Q1'18    4    3.00 GHz    2.20 GHz    8 MB    60 W
+Intel® Xeon® D-2141I Processor    Q1'18    8    3.00 GHz    2.20 GHz    11 MB    65 W
+Intel® Xeon® D-2142IT Processor    Q1'18    8    3.00 GHz    1.90 GHz    11 MB    65 W
+Intel® Xeon® D-2143IT Processor    Q1'18    8    3.00 GHz    2.20 GHz    11 MB    65 W
+Intel® Xeon® D-2145NT Processor    Q1'18    8    3.00 GHz    1.90 GHz    11 MB    65 W
+Intel® Xeon® D-2146NT Processor    Q1'18    8    3.00 GHz    2.30 GHz    11 MB    80 W
+Intel® Xeon® D-2161I Processor    Q1'18    12    3.00 GHz    2.20 GHz    16.5 MB L2 Cache    90 W
+Intel® Xeon® D-2163IT Processor    Q1'18    12    3.00 GHz    2.10 GHz    17 MB    75 W
+Intel® Xeon® D-2166NT Processor    Q1'18    12    3.00 GHz    2.00 GHz    17 MB    85 W
+Intel® Xeon® D-2173IT Processor    Q1'18    14    3.00 GHz    1.70 GHz    19 MB    70 W
+Intel® Xeon® D-2177NT Processor    Q1'18    14    3.00 GHz    1.90 GHz    19 MB    105 W
+Intel® Xeon® D-2183IT Processor    Q1'18    16    3.00 GHz    2.20 GHz    22 MB    100 W
+Intel® Xeon® D-2187NT Processor    Q1'18    16    3.00 GHz    2.00 GHz    22 MB    110 W
