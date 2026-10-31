@@ -1,0 +1,296 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+Nettrix R620 G50 LP                                                            
+SPECpower_ssj2008 = 14,714 overall ssj_ops/watt                                
+            Test Sponsor:  Nettrix                                             
+          SPEC License #:  6138                                                
+               Tested By:  Nettrix                                             
+           Test Location:  Beijing,China                                       
+               Test Date:  Dec 6, 2022                                         
+             Publication:  Jan 11, 2023                                        
+   Hardware Availability:  Jan-2023                                            
+   Software Availability:  Dec-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.4% |    14,736,604 |           814 |        18,107
+          90% |         90.0% |    13,337,056 |           753 |        17,720
+          80% |         80.1% |    11,867,984 |           704 |        16,851
+          70% |         70.0% |    10,368,355 |           618 |        16,787
+          60% |         60.1% |     8,902,998 |           572 |        15,552
+          50% |         50.0% |     7,413,490 |           475 |        15,599
+          40% |         40.0% |     5,921,885 |           430 |        13,766
+          30% |         30.0% |     4,451,818 |           385 |        11,555
+          20% |         20.0% |     2,960,455 |           337 |         8,786
+          10% |         10.0% |     1,487,803 |           290 |         5,128
+                  Active Idle |             0 |           157 |             0
+                              sum of ssj_ops / sum of power = |        14,714
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettrix                                     
+                           Model:  R620 G50 LP                                 
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Platinum 8490H                   
+             CPU Characteristics:  60-Core,1.9GHz,112.5MB L3 Cache             
+             CPU Frequency (MHz):  1900                                        
+                  CPU(s) Enabled:  120 cores, 2 chips, 60 cores/chip           
+                Hardware Threads:  240 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  115200 KB I+D on chip per chip              
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32 GB                                  
+                  Memory Details:  16 x 32GB 2Rx8 PC5-4800B-R; slots 0, 2, 4,  
+                                   6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28
+                                   and 30 populated                            
+ Power Supply Quantity and Rating  1 x 1300                                    
+                             (W):                                              
+            Power Supply Details:  Gospower CRPS1300-AH 1300W; P/N 96007831    
+                      Disk Drive:  1 x 960GB SATA SSD;P/N                      
+                                   MTFDKBG960TDZ-1AZ1ZABYY                     
+                 Disk Controller:  Integrated SATA controller                  
+  # and type of Network Interface  1 x Dual-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  2/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled(See SUT Notes)                      
+           Operating System (OS):  Microsoft Windows Server 2019 Datacenter    
+                      OS Version:  Version 1809 (OS Build 17763.737)           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.11+9-LTS-194, mixed mode)       
+        JVM Command-line Options:  -server -Xms1995m -Xmx1995m -Xmn1825m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   --XX:MaxTenuringThreshold=15                
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:UseAVX=0          
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  start /NODE[0-7] /AFFINITY                  
+                                   [0x3,0xC,0x30,0xC0,0x300,0xC00,0x3000,0xC000
+                                   ,0x30000,0xC0000,0x300000,0xC00000,0x3000000
+                                   ,0xC000000,0x30000000]                      
+                   JVM Instances:  120                                         
+           JVM Initial Heap (MB):  1995                                        
+           JVM Maximum Heap (MB):  1995                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  NNH1041018-U00-1                            
+     Management Firmware Version:  0.36                                        
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  KB5020685                                   
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware Prefetcher = Disabled                                               
+* Adjacent Cache Line Prefetch = Disabled                                      
+* DCU Streamer Prefetcher = Disabled                                           
+* VT-d = Disabled                                                              
+* CPU C6 Report = Enabled                                                      
+* Package C State = C6(Retetion state)                                         
+* Degrade Precedence = Feature Precedence                                      
+* Link L0p Enable = Enabled                                                    
+* Link L1 Enable = Enabled                                                     
+* Patrol Scrubbing = Disabled                                                  
+* UPI Link Frequency Select = 12.8GT/s                                         
+* Power Performance Tuning = OS Controls EPB                                   
+* Energy_PERF_BIAS_CFG mode = Power                                            
+* SR-IOV = Disabled                                                            
+* Intel DMI Link Frequency: Gen 1 Speed                                        
+* SNC (Sub-NUMA) = Enabled SNC4 (4-clusters)                                   
+* XPT Prefetch = Enabled                                                       
+* Maximum PCI Express Speed: PCIe Generation 1.0                               
+* PCI-E ASPM Support = L1 Only                                                 
+* DDR Frequency = 4000                                                         
+* Turbo mode = enabled                                                         
+* I350 LAN2 Enable = Disabled                                                  
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* Using the local security settings console.                                   
+* Lock pages in memory was enabled for the user running the benchmark.         
+* Power plan set to Balanced.                                                  
+* Hard disk set to turn off after 1 minute.                                    
+* Display set to turn off after 1 minute.                                      
+* Minmum processor state set to 0%.                                            
+* Maxmum processor state set to 100%.                                          
+* System cooling policy set to passive.                                        
+* PCIE power management set to maximum power saving.                           
+* N/A: The test sponsor attests, as of date of publication, the CVE-2017-5754  
+(Meltdown) is mitigated in the system as tested and documented.                
+* Yes: The test sponsor attests, as of date of publication, thE CVE-2017-5753  
+(Spectre variant 1) is mitigated in the system as tested and documented.       
+* Yes: The test sponsor attests, as of date of publication, that CVE-2017-5715 
+(Spectre variant 2) is mitigated in the system as tested and documented.       
+* The system ROM used for this result contains Intel microcode version         
+0x2b000111 for the Intel Xeon Platinum 8490H processor.                        
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettrix                                     
+                           Model:  R620 G40                                    
+                 CPU Description:  Intel Xeon Platinum 8380                    
+              Memory amount (GB):  512                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012 R2 Standard             
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.1+12-LTS-39, mixed mode, sharing)      
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA                                    
+                           Model:  WT310E                                      
+                   Serial Number:  C3XJ22093E                                  
+                    Connectivity:  USB                                         
+                Input Connection:  Default                                     
+             Metrology Institute:  CNAS(China National Accreditation Service   
+                                   for Conformity Assessment)                  
+                   Accredited by:  Calibration Laboratory of CETC              
+               Calibration Label:  C3VB14026E                                  
+             Date of Calibration:  29-Mar-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Attach to SUT Power Supplier Unit 1         
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButton Link Technology                     
+                           Model:  iButton Link T-Sense/T-Probe                
+                  Driver Version:  2.12.36.4                                   
+                    Connectivity:  USB2Serial                                  
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  10mm in front of SUT main airflow intake    
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        814 |          22.3
+        90% |        753 |          22.4
+        80% |        704 |          22.5
+        70% |        618 |          22.5
+        60% |        572 |          22.8
+        50% |        475 |          22.9
+        40% |        430 |          22.8
+        30% |        385 |          23.0
+        20% |        337 |          22.7
+        10% |        290 |          22.7
+Active Idle |        157 |          22.3
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 50 Hz / 1 phase /  |            22.3 |              50
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20221206-01209-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        14,803,781
+    Calibration 2 |                   |                   |        14,807,810
+    Calibration 3 |                   |                   |        14,836,475
+                                                ssj_ops@calibrated=14,822,142
+             100% |             99.4% |        14,822,142 |        14,736,604
+              90% |             90.0% |        13,339,928 |        13,337,056
+              80% |             80.1% |        11,857,714 |        11,867,984
+              70% |             70.0% |        10,375,500 |        10,368,355
+              60% |             60.1% |         8,893,285 |         8,902,998
+              50% |             50.0% |         7,411,071 |         7,413,490
+              40% |             40.0% |         5,928,857 |         5,921,885
+              30% |             30.0% |         4,446,643 |         4,451,818
+              20% |             20.0% |         2,964,428 |         2,960,455
+              10% |             10.0% |         1,482,214 |         1,487,803
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20221206-01209.WIN-4BVRMSS79JB.txt) for additional details.     
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

@@ -1,0 +1,277 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+
+
+Dell Inc. PowerEdge R570                                                       
+SPECpower_ssj2008 = 21,089 overall ssj_ops/watt                                
+            Test Sponsor:  Dell Inc.                                           
+          SPEC License #:  6573                                                
+               Tested By:  Dell Inc.                                           
+           Test Location:  Round Rock, TX, USA                                 
+               Test Date:  Mar 10, 2025                                        
+             Publication:  Mar 26, 2025                                        
+   Hardware Availability:  Mar-2025                                            
+   Software Availability:  Oct-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |    12,828,833 |           520 |        24,681
+          90% |         90.0% |    11,578,878 |           512 |        22,632
+          80% |         80.0% |    10,294,592 |           437 |        23,564
+          70% |         70.0% |     9,004,004 |           377 |        23,890
+          60% |         60.0% |     7,713,095 |           331 |        23,333
+          50% |         50.0% |     6,434,362 |           286 |        22,464
+          40% |         40.0% |     5,151,014 |           246 |        20,936
+          30% |         30.0% |     3,864,113 |           213 |        18,138
+          20% |         20.0% |     2,573,535 |           186 |        13,844
+          10% |         10.0% |     1,291,449 |           157 |         8,229
+                  Active Idle |             0 |          90.0 |             0
+                              sum of ssj_ops / sum of power = |        21,089
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  SUT                                         
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc.                                   
+                           Model:  PowerEdge R570                              
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon 6787P 2.0 GHz (Intel Turbo Boost 
+                                   Technology up to 3.80 GHz)                  
+             CPU Characteristics:  86-Core, 2.00 GHz, 336MB L3 Cache           
+             CPU Frequency (MHz):  2000                                        
+                  CPU(s) Enabled:  86 cores, 1 chip, 86 cores/chip             
+                Hardware Threads:  172 (2 / core)                              
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  336 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  8 x 64 GB                                   
+                  Memory Details:  64GB 2Rx4 PC5-6400; slots  Slots A1-8       
+                                   populated.                                  
+ Power Supply Quantity and Rating  1 x 1500                                    
+                             (W):                                              
+            Power Supply Details:  1500W  60mm Titanium - mixed mode, Dell p/n 
+                                   GRD17                                       
+                      Disk Drive:  1 x Dell EC NVMe ISE 7450 RI M.2 80 480GB,  
+                                   Dell p/n 3H1F4                              
+                 Disk Controller:  BOSS controller card, Dell p/n CMFVP        
+  # and type of Network Interface  1 x 1GbE BT 4P Broadcom OCP 3.0, Dell p/n   
+          Cards (NICs) Installed:  M2PYY                                       
+  NICs Enabled in Firmware / OS /  4/4/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT Notes)                     
+           Operating System (OS):  Microsoft Windows Server 2022 Standard      
+                      OS Version:  Version 21H2(OS Build 20348.1251)           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.13+10-LTS-268, mixed mode)      
+        JVM Command-line Options:  -server -Xms1300m -Xmx1300m -Xmn1100m       
+                                   -XX:+UseBiasedLocking -XX:+UseParallelGC    
+                                   -XX:ParallelGCThreads=2 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:InlineSmallCode=1500 -XX:UseAVX=1       
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap -XX:FreqInlineSize=2500 
+                                   -XX:CompileThresholdScaling=220             
+                    JVM Affinity:  start /NODE [0,2,5,8,10,13]                 
+                                   [1,3,4,6,7,9,11,12,14,15] /AFFINITY         
+                                   [0x3,0xC,0x30,0xC0,0x300,0xC00][0x3,0xC,0x30
+                                   ,0xC0,0x300]                                
+                   JVM Instances:  86                                          
+           JVM Initial Heap (MB):  1300                                        
+           JVM Maximum Heap (MB):  1300                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  0.5.62                                      
+     Management Firmware Version:  1.20.25.00                                  
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware Prefetcher: Disabled                                                
+* Adjacent Cache Line Prefetch: Disabled                                       
+* DCU Streamer Prefetcher: Disabled                                            
+* Virtual NUMA: Enabled                                                        
+* Virtual NUMA Nodes:8                                                         
+* MADT Core Enumeration: Linear                                                
+* LLC Prefetch: Enabled                                                        
+* System Profile: Custom                                                       
+* CPU Power Management: System DBPM(DAPC)                                      
+* Energy Efficient Policy: Energy Efficient                                    
+
+
+                         Management Firmware Settings                          
+
+See SUT Notes                                                                  
+
+
+                            System Under Test Notes                            
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 172 due to a   
+known inconsistency in processor reporting with this Java version.             
+* The test was started via Remote Desktop                                      
+* JVM Settings:                                                                
+* Each JVM instance was affinitized to two threads.                            
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Windows Power Saver Settings:                                                
+* Turn off Hard Disk after 1 minute                                            
+* Turn off Display after 1 minute                                              
+* Using Windows PowerShell, set the following powercfg properties:powercfg /qh 
+scheme_current sub_processor perfboostmode                                     
+* powercfg /setacvalueindex scheme_current sub_processor perfboostmode 3       
+* powercfg /qh scheme_current sub_processor perfboostmode                      
+* powercfg /setactive scheme_current                                           
+* The system ROM used for this result contains Intel microcode version         
+0x1000380 for the Intel Xeon 6787P processor.                                  
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc                                    
+                           Model:  PowerEdge R450                              
+                 CPU Description:  2 x Intel Xeon Silver 4310 CPU, 2.10 GHz    
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Hotspot(TM) Client VM, version 15.0.2+7     
+                                   (build 15.0.2+7, mixed mode)                
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT210                                       
+                   Serial Number:  91KA21979                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  NIST                                        
+                   Accredited by:  TesCom                                      
+               Calibration Label:  T76417                                      
+             Date of Calibration:  04-Oct-2025                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.1-462c978e-20240907                    
+               Setup Description:  Connected to power supply                   
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.10.26.0                                   
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  25 mm in front of SUT main airflow intake   
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        520 |          23.3
+        90% |        512 |          23.3
+        80% |        437 |          23.3
+        70% |        377 |          23.3
+        60% |        331 |          23.3
+        50% |        286 |          23.3
+        40% |        246 |          23.3
+        30% |        213 |          23.3
+        20% |        186 |          23.3
+        10% |        157 |          23.3
+Active Idle |       90.0 |          23.3
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+208V / 60 Hz / 1 phase /  |            23.3 |             255
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20250310-01501-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        13,145,125
+    Calibration 2 |                   |                   |        12,852,015
+    Calibration 3 |                   |                   |        12,872,064
+                                                ssj_ops@calibrated=12,862,039
+             100% |             99.7% |        12,862,039 |        12,828,833
+              90% |             90.0% |        11,575,836 |        11,578,878
+              80% |             80.0% |        10,289,632 |        10,294,592
+              70% |             70.0% |         9,003,428 |         9,004,004
+              60% |             60.0% |         7,717,224 |         7,713,095
+              50% |             50.0% |         6,431,020 |         6,434,362
+              40% |             40.0% |         5,144,816 |         5,151,014
+              30% |             30.0% |         3,858,612 |         3,864,113
+              20% |             20.0% |         2,572,408 |         2,573,535
+              10% |             10.0% |         1,286,204 |         1,291,449
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20250310-01501.WIN-D47JU6EQIV9.txt) for additional details.     
+
+
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

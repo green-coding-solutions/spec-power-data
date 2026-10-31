@@ -1,0 +1,281 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+
+
+Kaytus Systems Pte. Ltd. KR2280V3                                              
+SPECpower_ssj2008 = 22,130 overall ssj_ops/watt                                
+            Test Sponsor:  Kaytus Systems Pte. Ltd.                            
+          SPEC License #:  6865                                                
+               Tested By:  Kaytus Systems Pte. Ltd.                            
+           Test Location:  Gateway West, Singapore                             
+               Test Date:  Nov 17, 2025                                        
+             Publication:  Dec 16, 2025                                        
+   Hardware Availability:  Sep-2025                                            
+   Software Availability:  Sep-2025                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |        100.0% |    30,861,331 |         1,200 |        25,728
+          90% |         91.7% |    28,295,610 |         1,070 |        26,454
+          80% |         80.3% |    24,765,846 |           945 |        26,203
+          70% |         69.6% |    21,481,901 |           839 |        25,593
+          60% |         59.9% |    18,471,686 |           763 |        24,196
+          50% |         50.0% |    15,438,214 |           686 |        22,513
+          40% |         40.1% |    12,380,204 |           597 |        20,727
+          30% |         30.0% |     9,255,021 |           505 |        18,320
+          20% |         20.0% |     6,168,160 |           425 |        14,510
+          10% |         10.0% |     3,091,054 |           360 |         8,578
+                  Active Idle |             0 |           301 |             0
+                              sum of ssj_ops / sum of power = |        22,130
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None.                                       
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Kaytus Systems Pte. Ltd.                    
+                           Model:  KR2280V3                                    
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon 6980P                            
+             CPU Characteristics:  128-Core, 2.00GHz, Intel Turbo Boost        
+                                   Technology up to 3.90GHz, 504 MB L3 Cache   
+             CPU Frequency (MHz):  2000                                        
+                  CPU(s) Enabled:  256 cores, 2 chips, 128 cores/chip          
+                Hardware Threads:  512 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  64 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  504 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  768                                         
+              # and size of DIMM:  24 x 32 GB                                  
+                  Memory Details:  24 x SA_32G_DDR5-6400ER_2R8_A20F, Kaytus    
+                                   P/N:0001120;slots CPU0_C0D0,CPU0_C1D0,      
+                                   CPU0_C2D0, CPU0_C3D0, CPU0_C4D0, CPU0_C5D0, 
+                                   CPU0_C6D0, CPU0_C7D0, CPU1_C0D0,CPU1_C1D0,  
+                                   CPU1_C2D0, CPU1_C3D0, CPU1_C4D0, CPU1_C5D0, 
+                                   CPU1_C6D0, CPU1_C7D0 populated              
+ Power Supply Quantity and Rating  1 x 1600                                    
+                             (W):                                              
+            Power Supply Details:  1 x 1600W LITEON_M_PS-2162-15L1_1600_P      
+                      Disk Drive:  1 x 3.84 TB NVME Intel_P5510_SSDPF2KX038TZ  
+                 Disk Controller:  Integrated NVME controller                  
+  # and type of Network Interface  1 x Dual-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT Notes)                     
+           Operating System (OS):  Windows Server 2022 Datacenter              
+                      OS Version:  Version 21H2(OS Build 20348.1251)           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   25+37-LTS-3491, mixed mode, sharing)        
+        JVM Command-line Options:  -server -Xmn1900m -Xms2048m -Xmx2048m       
+                                   -XX:ParallelGCThreads=2 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m -XX:UseAVX=1    
+                                   -XX:AutoBoxCacheMax=20000 -XX:+UseParallelGC
+                                   -XX:+OptimizeFill -XX:+AggressiveHeap       
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:InlineSmallCode=3900                    
+                    JVM Affinity:  start /NODE [0,2,6,8] /AFFINITY [0x3, 0xC,  
+                                   0x30, 0xC0, 0x300, 0xC00, 0x3000, 0xC000,   
+                                   0x30000, 0xC0000, 0x300000, 0xC00000,       
+                                   0x3000000, 0xC000000, 0x30000000,           
+                                   0xC0000000, 0x300000000, 0xC00000000,       
+                                   0x3000000000, 0xC000000000, 0x30000000000,  
+                                   0xC0000000000];/NODE [1,3,4,5,7,9,10,11]    
+                                   /AFFINITY [0x3, 0xC, 0x30, 0xC0, 0x300,     
+                                   0xC00, 0x3000, 0xC000, 0x30000, 0xC0000,    
+                                   0x300000, 0xC00000, 0x3000000, 0xC000000,   
+                                   0x30000000, 0xC0000000, 0x300000000,        
+                                   0xC00000000, 0x3000000000, 0xC000000000,    
+                                   0x30000000000]                              
+                   JVM Instances:  256                                         
+           JVM Initial Heap (MB):  2048                                        
+           JVM Maximum Heap (MB):  2048                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  03.07.01                                    
+     Management Firmware Version:  4.33.02                                     
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware Prefetcher: Disabled.                                               
+* Adjacent Cache Prefetch: Disabled                                            
+* DCU Streamer Prefetcher: Enabled                                             
+* Package C State: C6(non Retention) state.                                    
+* Turbo Mode: Enabled.                                                         
+* Sub-NUMA Clustering: Enabled.                                                
+* Virtual NUMA: Enable.                                                        
+* Energy Efficient Policy: Power.                                              
+* CPU maximum frequency: 2.70Ghz.                                              
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Each JVM instance was affinitized to 2 logical processors                    
+* Set "Turn off hard disk after = 1 Minute" in OS.                             
+* Minimum Processor State:0%.                                                  
+* Maximum Processor State:100%.                                                
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Benchmark was started via Windows Remote Desktop Connection.                 
+* SPECpower_ssj.props input.load_level.number_warehouses set to 512 due to a   
+known inconsistency in processor reporting with this Java version.             
+* The system ROM used for this result contains Intel microcode version         
+0x01000380 for the Intel Xeon 6980P processor.                                 
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Kaytus Systems Pte. Ltd.                    
+                           Model:  Kaytus KR2280V2                             
+                 CPU Description:  Intel Xeon Silver 4514Y                     
+              Memory amount (GB):  256                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2019                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.11+7-LTS-207,mixed mode)        
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT500                                       
+                   Serial Number:  C2YA10071V                                  
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  CNAS                                        
+                   Accredited by:  Calibration and Testing Center of CEPREI    
+               Calibration Label:  J202505146784N-0008                         
+             Date of Calibration:  19-Jul-2025                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.1-462c978e-20240907                    
+               Setup Description:  Connected to PSU 0                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi                                        
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  placed in front the SUT less than 50mm.     
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |      1,200 |          27.6
+        90% |      1,070 |          27.9
+        80% |        945 |          28.2
+        70% |        839 |          28.1
+        60% |        763 |          28.1
+        50% |        686 |          27.8
+        40% |        597 |          27.5
+        30% |        505 |          27.4
+        20% |        425 |          27.2
+        10% |        360 |          26.9
+Active Idle |        301 |          26.7
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+230V / 50 Hz / 1 phase /  |            26.7 |              15
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20251118-01546-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        30,960,701
+    Calibration 2 |                   |                   |        30,831,604
+    Calibration 3 |                   |                   |        30,872,152
+                                                ssj_ops@calibrated=30,851,878
+             100% |            100.0% |        30,851,878 |        30,861,331
+              90% |             91.7% |        27,766,690 |        28,295,610
+              80% |             80.3% |        24,681,503 |        24,765,846
+              70% |             69.6% |        21,596,315 |        21,481,901
+              60% |             59.9% |        18,511,127 |        18,471,686
+              50% |             50.0% |        15,425,939 |        15,438,214
+              40% |             40.1% |        12,340,751 |        12,380,204
+              30% |             30.0% |         9,255,563 |         9,255,021
+              20% |             20.0% |         6,170,376 |         6,168,160
+              10% |             10.0% |         3,085,188 |         3,091,054
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20251118-01546.WIN-Q3AQLKAF6EB.txt) for additional details.     
+
+
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

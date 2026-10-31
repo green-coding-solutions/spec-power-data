@@ -1,0 +1,289 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+IEIT Systems Co., Ltd. NF5180M7                                                
+SPECpower_ssj2008 = 16,545 overall ssj_ops/watt                                
+            Test Sponsor:  IEIT Systems Co., Ltd.                              
+          SPEC License #:  3358                                                
+               Tested By:  IEIT Systems Co., Ltd.                              
+           Test Location:  JINAN, CHINA                                        
+               Test Date:  Mar 26, 2024                                        
+             Publication:  Apr 9, 2024                                         
+   Hardware Availability:  Feb-2024                                            
+   Software Availability:  Sep-2023                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.6% |    15,807,526 |           869 |        18,187
+          90% |         91.4% |    14,510,170 |           773 |        18,775
+          80% |         81.7% |    12,960,508 |           657 |        19,742
+          70% |         70.2% |    11,137,083 |           576 |        19,340
+          60% |         59.9% |     9,509,866 |           514 |        18,502
+          50% |         50.1% |     7,945,888 |           466 |        17,047
+          40% |         40.0% |     6,343,729 |           397 |        15,986
+          30% |         30.0% |     4,758,722 |           349 |        13,646
+          20% |         20.0% |     3,180,084 |           301 |        10,567
+          10% |         10.0% |     1,586,662 |           252 |         6,307
+                  Active Idle |             0 |           150 |             0
+                              sum of ssj_ops / sum of power = |        16,545
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  Single Node                                 
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  IEIT Systems Co., Ltd.                      
+                           Model:  NF5180M7                                    
+                     Form Factor:  1U                                          
+                        CPU Name:  Intel Xeon Platinum 8592+ Processor 1.90 GHz
+             CPU Characteristics:  64 core, 1.9GHz, 320MB L3 Cache             
+             CPU Frequency (MHz):  1900                                        
+                  CPU(s) Enabled:  128 cores, 2 chips, 64 cores/chip           
+                Hardware Threads:  256 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  128 MB I+D on chip per chip                 
+                  Tertiary Cache:  320 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32768 MB                               
+                  Memory Details:  16 x SA_32G_DDR5-4800ER_2R8_B20F, IEIT      
+                                   PN:ZMMY1000362;slots CPU0_C0D0,CPU0_C1D0,   
+                                   CPU0_C2D0, CPU0_C3D0, CPU0_C4D0, CPU0_C5D0, 
+                                   CPU0_C6D0, CPU0_C7D0, CPU1_C0D0,CPU1_C1D0,  
+                                   CPU1_C2D0, CPU1_C3D0, CPU1_C4D0, CPU1_C5D0, 
+                                   CPU1_C6D0, CPU1_C7D0 populated              
+ Power Supply Quantity and Rating  1 x 1300                                    
+                             (W):                                              
+            Power Supply Details:  1 x 1300w Great Wall Power;                 
+                                   G_M_CRPS1300C2_1300W_1U_T; IEIT             
+                                   PN:ZMPS1000772                              
+                      Disk Drive:  1 x 960G PM963_MZQLW960HMJP-00003_NVME;IEIT 
+                                   PN:ZMHD1000265                              
+                 Disk Controller:  Integrated NVME controller                  
+  # and type of Network Interface  1 x Intel_W_I350-T2V2_RJ_PCI-E4X_1KM        
+          Cards (NICs) Installed:                                              
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Balanced Mode enabled in OS                 
+           Operating System (OS):  Windows Server 2022 Datacenter              
+                      OS Version:  Version 21H2 (OS Build 20348.1970)          
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   18.9 (build 11.0.16.1+1-LTS-1, mixed mode)  
+        JVM Command-line Options:  -server -Xmn1650m -Xms1800m -Xmx1800m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:UseAVX=1          
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  start /NODE[0-3] /AFFINITY [0x3, 0xc, 0x30, 
+                                   0xc0, 0x300, 0xc00, 0x3000, 0xc000, 0x30000,
+                                   0xc0000, 0x300000, 0xc00000, 0x3000000,     
+                                   0xc000000, 0x30000000, 0xc0000000,          
+                                   0x300000000, 0xc00000000, 0x3000000000,     
+                                   0xc000000000, 0x30000000000, 0xc0000000000, 
+                                   0x300000000000, 0xc00000000000,             
+                                   0x3000000000000, 0xc000000000000,           
+                                   0x30000000000000, 0xc0000000000000,         
+                                   0x300000000000000, 0xc00000000000000,       
+                                   0x3000000000000000, 0xc000000000000000]     
+                   JVM Instances:  128                                         
+           JVM Initial Heap (MB):  1800                                        
+           JVM Maximum Heap (MB):  1800                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  05.12.01                                    
+     Management Firmware Version:  1.47.05                                     
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  KB5030216                                   
+
+
+
+                            Boot Firmware Settings                             
+
+* Set "Hardware Prefetcher = Disabled" in BIOS.                                
+* Set "Adjacent Cache  Prefetcher = Disabled" in BIOS.                         
+* Set "DCU Streamer Prefetcher = Disabled" in BIOS.                            
+* Set "Sub NUMA Cluster = SNC2(2-clusters)" in BIOS                            
+* Set "Package C-State = C6(retention) State" in BIOS                          
+* Set "Monitor/Mwait = Enabled" in BIOS                                        
+* Set "Memory Patrol Scrub = Disabled"                                         
+* Set "Energy Performance BIAS = Power" in BIOS                                
+* Set CPU maximum frequency to 2.60Ghz                                         
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Set "Turn off hard disk after = 1 Minute" in OS.                             
+* Minimum Processor State:0%.                                                  
+* Maximum Processor State:100%.                                                
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Benchmark was started via Windows Remote Desktop Connection.                 
+* Each JVM instance was affinitized to 2 logical processors                    
+* The system ROM used for this result contains Intel microcode version 21000161
+for the Intel Xeon Platinum 8592+ processor.                                   
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Hewlett Packard Enterprise                  
+                           Model:  HP EliteBook 640 G10                        
+                 CPU Description:  Intel Core i7-1355U                         
+              Memory amount (GB):  16                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.9+11-LTS-201), version 17.0.9   
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT310E                                      
+                   Serial Number:  C3WC12035E                                  
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  China National Accreditation Service for    
+                                   Conformity Assessment (CNAS)                
+                   Accredited by:  Calibration and Testing Center of CEPREI    
+               Calibration Label:  J202305312300C-0126                         
+             Date of Calibration:  27-Jun-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Connected to PSU 0                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi                                        
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  placed in front the main airflow inlet of   
+                                   the SUT less than 50mm.                     
+
+
+
+                                     Notes                                     
+
+SPECpower_ssj.props input.load_level.number_warehouses set to 256 to detect the
+full number of available processors on the SUT                                 
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        869 |          22.2
+        90% |        773 |          22.2
+        80% |        657 |          23.1
+        70% |        576 |          24.0
+        60% |        514 |          24.2
+        50% |        466 |          24.4
+        40% |        397 |          24.5
+        30% |        349 |          24.3
+        20% |        301 |          24.1
+        10% |        252 |          24.1
+Active Idle |        150 |          23.9
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+230V / 50 Hz / 1 phase /  |            22.2 |              57
+         1 wire           |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240326-01385-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        15,932,873
+    Calibration 2 |                   |                   |        15,820,155
+    Calibration 3 |                   |                   |        15,920,659
+                                                ssj_ops@calibrated=15,870,407
+             100% |             99.6% |        15,870,407 |        15,807,526
+              90% |             91.4% |        14,283,366 |        14,510,170
+              80% |             81.7% |        12,696,325 |        12,960,508
+              70% |             70.2% |        11,109,285 |        11,137,083
+              60% |             59.9% |         9,522,244 |         9,509,866
+              50% |             50.1% |         7,935,203 |         7,945,888
+              40% |             40.0% |         6,348,163 |         6,343,729
+              30% |             30.0% |         4,761,122 |         4,758,722
+              20% |             20.0% |         3,174,081 |         3,180,084
+              10% |             10.0% |         1,587,041 |         1,586,662
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240326-01385.WIN-Q3AQLKAF6EB.txt) for additional details.     
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

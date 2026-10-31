@@ -1,0 +1,290 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+Supermicro System SYS-222H-TN                                                  
+SPECpower_ssj2008 = 19,273 overall ssj_ops/watt                                
+            Test Sponsor:  Supermicro                                          
+          SPEC License #:  1176                                                
+               Tested By:  Supermicro                                          
+           Test Location:  980 Rack Ave, San Jose, CA, USA                     
+               Test Date:  Jul 29, 2024                                        
+             Publication:  Aug 14, 2024                                        
+   Hardware Availability:  Jul-2024                                            
+   Software Availability:  Jun-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.5% |    20,698,948 |           906 |        22,846
+          90% |         90.0% |    18,715,460 |           830 |        22,556
+          80% |         80.1% |    16,646,432 |           766 |        21,735
+          70% |         70.0% |    14,561,283 |           673 |        21,643
+          60% |         60.0% |    12,486,335 |           552 |        22,614
+          50% |         50.0% |    10,390,255 |           484 |        21,489
+          40% |         40.0% |     8,313,878 |           441 |        18,839
+          30% |         30.0% |     6,239,203 |           398 |        15,669
+          20% |         20.0% |     4,155,577 |           342 |        12,150
+          10% |         10.0% |     2,082,846 |           302 |         6,897
+                  Active Idle |             0 |           236 |             0
+                              sum of ssj_ops / sum of power = |        19,273
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Supermicro                                  
+                           Model:  System SYS-222H-TN                          
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon(R) 6780E, 2.20GHZ                
+             CPU Characteristics:  144 Core, 2.2GHz, 108MB L3 Cache            
+             CPU Frequency (MHz):  2200                                        
+                  CPU(s) Enabled:  288 cores, 2 chips, 144 cores/chip          
+                Hardware Threads:  288 (1 / core)                              
+                CPU(s) Orderable:  2 chips                                     
+                   Primary Cache:  64 KB I + 32 KB D on chip per core          
+                 Secondary Cache:  4 MB I+D on chip per core                   
+                  Tertiary Cache:  108 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32 GB                                  
+                  Memory Details:  16 x 32GB 2Rx8 PC5-6400 ECC; slots CPU 1/2  
+                                   A1, B1, C1, D1, E1, F1, G1, H1 populated    
+ Power Supply Quantity and Rating  2 x 1600                                    
+                             (W):                                              
+            Power Supply Details:  PWS-1K63R-1R                                
+                      Disk Drive:  1 x 6.4TB NVMe GEN4                         
+                                   Micron,MTFDKCC6T4TFS-1BC1ZABYY              
+                 Disk Controller:  onboard SCU controller                      
+  # and type of Network Interface  1 x 2-port 10GBase-T RJ45,based on Intel    
+          Cards (NICs) Installed:  Carlsville X71 Ethernet controller          
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power Saver (see SUT Notes)                 
+           Operating System (OS):  Windows server 2022 Standard                
+                      OS Version:  Version 10.0.20348 N/A Build 20348          
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.1+12-LTS-39, mixed mode)               
+        JVM Command-line Options:  -server -Xmn1300m -Xms1550m -Xmx1550m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelGC -XX:UseAVX=0             
+                                   -XX:BiasedLockingStartupDelay=30000         
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:+UseOptoBiasInlining -XX:+UseFastStosb  
+                                   -XX:MaxInlineLevel=9 -XX:MaxVectorSize=32   
+                                   -XX:-UseSharedSpaces -XX:-UseXMMForObjInit  
+                                   -XX:-UseBASE64Intrinsics -XX:+OptimizeFill  
+                                   -XX:+CriticalJNINatives                     
+                    JVM Affinity:  start /affinity                             
+                                   [[0x3,0xc,0x30,0xc0,0x300,0xc00,0x3000,0xc00
+                                   0,0x30000,0xc0000,0x300000,0xc00000,0x300000
+                                   0,0xc000000,0x30000000,0xc0000000,0x30000000
+                                   0,0xc00000000]                              
+                   JVM Instances:  144                                         
+           JVM Initial Heap (MB):  1550                                        
+           JVM Maximum Heap (MB):  1550                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  1.0a                                        
+     Management Firmware Version:  09.80.73.00                                 
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Workload Profile: Virtualization                                             
+* Hardware Prefetcher: Disabled                                                
+* Adjacent Prefetcher: Disabled                                                
+* DCU Streamer: Enabled                                                        
+* DCU IP Prefetcher: Enabled                                                   
+* L1 Next Page Prefetcher: Disabled                                            
+* Virtual Numa:Enabled                                                         
+* LLC Dead line alloc: Enabled                                                 
+* Opportunistic LLC to SF Migration: Disabled                                  
+* C-states C6: No Limit                                                        
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 288 due to a   
+known inconsistency in processor reporting with this Java version.             
+* The test was started via Remote Desktop                                      
+* JVM Settings:                                                                
+* Each JVM instance was bound to 2 processors                                  
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Windows Power Saver Settings:                                                
+* Turn off Hard Disk after 1 minute                                            
+* Turn off Display after 1 minute                                              
+* Using Windows PowerShell, set the following powercfg properties:             
+* powercfg /qh scheme_current sub_processor perfboostmode                      
+* powercfg /setacvalueindex scheme_current sub_processor perfboostmode 3       
+* powercfg /qh scheme_current sub_processor perfboostmode                      
+* powercfg /setactive scheme_current                                           
+* The system ROM used for this result contains Intel microcode version         
+00000000A0010013 for the Intel Xeon 6780E processor.                           
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Supermicro                                  
+                           Model:  SYS-2029U-MTNRV                             
+                 CPU Description:  Intel(R) Xeon(R) Gold 5220 2.20G            
+              Memory amount (GB):  32                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2019 Datacenter    
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java(TM) SE Runtime Environment (build      
+                                   1.7.0_80-b15) Java HotSpot(TM) 64-Bit Server
+                                   VM(build 24.80-b11)                         
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Chroma, Inc.                                
+                           Model:  66205                                       
+                   Serial Number:  662050006185                                
+                    Connectivity:  GPIB                                        
+                Input Connection:  Default                                     
+             Metrology Institute:  Chroma                                      
+                   Accredited by:  Chroma Calibration Laboratory               
+               Calibration Label:  949-600-6400                                
+             Date of Calibration:  6-Nov-2023                                  
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  SUT Power Supply                            
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  icbttonlink, Inc.                           
+                           Model:  LinkUSBi USB-2                              
+                  Driver Version:  1.7                                         
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  10 mm in front of SUT main intake           
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        906 |          21.8
+        90% |        830 |          21.9
+        80% |        766 |          22.4
+        70% |        673 |          21.9
+        60% |        552 |          22.3
+        50% |        484 |          22.4
+        40% |        441 |          22.5
+        30% |        398 |          22.4
+        20% |        342 |          21.9
+        10% |        302 |          22.4
+Active Idle |        236 |          22.0
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 1 phase /  |            21.8 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240729-01423-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        20,899,366
+    Calibration 2 |                   |                   |        20,823,649
+    Calibration 3 |                   |                   |        20,763,070
+                                                ssj_ops@calibrated=20,793,359
+             100% |             99.5% |        20,793,359 |        20,698,948
+              90% |             90.0% |        18,714,024 |        18,715,460
+              80% |             80.1% |        16,634,688 |        16,646,432
+              70% |             70.0% |        14,555,352 |        14,561,283
+              60% |             60.0% |        12,476,016 |        12,486,335
+              50% |             50.0% |        10,396,680 |        10,390,255
+              40% |             40.0% |         8,317,344 |         8,313,878
+              30% |             30.0% |         6,238,008 |         6,239,203
+              20% |             20.0% |         4,158,672 |         4,155,577
+              10% |             10.0% |         2,079,336 |         2,082,846
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240729-01423.WIN-8QO28F4C892.txt) for additional details.     
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

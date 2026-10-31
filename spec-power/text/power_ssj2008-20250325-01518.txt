@@ -1,0 +1,283 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+
+
+Fujitsu PRIMERGY TX1330 M6                                                     
+SPECpower_ssj2008 = 12,890 overall ssj_ops/watt                                
+            Test Sponsor:  Fujitsu                                             
+          SPEC License #:  19                                                  
+               Tested By:  Fujitsu                                             
+           Test Location:  Kawasaki, Kanagawa, Japan                           
+               Test Date:  Mar 23, 2025                                        
+             Publication:  Apr 9, 2025                                         
+   Hardware Availability:  Apr-2025                                            
+   Software Availability:  Jan-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.9% |     1,396,439 |          93.6 |        14,916
+          90% |         91.2% |     1,274,884 |          85.6 |        14,885
+          80% |         79.7% |     1,113,458 |          72.0 |        15,459
+          70% |         69.9% |       977,230 |          63.7 |        15,341
+          60% |         60.2% |       840,844 |          58.1 |        14,465
+          50% |         49.8% |       696,455 |          52.2 |        13,337
+          40% |         39.9% |       557,626 |          46.7 |        11,936
+          30% |         30.1% |       419,872 |          41.2 |        10,179
+          20% |         20.0% |       279,401 |          35.3 |         7,923
+          10% |         10.0% |       140,376 |          28.8 |         4,874
+                  Active Idle |             0 |          19.7 |             0
+                              sum of ssj_ops / sum of power = |        12,890
+
+
+
+                               System Under Test                               
+
+
+
+                                Set: 'TX1330M6'                                
+
+                  Set Identifier:  TX1330M6                                    
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  Single Node                                 
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Fujitsu                                     
+                           Model:  PRIMERGY TX1330 M6                          
+                     Form Factor:  Tower                                       
+                        CPU Name:  Intel Xeon 6369P                            
+             CPU Characteristics:  8-Core, 3.30 GHz, 24 MB L3 Cache            
+             CPU Frequency (MHz):  3300                                        
+                  CPU(s) Enabled:  8 cores, 1 chip, 8 cores/chip               
+                Hardware Threads:  16 (2 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  24 MB I+D on chip per chip                  
+                     Other Cache:  None                                        
+              Memory Amount (GB):  32                                          
+              # and size of DIMM:  2 x 16384 MB                                
+                  Memory Details:  2 x 16 GB 1Rx8 DDR5-4800 U ECC; slots 1A, 1B
+                                   populated                                   
+ Power Supply Quantity and Rating  1 x 450                                     
+                             (W):                                              
+            Power Supply Details:  Standard 450W Platinum PSU,                 
+                                   S26113-E663-V50-1                           
+                      Disk Drive:  1 x M.2 SSD 240GB, PY-MF24YN5               
+                 Disk Controller:  Integrated SATA Controller                  
+  # and type of Network Interface  2 x RJ45 with integrated LEDs for fixed     
+          Cards (NICs) Installed:  onboard 1Gb LAN                             
+  NICs Enabled in Firmware / OS /  1/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power saver                                 
+           Operating System (OS):  Windows Server 2022 Standard                
+                      OS Version:  Version 21H2, OS build 20348.1906           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.10+11-LTS-240, mixed mode,      
+                                   sharing)                                    
+        JVM Command-line Options:  -server -Xmn1700m -Xms1950m -Xmx1950m       
+                                   -XX:+UseLargePages                          
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:MaxInlineSize=270 -XX:UseAVX=0          
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:+UseAdaptiveSizePolicy                  
+                                   -XX:+UseParallelGC -XX:+UseBiasedLocking    
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:LoopUnrollLimit=45 -XX:+OptimizeFill    
+                    JVM Affinity:  START /AFFINITY [0x3, 0xC, 0x30, 0xC0,      
+                                   0x300, 0xC00, 0x3000, 0xC000]               
+                   JVM Instances:  8                                           
+           JVM Initial Heap (MB):  1950                                        
+           JVM Maximum Heap (MB):  1950                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  R2.1.0                                      
+     Management Firmware Version:  2.58S                                       
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+Set the following options in BIOS.                                             
+* "LAN 2 Controller = Disabled"                                                
+* "ASPM Support = L1 Only"                                                     
+* "Hardware Prefetcher = Disabled"                                             
+* "Adjacent Cache Line Prefetch = Disabled"                                    
+* "Intel Virtualization Technology = Disabled"                                 
+* "Turbo Mode = Disabled"                                                      
+* "Total Memory Encryption = Disabled"                                         
+* "Package C-State limit = C7"                                                 
+* "DMI Max Link Speed = Gen1"                                                  
+* "Intel(R) Speed Shift Technology = Disabled"                                 
+* "SATA Port X = Disabled"                                                     
+* "Legacy USB Support = Auto"                                                  
+* "Serial Port = Disabled"                                                     
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+Set the following options in OS.                                               
+* "Turn off hard disk after = 1 Minute"                                        
+* "Minimum processor state = 0%"                                               
+* "Turn off display after = 1 Minute"                                          
+Execute the following commands in OS.                                          
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFINCTHRESHOLD 95" 
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFINCTIME 50"      
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFINCTHRESHOLD 93" 
+* "POWERCFG /S SCHEME_CURRENT"                                                 
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Benchmark was started via Windows Remote Desktop Connection.                 
+* SPECpower_ssj.props input.load_level.number_warehouses set to 16.            
+* The system ROM used for this result contains Intel microcode version         
+000000002C010000 for the Intel Xeon 6369P processor.                           
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Fujitsu                                     
+                           Model:  PRIMERGY RX2530 M2                          
+                 CPU Description:  2 x Intel Xeon E5-2643 v4                   
+              Memory amount (GB):  128                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2019 Standard                
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 25.211-b12, mixed mode), version     
+                                   1.8.0_211                                   
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Hioki                                       
+                           Model:  PW3336                                      
+                   Serial Number:  170213562                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  AIST (National Institute of Advanced Science
+                                   and Technology)                             
+                   Accredited by:  Kyosai Technos Co.,Ltd.                     
+               Calibration Label:  RY246003096                                 
+             Date of Calibration:  18-Jun-2024                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.1-462c978e-20240907                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  Watchport Virtual Port 5.70.105.0           
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  5 mm in front of SUT main air intake        
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |       93.6 |          20.3
+        90% |       85.6 |          20.4
+        80% |       72.0 |          20.4
+        70% |       63.7 |          20.4
+        60% |       58.1 |          20.4
+        50% |       52.2 |          20.3
+        40% |       46.7 |          20.2
+        30% |       41.2 |          20.2
+        20% |       35.3 |          20.2
+        10% |       28.8 |          20.2
+Active Idle |       19.7 |          20.2
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+200V / 50 Hz / 1 phase /  |            20.2 |              15
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20250325-01518-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         1,400,411
+    Calibration 2 |                   |                   |         1,397,568
+    Calibration 3 |                   |                   |         1,396,767
+                                                 ssj_ops@calibrated=1,397,168
+             100% |             99.9% |         1,397,168 |         1,396,439
+              90% |             91.2% |         1,257,451 |         1,274,884
+              80% |             79.7% |         1,117,734 |         1,113,458
+              70% |             69.9% |           978,017 |           977,230
+              60% |             60.2% |           838,301 |           840,844
+              50% |             49.8% |           698,584 |           696,455
+              40% |             39.9% |           558,867 |           557,626
+              30% |             30.1% |           419,150 |           419,872
+              20% |             20.0% |           279,434 |           279,401
+              10% |             10.0% |           139,717 |           140,376
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20250325-01518.WIN-PEKNURDBKJA.txt) for additional details.     
+
+
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

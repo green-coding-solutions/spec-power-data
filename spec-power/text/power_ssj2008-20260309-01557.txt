@@ -1,0 +1,258 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2026 Standard Performance Evaluation Corporation      
+
+
+Dell Inc. PowerEdge XR8720t (Intel Xeon 6716P-B)                               
+SPECpower_ssj2008 = 17,889 overall ssj_ops/watt                                
+            Test Sponsor:  Dell Inc.                                           
+          SPEC License #:  6573                                                
+               Tested By:  Dell Inc.                                           
+           Test Location:  Round Rock, TX, USA                                 
+               Test Date:  Feb 25, 2026                                        
+             Publication:  Mar 24, 2026                                        
+   Hardware Availability:  Jan-2026                                            
+   Software Availability:  Nov-2025                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.8% |     6,149,456 |           283 |        21,743
+          90% |         90.1% |     5,549,000 |           264 |        21,054
+          80% |         80.0% |     4,931,812 |           220 |        22,428
+          70% |         70.1% |     4,317,807 |           195 |        22,186
+          60% |         60.0% |     3,699,349 |           175 |        21,161
+          50% |         50.0% |     3,079,044 |           157 |        19,554
+          40% |         40.1% |     2,470,264 |           143 |        17,334
+          30% |         30.0% |     1,850,129 |           130 |        14,266
+          20% |         20.1% |     1,236,245 |           119 |        10,432
+          10% |         10.0% |       616,123 |           107 |         5,735
+                  Active Idle |             0 |           104 |             0
+                              sum of ssj_ops / sum of power = |        17,889
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  PowerEdge XR8720t                           
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc.                                   
+                           Model:  PowerEdge XR8720t (Intel Xeon 6716P-B)      
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon 6716P-B 2.5 GHz                  
+             CPU Characteristics:  40 core, 2.5 GHz, 160 MB L3 Cache, Max Boost
+                                   Clock up to 3.5 GHz                         
+             CPU Frequency (MHz):  2500                                        
+                  CPU(s) Enabled:  40 cores, 1 chip, 40 cores/chip             
+                Hardware Threads:  80 (2 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  64 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  160 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  128                                         
+              # and size of DIMM:  4 x 32 GB                                   
+                  Memory Details:  32 GB 2Rx4 PC5-6400-R running at 6400MHz    
+                                   Slots A5-8 populated.                       
+ Power Supply Quantity and Rating  1 x 1800                                    
+                             (W):                                              
+            Power Supply Details:  1 x 1800W Titanium Efficiency (SKU:         
+                                   450-BCXB)                                   
+                      Disk Drive:  1 x 480 GB NVMe Gen4 M.2 SSD                
+                 Disk Controller:  Integrated PCIe Controller                  
+  # and type of Network Interface  1 x Intel(R) Ethernet Connection E825-C     
+          Cards (NICs) Installed:                                              
+  NICs Enabled in Firmware / OS /  8/8/2                                       
+                       Connected:                                              
+            Network Speed (Mbit):  10000                                       
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT notes)                     
+           Operating System (OS):  SUSE Linux Enterprise Server 16.0           
+                      OS Version:  6.12.0-160000.5-default                     
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle                                      
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM(build     
+                                   17.0.11+7-LTS-207, mixed mode)              
+        JVM Command-line Options:  -server -Xms1024m -Xmx1024m -Xmn800m        
+                                   -XX:+UseParallelGC -XX:ParallelGCThreads=2  
+                                   -XX:+UseLargePages                          
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:InlineSmallCode=1500 -XX:UseAVX=1       
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap                         
+                    JVM Affinity:  for each physicalCore { numactl -C          
+                                   physicalCoreId, physicalCoreId + 40}        
+                   JVM Instances:  40                                          
+           JVM Initial Heap (MB):  1024                                        
+           JVM Maximum Heap (MB):  1024                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  1.0.4                                       
+     Management Firmware Version:  1.30.05.10 A00                              
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Virtualization Technology disabled                                           
+* Adjacent Cache Line Prefetch disabled                                        
+* Hardware Prefetcher disabled                                                 
+* DCU Streamer Prefetcher disabled                                             
+* Virtual NUMA enabled with Virtual NUMA Nodes set to 6                        
+* System Profile set to Power Saving Dell Active Power Controller (DAPC)       
+* C-States set to Disabled                                                     
+* Energy Efficient Policy set to Energy Efficient                              
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Each JVM instance was bound to 2 logical processors                          
+* SPECpower_ssj.props input.load_level.number_warehouses set to 80             
+* The System ROM used for this result contains Intel microcode 0x10002B3       
+Version for the Intel Xeon processor                                           
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc                                    
+                           Model:  PowerEdge R650xs                            
+                 CPU Description:  2 x Intel Xeon Gold 5315Y, 3.20 GHz         
+              Memory amount (GB):  512                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2022 Standard      
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java Development Kit 15.0.2                 
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT310                                       
+                   Serial Number:  T11733387                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  NIST                                        
+                   Accredited by:  TesCom                                      
+               Calibration Label:  T126625                                     
+             Date of Calibration:  13-Aug-2025                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.3-a7835373-20251015                    
+               Setup Description:  Connected to power supply                   
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.10.26.0                                   
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  25 mm in front of SUT main airflow intake   
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        283 |          20.9
+        90% |        264 |          20.9
+        80% |        220 |          20.9
+        70% |        195 |          21.0
+        60% |        175 |          21.0
+        50% |        157 |          21.0
+        40% |        143 |          21.0
+        30% |        130 |          21.0
+        20% |        119 |          21.1
+        10% |        107 |          21.1
+Active Idle |        104 |          21.1
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+208V / 60 Hz / 1 phase /  |            20.9 |             255
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20260309-01557-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         6,254,502
+    Calibration 2 |                   |                   |         6,168,566
+    Calibration 3 |                   |                   |         6,154,782
+                                                 ssj_ops@calibrated=6,161,674
+             100% |             99.8% |         6,161,674 |         6,149,456
+              90% |             90.1% |         5,545,507 |         5,549,000
+              80% |             80.0% |         4,929,339 |         4,931,812
+              70% |             70.1% |         4,313,172 |         4,317,807
+              60% |             60.0% |         3,697,004 |         3,699,349
+              50% |             50.0% |         3,080,837 |         3,079,044
+              40% |             40.1% |         2,464,670 |         2,470,264
+              30% |             30.0% |         1,848,502 |         1,850,129
+              20% |             20.1% |         1,232,335 |         1,236,245
+              10% |             10.0% |           616,167 |           616,123
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20260309-01557.SLXR871-XR8720t.txt) for additional details.     
+
+
+      Copyright (C) 2007-2026 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

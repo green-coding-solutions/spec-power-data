@@ -1,0 +1,276 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+Hewlett Packard Enterprise ProLiant DL110 Gen11                                
+SPECpower_ssj2008 = 10,523 overall ssj_ops/watt                                
+            Test Sponsor:  Hewlett Packard Enterprise                          
+          SPEC License #:  3                                                   
+               Tested By:  Hewlett Packard Enterprise                          
+           Test Location:  Houston, TX, USA                                    
+               Test Date:  Aug 28, 2023                                        
+             Publication:  Sep 13, 2023                                        
+   Hardware Availability:  Oct-2023                                            
+   Software Availability:  Aug-2023                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.6% |     4,229,874 |           304 |        13,924
+          90% |         90.1% |     3,828,327 |           278 |        13,759
+          80% |         80.0% |     3,397,569 |           244 |        13,904
+          70% |         70.0% |     2,975,290 |           224 |        13,261
+          60% |         59.9% |     2,545,811 |           208 |        12,241
+          50% |         50.0% |     2,123,801 |           194 |        10,929
+          40% |         40.0% |     1,700,616 |           182 |         9,334
+          30% |         30.0% |     1,273,306 |           170 |         7,486
+          20% |         20.0% |       851,557 |           159 |         5,367
+          10% |         10.0% |       425,591 |           147 |         2,903
+                  Active Idle |             0 |           108 |             0
+                              sum of ssj_ops / sum of power = |        10,523
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'SUT'                                   
+
+                  Set Identifier:  SUT                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  SUT                                         
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Hewlett Packard Enterprise                  
+                           Model:  ProLiant DL110 Gen11                        
+                     Form Factor:  1U                                          
+                        CPU Name:  Intel Xeon Gold 6438N 2.00 GHz (Intel Turbo 
+                                   Boost Technology up to 3.60 GHz)            
+             CPU Characteristics:  32-Core, 2.00 GHz, 60MB L3 Cache            
+             CPU Frequency (MHz):  2000                                        
+                  CPU(s) Enabled:  32 cores, 1 chip, 32 cores/chip             
+                Hardware Threads:  64 (2 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  60 MB I+D on chip per chip                  
+                     Other Cache:  None                                        
+              Memory Amount (GB):  128                                         
+              # and size of DIMM:  8 x 16384 MB                                
+                  Memory Details:  8 x 16GB 1Rx8 PC5-4800; slots 1, 2, 3, 4, 5,
+                                   6, 7 and 8                                  
+ Power Supply Quantity and Rating  1 x 700                                     
+                             (W):                                              
+            Power Supply Details:  HPE 700W Flex Slot Platinum Hot Plug Low    
+                                   Halogen Power Supply Kit (P44975-B21)       
+                      Disk Drive:  1 x 240GB M.2 SSD SATA (P47817-B21)         
+                 Disk Controller:  embedded SATA                               
+  # and type of Network Interface  1 x Intel(R) Ethernet Server Adapter I350-T4
+          Cards (NICs) Installed:  (P08449-B21)                                
+  NICs Enabled in Firmware / OS /  4/4/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT Notes)                     
+           Operating System (OS):  SUSE Linux Enterprise Server 15 SP4         
+                      OS Version:  5.14.21-150400.22-default                   
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.8+9-LTS-211, mixed mode)        
+        JVM Command-line Options:  -server -Xms1500m -Xmx1500m -Xmn1300m       
+                                   -XX:+UseParallelGC -XX:ParallelGCThreads=2  
+                                   -XX:+UseLargePages                          
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:InlineSmallCode=1500 -XX:UseAVX=1       
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap                         
+                    JVM Affinity:  for each physicalCore { numactl -C          
+                                   physicalCoreId, physicalCoreId + 32 }       
+                   JVM Instances:  32                                          
+           JVM Initial Heap (MB):  1500                                        
+           JVM Maximum Heap (MB):  1500                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  U62 v1.50 (08/09/2023)                      
+     Management Firmware Version:  1.50 Jul 19 2023                            
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  HPE ProLiant Agentless Management Service   
+                                   for SUSE LINUX Enterprise Server 15         
+
+
+
+                            Boot Firmware Settings                             
+
+BIOS Platform Configuration (RBSU):                                            
+* Maximum Memory Bus Frequency: 4800                                           
+* Access Control Service: Disabled                                             
+* Workload Profile: Custom                                                     
+* Power Regulator: OS control Mode                                             
+* Energy/Performance Bias: Balanced Power                                      
+* Intel DMI Link Frequency: Gen 1 Speed                                        
+* Sub-NUMA Clustering: Enabled SNC2 (2-clusters)                               
+* Intel UPI Link Enablement: Single Link Operation                             
+* Intel UPI Link Frequency: Min UPI speed                                      
+* Adjacent Sector Prefetcher: Disabled                                         
+* Maximum PCI Express Speed: PCIe Generation 1.0                               
+
+
+                         Management Firmware Settings                          
+
+See SUT Notes                                                                  
+
+
+                            System Under Test Notes                            
+
+* Benchmark started via ssh                                                    
+* SPECpower_ssj.props input.load_level.number_warehouses set to 64 due to a    
+known inconsistency in processor reporting with this Java version              
+* OS tunings                                                                   
+* modprobe cpufreq_conservative                                                
+* cpupower frequency-set -g conservative                                       
+* echo 3000000 > /sys/devices/system/cpu/cpufreq/conservative/sampling_rate    
+* echo 94 > /sys/devices/system/cpu/cpufreq/conservative/up_threshold          
+* echo 1 > /sys/devices/system/cpu/cpufreq/conservative/freq_step              
+* echo 93 > /sys/devices/system/cpu/cpufreq/conservative/down_threshold        
+* echo 960000 > /proc/sys/kernel/sched_rt_runtime_us                           
+* echo 16000000 > /proc/sys/kernel/sched_latency_ns                            
+* echo 9000000 > /proc/sys/kernel/sched_min_granularity_ns                     
+* echo 40000 > /proc/sys/vm/nr_hugepages                                       
+* intel_pstate=passive                                                         
+* The system ROM used for this result contains Intel microcode version         
+0x2b0004b1 for the Intel Xeon Gold 6438N processor.                            
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Hewlett-Packard Company                     
+                           Model:  ProLiant DL360p Gen8                        
+                 CPU Description:  Intel Xeon E5-2660 v3                       
+              Memory amount (GB):  128                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2019                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  1.8.0_251-b08                               
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa                                    
+                           Model:  WT210                                       
+                   Serial Number:  91GB45372                                   
+                    Connectivity:  GPIB vi NI GPIB-USB-HS                      
+                Input Connection:  Default                                     
+             Metrology Institute:  NIST                                        
+                   Accredited by:  TRANSCAT                                    
+               Calibration Label:  5-HC75N-60-1                                
+             Date of Calibration:  16-May-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  SUT Power Supply                            
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  5 mm in front of SUT main intake            
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        304 |          25.4
+        90% |        278 |          24.9
+        80% |        244 |          24.8
+        70% |        224 |          24.9
+        60% |        208 |          24.7
+        50% |        194 |          24.8
+        40% |        182 |          25.1
+        30% |        170 |          25.2
+        20% |        159 |          24.9
+        10% |        147 |          24.9
+Active Idle |        108 |          25.2
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+208V / 60 Hz / 1 phase /  |            24.7 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20230828-01298-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         3,747,497
+    Calibration 2 |                   |                   |         4,251,142
+    Calibration 3 |                   |                   |         4,244,851
+                                                 ssj_ops@calibrated=4,247,997
+             100% |             99.6% |         4,247,997 |         4,229,874
+              90% |             90.1% |         3,823,197 |         3,828,327
+              80% |             80.0% |         3,398,397 |         3,397,569
+              70% |             70.0% |         2,973,598 |         2,975,290
+              60% |             59.9% |         2,548,798 |         2,545,811
+              50% |             50.0% |         2,123,998 |         2,123,801
+              40% |             40.0% |         1,699,199 |         1,700,616
+              30% |             30.0% |         1,274,399 |         1,273,306
+              20% |             20.0% |           849,599 |           851,557
+              10% |             10.0% |           424,800 |           425,591
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report (power_ssj2008-20230828-01298.dl110gen11.txt)  
+for additional details.                                                        
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

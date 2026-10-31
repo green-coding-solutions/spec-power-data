@@ -1,0 +1,261 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+FOXCONN (FII) Mt. Collins                                                      
+SPECpower_ssj2008 = 12,195 overall ssj_ops/watt                                
+            Test Sponsor:  Infobell IT Solutions Pvt. Ltd.                     
+          SPEC License #:  6723                                                
+               Tested By:  Infobell IT Solutions Pvt. Ltd.                     
+           Test Location:  San Jose, CA, USA                                   
+               Test Date:  May 22, 2023                                        
+             Publication:  Jun 9, 2023                                         
+   Hardware Availability:  Feb-2023                                            
+   Software Availability:  Jan-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.3% |     5,224,289 |           282 |        18,544
+          90% |         90.0% |     4,734,743 |           268 |        17,665
+          80% |         80.2% |     4,221,999 |           255 |        16,563
+          70% |         69.9% |     3,677,485 |           242 |        15,182
+          60% |         60.0% |     3,157,749 |           230 |        13,729
+          50% |         50.1% |     2,636,717 |           217 |        12,140
+          40% |         40.1% |     2,110,714 |           204 |        10,356
+          30% |         30.0% |     1,576,520 |           190 |         8,289
+          20% |         20.0% |     1,052,971 |           177 |         5,954
+          10% |         10.0% |       526,188 |           164 |         3,211
+                  Active Idle |             0 |           143 |             0
+                              sum of ssj_ops / sum of power = |        12,195
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  sut                                         
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  FOXCONN (FII)                               
+                           Model:  Mt. Collins                                 
+                     Form Factor:  2U                                          
+                        CPU Name:  Ampere Altra Max 64-Bit Multi-Core Processor
+                                   M128-30                                     
+             CPU Characteristics:  128 Core, 3.0GHz                            
+             CPU Frequency (MHz):  3000                                        
+                  CPU(s) Enabled:  256 cores, 2 chips, 128 cores/chip          
+                Hardware Threads:  256 (1 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  64 KB I + 64 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  None                                        
+                     Other Cache:  16 MB I+D on chip per chip (SLC)            
+              Memory Amount (GB):  256                                         
+              # and size of DIMM:  16 x 16 GB                                  
+                  Memory Details:  16 x 16GB 2Rx8 PC4-3200; slots 0, 2, 4, 6,  
+                                   8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28,  
+                                   30 slots populated                          
+ Power Supply Quantity and Rating  1 x 650                                     
+                             (W):                                              
+            Power Supply Details:  3Y Power Technology P/N: YM-2651YA10R       
+                      Disk Drive:  1 x 960GB M.2 NVMe SSD (SAMSUNG             
+                                   MZ1LB960HAJQ-00007)                         
+                 Disk Controller:  Non-Volatile Memory Host Controller         
+                                   Interface                                   
+  # and type of Network Interface  1 x 1Gbps with Intel Corporation I350       
+          Cards (NICs) Installed:  Gigabit Network Connection                  
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT Notes)                     
+           Operating System (OS):  Ubuntu 20.04                                
+                      OS Version:  Kernel 5.4.0-148-generic                    
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  OpenJDK 64-Bit Server VM (build 17.0.2+8-86,
+                                   mixed mode, sharing)                        
+        JVM Command-line Options:  -server -Xms1500m -Xmx1500m -Xmn1300m       
+                                   -XX:NewRatio=2 -XX:+UseParallelGC           
+                                   -XX:TargetSurvivorRatio=90                  
+                                   -XX:FreqInlineSize=2000                     
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxInlineSize=35 -XX:SurvivorRatio=30   
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:ParallelGCThreads=4 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:+UseTransparentHugePages                
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:InlineSmallCode=1000                    
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap                         
+                    JVM Affinity:  for each i=1-64 {numactl                    
+                                   --physcpubind=$(i-1)*4,$(i-1)*4+1,$(i-1)*4+2
+                                   ,$(i-1)*4+3 --localalloc }                  
+                   JVM Instances:  64                                          
+           JVM Initial Heap (MB):  1500                                        
+           JVM Maximum Heap (MB):  1500                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  0ACOD013 (SCP: 2.10.20221028)               
+     Management Firmware Version:  0.43.4                                      
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+None                                                                           
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* Benchmark started via ssh.                                                   
+* Each JVM instance was bound to four CPU cores                                
+* CPU governor: powersave using command: cpupower frequency-set --governor     
+powersave                                                                      
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  HP                                          
+                           Model:  HP EliteBook 745 G6                         
+                 CPU Description:  AMD Ryzen 7 PRO 3700U                       
+              Memory amount (GB):  32                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2019 Standard      
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  OpenJDK 64-Bit Server VM 18.9 (build        
+                                   11.0.2+9, mixed mode)                       
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA, Inc.                              
+                           Model:  WT310E                                      
+                   Serial Number:  C2XM03068V                                  
+                    Connectivity:  USB2                                        
+                Input Connection:  Default                                     
+             Metrology Institute:  TESCOM                                      
+                   Accredited by:  12-May-2023                                 
+               Calibration Label:  T114528                                     
+             Date of Calibration:  12-May-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButtonLink, Inc.                           
+                           Model:  LinkUSBi + T-Probe                          
+                  Driver Version:  FTDI USB Serial Device 1.0                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  50 mm in front of SUT main intake           
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        282 |          22.9
+        90% |        268 |          23.0
+        80% |        255 |          23.0
+        70% |        242 |          23.0
+        60% |        230 |          22.9
+        50% |        217 |          23.0
+        40% |        204 |          23.0
+        30% |        190 |          23.0
+        20% |        177 |          23.0
+        10% |        164 |          23.0
+Active Idle |        143 |          23.1
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 1 phase /  |            22.9 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20230522-01258-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         5,276,299
+    Calibration 2 |                   |                   |         5,271,987
+    Calibration 3 |                   |                   |         5,253,585
+                                                 ssj_ops@calibrated=5,262,786
+             100% |             99.3% |         5,262,786 |         5,224,289
+              90% |             90.0% |         4,736,508 |         4,734,743
+              80% |             80.2% |         4,210,229 |         4,221,999
+              70% |             69.9% |         3,683,950 |         3,677,485
+              60% |             60.0% |         3,157,672 |         3,157,749
+              50% |             50.1% |         2,631,393 |         2,636,717
+              40% |             40.1% |         2,105,115 |         2,110,714
+              30% |             30.0% |         1,578,836 |         1,576,520
+              20% |             20.0% |         1,052,557 |         1,052,971
+              10% |             10.0% |           526,279 |           526,188
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report (power_ssj2008-20230522-01258.amd.txt) for     
+additional details.                                                            
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

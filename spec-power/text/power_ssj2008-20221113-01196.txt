@@ -1,0 +1,288 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2022 Standard Performance Evaluation Corporation      
+
+
+FALINUX, Inc. AnyStor-700EC                                                    
+SPECpower_ssj2008 = 8,436 overall ssj_ops/watt                                 
+            Test Sponsor:  Telecommunications Technology Association           
+          SPEC License #:  83                                                  
+               Tested By:  Telecommunications Technology Association           
+           Test Location:  TTA, Seongnam-city, Korea                           
+               Test Date:  Nov 11, 2022                                        
+             Publication:  Dec 8, 2022                                         
+   Hardware Availability:  Dec-2022                                            
+   Software Availability:  Oct-2022                                            
+             Test Method:  Multi Node                                          
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.8% |     3,005,115 |           250 |        12,013
+          90% |         90.1% |     2,714,871 |           218 |        12,435
+          80% |         79.9% |     2,407,480 |           205 |        11,732
+          70% |         70.0% |     2,107,575 |           194 |        10,847
+          60% |         60.0% |     1,808,557 |           185 |         9,800
+          50% |         50.0% |     1,507,263 |           175 |         8,596
+          40% |         39.9% |     1,201,400 |           166 |         7,229
+          30% |         29.9% |       901,120 |           157 |         5,728
+          20% |         20.1% |       605,636 |           148 |         4,082
+          10% |         10.0% |       302,522 |           139 |         2,183
+                  Active Idle |             0 |           125 |             0
+                              sum of ssj_ops / sum of power = |         8,436
+
+
+
+                              Aggregate SUT Data                               
+
+# of Nodes | # of Chips | # of Cores |    # of    | Total RAM  | # of OS Images | # of JVM 
+           |            |            |  Threads   |    (GB)    |                | Instances
+---------- | ---------- | ---------- | ---------- | ---------- | -------------- | ---------
+         2 |          2 |        128 |        128 |       64.0 |              2 |       128
+
+
+
+                               System Under Test                               
+
+
+
+                                Shared Hardware                                
+
+                                SHARED HARDWARE                                
+                       Enclosure:  AnyStor-700EC-NM(8 Bays)                    
+                     Form Factor:  1U                                          
+ Power Supply Quantity and Rating  1 x 1200                                    
+                             (W):                                              
+            Power Supply Details:  DELTA DPS-1200AB-4 E 2U 1200 W              
+                  Network Switch:  uSafe3010-24T                               
+          Network Switch Details:  24 Port 10/100/1000 Base-T, 4 Uplink port 1G
+                                   TX/SFP Combo                                
+                      KVM Switch:  None                                        
+              KVM Switch Details:  N/A                                         
+                  Other Hardware:  None                                        
+                         Comment:  None                                        
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  2                                           
+                         Comment:  SUT                                         
+
+                               HARDWARE PER NODE                               
+                 Hardware Vendor:  FALINUX, Inc.                               
+                           Model:  AnyStor-700EC                               
+                     Form Factor:  1U                                          
+                        CPU Name:  Ampere® Altra® 64-Bit Multi-Core Processor  
+                                   Q64-30                                      
+             CPU Characteristics:  64 Core, 3.0GHz                             
+             CPU Frequency (MHz):  3000                                        
+                  CPU(s) Enabled:  64 cores, 1 chip, 64 cores/chip             
+                Hardware Threads:  64 (1 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  64 KB I + 64 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  None                                        
+                     Other Cache:  32 MB I+D on chip per chip (SLC)            
+              Memory Amount (GB):  32                                          
+              # and size of DIMM:  2 x 16 GB                                   
+                  Memory Details:  2 x 16GB 2Rx8 PC4-32003G2-R; slots 1 and 8  
+                                   populated                                   
+ Power Supply Quantity and Rating  None                                        
+                             (W):                                              
+            Power Supply Details:  Delta DPS-1200AB-4 E Rev.S0F P/N:           
+                                   ISBD2135007209                              
+                      Disk Drive:  NMVe M.2 SSD 256 GB                         
+                 Disk Controller:  Non-Volatile Memory Host Controller         
+                                   Interface                                   
+  # and type of Network Interface  1 x 1Gbps with Intel Corporation I350       
+          Cards (NICs) Installed:  Gigabit Network Connection                  
+  NICs Enabled in Firmware / OS /  1/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                               SOFTWARE PER NODE                               
+                Power Management:  Enabled                                     
+           Operating System (OS):  Red Hat Enterprise Linux Server release 7.8 
+                                   (Maipo)                                     
+                      OS Version:  Kernel 3.10.0-1127.el7.x86_64               
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.17+10-LTS-269, mixed mode)      
+        JVM Command-line Options:  -server -Djava.awt.headless=true -Xms256m   
+                                   -Xmx256m -Djava.net.preferIPv4Stack=true    
+                                   -XX:ParallelGCThreads=15                    
+                                   -XX:SurvivorRatio=60                        
+                                   -XX:TargetSurvivorRatio=90                  
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:LoopUnrollLimit=45 -XX:+UseParallelGC   
+                    JVM Affinity:  numactl --physcpubind=[0-63] --localalloc   
+                   JVM Instances:  64                                          
+           JVM Initial Heap (MB):  256                                         
+           JVM Maximum Heap (MB):  256                                         
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  R01                                         
+     Management Firmware Version:  TianoCore 2.06.100                          
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* ACPI support -enabled.                                                       
+* CPPC support -enabled.                                                       
+* PLI support -enabled.                                                        
+* Max performance -disabled                                                    
+
+
+                         Management Firmware Settings                          
+
+See SUT Notes                                                                  
+
+
+                            System Under Test Notes                            
+
+* Benchmark started via ssh.                                                   
+* Each JVM instance was bound to each CPU core                                 
+* CPU governor: powersave                                                      
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettars tech                                
+                           Model:  NM-R221-K800                                
+                 CPU Description:  Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz    
+              Memory amount (GB):  256                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Red Hat Enterprise Linux Server release 7.8 
+                                   (Maipo)                                     
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  25.252-b09                                  
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Tektronix                                   
+                           Model:  PA1000                                      
+                   Serial Number:  C040933                                     
+                    Connectivity:  USB                                         
+                Input Connection:  Default                                     
+             Metrology Institute:  SS TECHNOLOGY INC.                          
+                   Accredited by:  KOLAS (Korea Laboratory Accreditation       
+                                   Scheme)                                     
+               Calibration Label:  SS-220411-0085                              
+             Date of Calibration:  13-Apr-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-ed9a21d2-20220817                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButtonLink                                 
+                           Model:  LinkUSBi + T-Probe                          
+                  Driver Version:  FTDI USB Serial Device 1.0                  
+                    Connectivity:  USB(UART)                                   
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  5 mm in front of SUT main intake            
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        250 |          25.1
+        90% |        218 |          25.2
+        80% |        205 |          25.1
+        70% |        194 |          25.0
+        60% |        185 |          24.9
+        50% |        175 |          24.8
+        40% |        166 |          24.7
+        30% |        157 |          24.7
+        20% |        148 |          24.6
+        10% |        139 |          24.6
+Active Idle |        125 |          24.6
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 2 phase /  |            24.6 |              57
+         1 wire           |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20221113-01196-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         2,888,283
+    Calibration 2 |                   |                   |         3,005,507
+    Calibration 3 |                   |                   |         3,018,705
+                                                 ssj_ops@calibrated=3,012,106
+             100% |             99.8% |         3,012,106 |         3,005,115
+              90% |             90.1% |         2,710,896 |         2,714,871
+              80% |             79.9% |         2,409,685 |         2,407,480
+              70% |             70.0% |         2,108,474 |         2,107,575
+              60% |             60.0% |         1,807,264 |         1,808,557
+              50% |             50.0% |         1,506,053 |         1,507,263
+              40% |             39.9% |         1,204,843 |         1,201,400
+              30% |             29.9% |           903,632 |           901,120
+              20% |             20.1% |           602,421 |           605,636
+              10% |             10.0% |           301,211 |           302,522
+      Active Idle |                   |                 0 |                 0
+
+See the Aggregate Performance Report (power_ssj2008-20221113-01196.sut.txt) for
+additional details.                                                            
+
+
+      Copyright (C) 2007-2022 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

@@ -1,0 +1,282 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+
+
+xFusion Digital Technologies Co., Ltd FusionServer 2158H V8                    
+SPECpower_ssj2008 = 36,151 overall ssj_ops/watt                                
+            Test Sponsor:  xFusion Digital Technologies Co., Ltd               
+          SPEC License #:  6488                                                
+               Tested By:  xFusion Digital Technologies Co., Ltd               
+           Test Location:  Shenzhen, Guangdong, China                          
+               Test Date:  Mar 14, 2025                                        
+             Publication:  Apr 9, 2025                                         
+   Hardware Availability:  May-2025                                            
+   Software Availability:  Mar-2025                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.6% |    20,350,763 |           432 |        47,141
+          90% |         90.0% |    18,388,170 |           404 |        45,541
+          80% |         79.9% |    16,328,635 |           375 |        43,499
+          70% |         68.6% |    14,020,823 |           345 |        40,590
+          60% |         59.3% |    12,121,358 |           321 |        37,818
+          50% |         50.0% |    10,213,120 |           293 |        34,875
+          40% |         40.0% |     8,176,674 |           259 |        31,514
+          30% |         30.0% |     6,130,139 |           226 |        27,130
+          20% |         20.0% |     4,086,658 |           193 |        21,190
+          10% |         10.0% |     2,045,352 |           160 |        12,798
+                  Active Idle |             0 |          86.6 |             0
+                              sum of ssj_ops / sum of power = |        36,151
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  'SUT'                                       
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  xFusion Digital Technologies Co., Ltd       
+                           Model:  FusionServer 2158H V8                       
+                     Form Factor:  2U                                          
+                        CPU Name:  AMD EPYC 9965 192-Core Processor            
+             CPU Characteristics:  192 core, 2.25 GHz, 384 MB L3 Cache, Max    
+                                   Boost Clock up to 3.70 GHz                  
+             CPU Frequency (MHz):  2250                                        
+                  CPU(s) Enabled:  192 cores, 1 chip, 192 cores/chip           
+                Hardware Threads:  384 (2 / core)                              
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  384 MB I+D on chip per chip, 32 MB shared / 
+                                   16 cores                                    
+                     Other Cache:  None                                        
+              Memory Amount (GB):  384                                         
+              # and size of DIMM:  12 x 32 GB                                  
+                  Memory Details:  32GB 2Rx8 PC5-5200B-R; slot DIMM000,        
+                                   DIMM010, DIMM020, DIMM030, DIMM040, DIMM050,
+                                   DIMM060, DIMM070, DIMM080, DIMM900, DIMM0A0,
+                                   DIMM0B0 populated                           
+ Power Supply Quantity and Rating  1 x 900                                     
+                             (W):                                              
+            Power Supply Details:  xFusion P/N PAC900S12-B2                    
+                      Disk Drive:  1 x 480GB SSD 2.5" SATA, xFusion            
+                                   P/N:06210545                                
+                 Disk Controller:  Integrated SATA controller                  
+  # and type of Network Interface  1 x Dual-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power Balance Mode enabled in OS            
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                      OS Version:  21H2(OS Build 20348.3328)                   
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.12, mixed mode, sharing)               
+        JVM Command-line Options:  -server -Xmn1450m -Xms1650m -Xmx1650m       
+                                   -XX:ParallelGCThreads=2 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m -XX:UseAVX=1    
+                                   -XX:AutoBoxCacheMax=20000 -XX:+UseParallelGC
+                                   -XX:+OptimizeFill -XX:+AggressiveHeap       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=8                 
+                    JVM Affinity:  start /NODE[0-11] /AFFINITY [0xF to         
+                                   0xF0000000]                                 
+                   JVM Instances:  96                                          
+           JVM Initial Heap (MB):  1500                                        
+           JVM Maximum Heap (MB):  1500                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  00.13.01.07                                 
+     Management Firmware Version:  3.08.07.01                                  
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  none                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Power Profile Selection -Efficiency Mode.                                    
+* ACPI SRAT L3 Cache Domain -Enabled.                                          
+* Boost fmax -2100.                                                            
+* Memory Target Speed -5200.                                                   
+* Determinism Enable -Performance.                                             
+* L1 Stream HW Prefetcher -Disabled.                                           
+* L1 Stride Prefetcher -Disabled.                                              
+* L1 Region Prefetcher -Disabled.                                              
+* L1 Burst Prefetcher -Disabled.                                               
+* L2 Stream HW Prefetcher -Disabled.                                           
+* L2 Up/Down Prefetcher -Disabled.                                             
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Each JVM instance was bound to 4 logical processors.                         
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Run initiated via Windows Remote Desktop Connection.                         
+* Hard Disk set to turn off after 1 minute.                                    
+* Display set to turn off after 1 minute.                                      
+* SPECpower_ssj.props input.load_level.number_warehouses set to 384 since      
+processor has 192 cores.                                                       
+* Power Plan Minimum processor state set to 0%.                                
+* Power Plan Maximum processor state set to 100%.                              
+* Using Windows PowerShell, set the following powercfg properties:.            
+* Powercfg /setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD 95.  
+* Powercfg /setactive scheme_current.                                          
+* The system ROM used for this result contains AMD AGESA version               
+2110100B00000000 for the AMD EPYC 9965 processor.                              
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  xFusion Digital Technologies Co., Ltd       
+                           Model:  FusionServer 1158H V7                       
+                 CPU Description:  1 x AMD EPYC 9474F                          
+              Memory amount (GB):  256                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2022 Standard (64-bit)       
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.12+8-LTS-286, mixed mode, sharing)     
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA Inc.                               
+                           Model:  WT210                                       
+                   Serial Number:  91M412343                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  CNAS (China National Accreditation Service  
+                                   for Conformity Assessment)                  
+                   Accredited by:  Calibration and Testing Center of CEPREI    
+               Calibration Label:  23C8A9D47E7D6E6A6F                          
+             Date of Calibration:  30-Jul-2024                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.1-462c978e-20240907                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButtonLink                                 
+                           Model:  LinkUSBi And iButtonLink T-Probe            
+                  Driver Version:  4.05                                        
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  Use a 2 meters USB extension cable to       
+                                   connect to the controller. And placed in    
+                                   front the main airflow inlet of the SUT less
+                                   than 50mm.                                  
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        432 |          23.1
+        90% |        404 |          23.1
+        80% |        375 |          23.1
+        70% |        345 |          23.1
+        60% |        321 |          23.1
+        50% |        293 |          23.2
+        40% |        259 |          23.1
+        30% |        226 |          23.1
+        20% |        193 |          23.0
+        10% |        160 |          23.0
+Active Idle |       86.6 |          23.0
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 50 Hz / 1 phase /  |            23.0 |             101
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20250318-01509-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        20,569,119
+    Calibration 2 |                   |                   |        20,423,728
+    Calibration 3 |                   |                   |        20,445,670
+                                                ssj_ops@calibrated=20,434,699
+             100% |             99.6% |        20,434,699 |        20,350,763
+              90% |             90.0% |        18,391,229 |        18,388,170
+              80% |             79.9% |        16,347,759 |        16,328,635
+              70% |             68.6% |        14,304,289 |        14,020,823
+              60% |             59.3% |        12,260,819 |        12,121,358
+              50% |             50.0% |        10,217,349 |        10,213,120
+              40% |             40.0% |         8,173,880 |         8,176,674
+              30% |             30.0% |         6,130,410 |         6,130,139
+              20% |             20.0% |         4,086,940 |         4,086,658
+              10% |             10.0% |         2,043,470 |         2,045,352
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20250318-01509.WIN-NFE94OB2I73.txt) for additional details.     
+
+
+      Copyright (C) 2007-2025 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

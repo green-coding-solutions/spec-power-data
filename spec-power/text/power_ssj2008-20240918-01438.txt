@@ -1,0 +1,279 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+Nettrix R620 G50                                                               
+SPECpower_ssj2008 = 10,259 overall ssj_ops/watt                                
+            Test Sponsor:  Nettrix                                             
+          SPEC License #:  6138                                                
+               Tested By:  Nettrix                                             
+           Test Location:  Tianjin,China                                       
+               Test Date:  Sep 11, 2024                                        
+             Publication:  Oct 10, 2024                                        
+   Hardware Availability:  Nov-2023                                            
+   Software Availability:  Jan-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.8% |     9,751,940 |           976 |         9,994
+          90% |         90.0% |     8,795,086 |           780 |        11,273
+          80% |         80.0% |     7,810,105 |           684 |        11,422
+          70% |         70.0% |     6,836,999 |           606 |        11,279
+          60% |         60.0% |     5,857,357 |           530 |        11,059
+          50% |         50.0% |     4,880,352 |           440 |        11,090
+          40% |         40.0% |     3,909,591 |           360 |        10,857
+          30% |         30.0% |     2,930,266 |           298 |         9,846
+          20% |         20.0% |     1,954,327 |           248 |         7,891
+          10% |         10.0% |       976,600 |           209 |         4,681
+                  Active Idle |             0 |           105 |             0
+                              sum of ssj_ops / sum of power = |        10,259
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettrix                                     
+                           Model:  R620 G50                                    
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Gold 6558Q                       
+             CPU Characteristics:  32-Core,3.2GHz,60MB L3 Cache                
+             CPU Frequency (MHz):  3200                                        
+                  CPU(s) Enabled:  64 cores, 2 chips, 32 cores/chip            
+                Hardware Threads:  128 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per chip                   
+                  Tertiary Cache:  60 MB I+D on chip per chip                  
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32 GB                                  
+                  Memory Details:  16 x 32GB 2Rx8 PC5-4800B-R; slots 0, 2, 4,  
+                                   6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28
+                                   and 30 populated                            
+ Power Supply Quantity and Rating  1 x 1300                                    
+                             (W):                                              
+            Power Supply Details:  GW-CRPS1300D2 1300W; P/N 96007295           
+                      Disk Drive:  1 x 1920GB SAMSUNG NVMe SSD; P/N            
+                                   MZ1LB1T9HALS-00007                          
+                 Disk Controller:  Integrated PCIe controller                  
+  # and type of Network Interface  1 x 10000BASE-T OCP with 4x RJ45 ports      
+          Cards (NICs) Installed:                                              
+  NICs Enabled in Firmware / OS /  4/4/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  10000                                       
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled(See SUT Notes)                      
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                      OS Version:  Version 21H2 (OS Build 20348.169)           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.20+9-LTS-256, mixed mode)       
+        JVM Command-line Options:  -server -Xmn1650m -Xms1800m -Xmx1800m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:UseAVX=0          
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  start /NODE [0-3] /AFFINITY [0x3, 0xC, 0x30,
+                                   0xC0, 0X300, 0XC00, 0X3000, 0XC000, 0X30000,
+                                   0XC0000, 0X300000, 0XC00000, 0X3000000,     
+                                   0XC000000, 0X3000000, 0XC000000]            
+                   JVM Instances:  64                                          
+           JVM Initial Heap (MB):  1800                                        
+           JVM Maximum Heap (MB):  1800                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  NNH1041268                                  
+     Management Firmware Version:  1.51.0                                      
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Application Profile: Energy Efficient Mode                                   
+* USB Support: All USB Ports Disabled                                          
+* Memory Patrol Scrubbing: Disabled                                            
+* Energy Performance Bias: Balanced Power                                      
+* Intel DMI Link Frequency: Gen 1 Speed                                        
+* NUMA Group Size Optimization: Clustered                                      
+* Intel Performance Monitoring Support: Disabled                               
+* Sub-NUMA Clustering: Enabled SNC2 (2-clusters)                               
+* HW Prefetcher: Disabled                                                      
+* Adjacent Sector Prefetch: Disabled                                           
+* DCU Stream Prefetcher: Disabled                                              
+* XPT Prefetcher: Enabled                                                      
+* Maximum PCI Express Speed: PCIe Generation 1.0                               
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* Using the local security settings console.                                   
+* Lock pages in memory was enabled for the user running the benchmark.         
+* SPECpower_ssj.props input.load_level.number_warehouses set to 64 due to a    
+known inconsistency in processor reporting with this Java version.             
+* Hard disk set to turn off after 1 minute.                                    
+* Display set to turn off after 1 minute.                                      
+* Minimum processor state set to 0%.                                           
+* Maximum processor state set to 100%.                                         
+* The system ROM used for this result contains Intel microcode version         
+0x21000200 for the Intel Xeon Gold 6558Q processor.                            
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettrix                                     
+                           Model:  R620 G30                                    
+                 CPU Description:  Intel Xeon Gold 5120                        
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012 R2 Standard             
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.1+12-LTS-39, mixed mode, sharing)      
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA                                    
+                           Model:  WT310EH                                     
+                   Serial Number:  C3D11036E                                   
+                    Connectivity:  Ethernet                                    
+                Input Connection:  Default                                     
+             Metrology Institute:  CETC                                        
+                   Accredited by:  Calibration Laboratory of CETC              
+               Calibration Label:  A2012018                                    
+             Date of Calibration:  27-Mar-2024                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Attach to SUT Power Supplier Unit 1         
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButton Link Technology                     
+                           Model:  iButton Link T-Sense/T-Probe                
+                  Driver Version:  2.12.36.4                                   
+                    Connectivity:  USB2Serial                                  
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  10mm in front of SUT main airflow intake    
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        976 |          30.1
+        90% |        780 |          30.2
+        80% |        684 |          30.2
+        70% |        606 |          30.2
+        60% |        530 |          30.1
+        50% |        440 |          30.1
+        40% |        360 |          30.0
+        30% |        298 |          30.0
+        20% |        248 |          30.0
+        10% |        209 |          29.9
+Active Idle |        105 |          29.8
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+230V / 50 Hz / 1 phase /  |            29.8 |              50
+         1 wire           |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240918-01438-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         9,745,853
+    Calibration 2 |                   |                   |         9,768,348
+    Calibration 3 |                   |                   |         9,765,509
+                                                 ssj_ops@calibrated=9,766,929
+             100% |             99.8% |         9,766,929 |         9,751,940
+              90% |             90.0% |         8,790,236 |         8,795,086
+              80% |             80.0% |         7,813,543 |         7,810,105
+              70% |             70.0% |         6,836,850 |         6,836,999
+              60% |             60.0% |         5,860,157 |         5,857,357
+              50% |             50.0% |         4,883,464 |         4,880,352
+              40% |             40.0% |         3,906,771 |         3,909,591
+              30% |             30.0% |         2,930,079 |         2,930,266
+              20% |             20.0% |         1,953,386 |         1,954,327
+              10% |             10.0% |           976,693 |           976,600
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240918-01438.WIN-8VUURCG8J8L.txt) for additional details.     
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

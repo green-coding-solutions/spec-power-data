@@ -1,0 +1,290 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+Dell Inc. PowerEdge XR11 (Intel Xeon Gold 6338N, 2.20 GHz)                     
+SPECpower_ssj2008 = 6,466 overall ssj_ops/watt                                 
+            Test Sponsor:  Dell Inc.                                           
+          SPEC License #:  6573                                                
+               Tested By:  Dell Inc.                                           
+           Test Location:  Round Rock, TX, USA                                 
+               Test Date:  Apr 13, 2023                                        
+             Publication:  May 11, 2023                                        
+   Hardware Availability:  Jun-2021                                            
+   Software Availability:  May-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |     2,337,691 |           274 |         8,528
+          90% |         89.9% |     2,107,969 |           253 |         8,323
+          80% |         80.1% |     1,876,433 |           214 |         8,755
+          70% |         69.9% |     1,638,463 |           191 |         8,599
+          60% |         60.1% |     1,407,674 |           180 |         7,817
+          50% |         50.0% |     1,172,933 |           171 |         6,878
+          40% |         40.0% |       938,247 |           162 |         5,786
+          30% |         30.0% |       703,249 |           153 |         4,583
+          20% |         20.1% |       470,448 |           145 |         3,246
+          10% |         10.0% |       233,489 |           135 |         1,727
+                  Active Idle |             0 |           114 |             0
+                              sum of ssj_ops / sum of power = |         6,466
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  PowerEdge XR11                              
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc.                                   
+                           Model:  PowerEdge XR11 (Intel Xeon Gold 6338N, 2.20 
+                                   GHz)                                        
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Gold 6338N                       
+             CPU Characteristics:  32-Core, 2.20GHz, 48MB L3 Cache             
+             CPU Frequency (MHz):  2200                                        
+                  CPU(s) Enabled:  32 cores, 1 chip, 32 cores/chip             
+                Hardware Threads:  64 (2 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  1280 KB I+D on chip per core                
+                  Tertiary Cache:  48 MB I+D on chip per chip                  
+                     Other Cache:  None                                        
+              Memory Amount (GB):  128                                         
+              # and size of DIMM:  8 x 16 GB                                   
+                  Memory Details:  16GB 2Rx8 PC4-3200AA-R. Slots A1-8,         
+                                   populated.                                  
+ Power Supply Quantity and Rating  1 x 800                                     
+                             (W):                                              
+            Power Supply Details:  800W Platinum, Dell p/n 450-AIQY            
+                      Disk Drive:  1 x 480 GB SATA SSD, Dell p/n 400-BBIE      
+                 Disk Controller:  OnBoard SATA                                
+  # and type of Network Interface  Onboard 1 x Quad Port Broadcom 57504 Dell   
+          Cards (NICs) Installed:  p/n 379-BEJK                                
+  NICs Enabled in Firmware / OS /  1/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  10000                                       
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power saver power plan enabled in OS        
+           Operating System (OS):  Microsoft Windows Server 2022 DataCenter    
+                      OS Version:  20348.887                                   
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9(build
+                                   11.0.18+9-LTS-195, mixed mode)              
+        JVM Command-line Options:  -server -Xms3328m -Xmx3584m -Xmn3584m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:UseAVX=0          
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  start /NODE [0,1] /AFFINITY                 
+                                   [0x3,0xC,0x30,0xC0,0x300,0xC00,0x3000,0xC000
+                                   ,0x30000,0xC0000,0x300000,0xC00000,0x3000000
+                                   ,0xC000000,0x30000000,0xC0000000]           
+                   JVM Instances:  32                                          
+           JVM Initial Heap (MB):  3584                                        
+           JVM Maximum Heap (MB):  3584                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  1.6.5                                       
+     Management Firmware Version:  5.10.30.00 (Build A00)                      
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  Microsoft Windows KB4601345 KB4589208       
+
+
+
+                            Boot Firmware Settings                             
+
+* Virtualization Technology disabled                                           
+* Sub NUMA Cluster set to 2-Way Clustering                                     
+* Adjacent Cache Line Prefetch disabled                                        
+* Hardware Prefetcher disabled                                                 
+* DCU Streamer Prefetcher disabled                                             
+* Logical Processor Idling enabled                                             
+* System Profile set to Custom                                                 
+* CPU Power Management set to OS DBPM                                          
+* Turbo Boost disabled                                                         
+* C States set to Enabled                                                      
+* Memory Patrol Scrub set to Disabled                                          
+* Memory Refresh Rate set to 1x                                                
+* Energy Efficient Policy set to Energy Efficient                              
+* Uncore Frequency set to Dynamic                                              
+* Monitor/Mwait enabled                                                        
+* CPU Interconnect Bus Link Power Management enabled                           
+* PCI ASPM L1 Link Power Management enabled                                    
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Each JVM instance was bound to 2 logical processors                          
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark                                             
+* Run initiated via Windows Remote Desktop Connection                          
+* Hard Disk set to turn off after 1 minute                                     
+* Display set to turn off after 1 minute                                       
+* SPECpower_ssj.props input.load_level.number_warehouses set to 64 due to a    
+known inconsistency in processor reporting with this Java version              
+* Power Plan Minimum processor state set to 0%                                 
+* Power Plan Maximum processor state set to 100%                               
+* Yes: The test sponsor attests, as of date of publication, that CVE-2017-5754 
+(Meltdown) is mitigated in the system as tested and documented.                
+* Yes: The test sponsor attests, as of date of publication, that CVE-2017-5753 
+(Spectre variant 1) is mitigated in the system as tested and documented.       
+* Yes: The test sponsor attests, as of date of publication, that CVE-2017-5715 
+(Spectre variant 2) is mitigated in the system as tested and documented.       
+* The system ROM used for this result contains Intel microcode version         
+000000006303000d for the Intel Xeon 6338N processor                            
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Dell Inc                                    
+                           Model:  PowerEdge R7415                             
+                 CPU Description:  AMD EPYC 7251, 2.10 GHz                     
+              Memory amount (GB):  64.0                                        
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2022 Datacenter              
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.17+10-LTS-269, mixed mode)      
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT210                                       
+                   Serial Number:  91K308530                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  NIST                                        
+                   Accredited by:  TesCom                                      
+               Calibration Label:  T75067                                      
+             Date of Calibration:  25-Oct-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Connected to power supply                   
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.10.26.0                                   
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  25 mm in front of SUT main airflow intake   
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        274 |          26.2
+        90% |        253 |          26.2
+        80% |        214 |          26.2
+        70% |        191 |          26.2
+        60% |        180 |          26.2
+        50% |        171 |          26.2
+        40% |        162 |          26.1
+        30% |        153 |          26.2
+        20% |        145 |          26.1
+        10% |        135 |          26.1
+Active Idle |        114 |          26.1
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+208V / 60 Hz / 1 phase /  |            26.1 |             255
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20230418-01247-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         2,314,756
+    Calibration 2 |                   |                   |         2,342,443
+    Calibration 3 |                   |                   |         2,345,261
+                                                 ssj_ops@calibrated=2,343,852
+             100% |             99.7% |         2,343,852 |         2,337,691
+              90% |             89.9% |         2,109,467 |         2,107,969
+              80% |             80.1% |         1,875,082 |         1,876,433
+              70% |             69.9% |         1,640,697 |         1,638,463
+              60% |             60.1% |         1,406,311 |         1,407,674
+              50% |             50.0% |         1,171,926 |         1,172,933
+              40% |             40.0% |           937,541 |           938,247
+              30% |             30.0% |           703,156 |           703,249
+              20% |             20.1% |           468,770 |           470,448
+              10% |             10.0% |           234,385 |           233,489
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20230418-01247.WIN-LDM8R3D1SH4.txt) for additional details.     
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

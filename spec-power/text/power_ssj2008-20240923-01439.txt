@@ -1,0 +1,279 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+IEIT Systems Co., Ltd. meta brain NF5280G8                                     
+SPECpower_ssj2008 = 21,357 overall ssj_ops/watt                                
+            Test Sponsor:  IEIT Systems Co., Ltd.                              
+          SPEC License #:  3358                                                
+               Tested By:  IEIT Systems Co., Ltd.                              
+           Test Location:  JINAN, CHINA                                        
+               Test Date:  Aug 30, 2024                                        
+             Publication:  Oct 10, 2024                                        
+   Hardware Availability:  Oct-2024                                            
+   Software Availability:  Jun-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |        100.0% |    18,250,813 |           727 |        25,093
+          90% |         91.7% |    16,728,527 |           646 |        25,882
+          80% |         80.2% |    14,628,251 |           555 |        26,363
+          70% |         70.0% |    12,779,231 |           497 |        25,719
+          60% |         60.1% |    10,966,604 |           446 |        24,606
+          50% |         50.0% |     9,133,625 |           413 |        22,100
+          40% |         40.0% |     7,305,694 |           376 |        19,448
+          30% |         30.0% |     5,476,089 |           328 |        16,680
+          20% |         20.0% |     3,652,042 |           281 |        12,987
+          10% |         10.0% |     1,820,971 |           247 |         7,372
+                  Active Idle |             0 |           200 |             0
+                              sum of ssj_ops / sum of power = |        21,357
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  Single Node                                 
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  IEIT Systems Co., Ltd.                      
+                           Model:  meta brain NF5280G8                         
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon 6780E 2.2 GHz                    
+             CPU Characteristics:  144 core, 2.2GHz, 108MB L3 Cache            
+             CPU Frequency (MHz):  2200                                        
+                  CPU(s) Enabled:  288 cores, 2 chips, 144 cores/chip          
+                Hardware Threads:  288 (1 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  64 KB I + 32 KB D on chip per core          
+                 Secondary Cache:  4 MB I+D on chip per core                   
+                  Tertiary Cache:  108 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  1024                                        
+              # and size of DIMM:  16 x 65536 MB                               
+                  Memory Details:  16 x                                        
+                                   SA_64G_DDR5-6400ER_2R4_A40F-CS,M321R8GA0PB2-
+                                   CCP, IEIT PN:ZMMY1001071;slots              
+                                   CPU0_C0D0,CPU0_C1D0, CPU0_C2D0, CPU0_C3D0,  
+                                   CPU0_C4D0, CPU0_C5D0, CPU0_C6D0, CPU0_C7D0, 
+                                   CPU1_C0D0,CPU1_C1D0, CPU1_C2D0, CPU1_C3D0,  
+                                   CPU1_C4D0, CPU1_C5D0, CPU1_C6D0, CPU1_C7D0  
+                                   populated                                   
+ Power Supply Quantity and Rating  1 x 1600                                    
+                             (W):                                              
+            Power Supply Details:  1 x 1600w Great Wall Power;                 
+                                   G_M_GW-CRPS1600D2W_1600W_1U_P; IEIT         
+                                   PN:ZMPS1000775                              
+                      Disk Drive:  1 x 960G PM963_MZQLW960HMJP-00003_NVME;IEIT 
+                                   PN:ZMHD1000265                              
+                 Disk Controller:  Integrated NVME controller                  
+  # and type of Network Interface  1 x Intel_W_I350-T2V2_RJ_PCI-E4X_1KM        
+          Cards (NICs) Installed:                                              
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Balanced Mode enabled in OS                 
+           Operating System (OS):  Windows Server 2022 Datacenter              
+                      OS Version:  Version 21H2 (OS Build 20348.587)           
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.10+11-LTS-240, mixed mode,      
+                                   sharing)                                    
+        JVM Command-line Options:  -server -Xmn1825m -Xms1995m -Xmx1995m       
+                                   -XX:ParallelGCThreads=2 -XX:+UseLargePages  
+                                   -XX:InlineSmallCode=1500 -XX:UseAVX=0       
+                                   -XX:AutoBoxCacheMax=20000 -XX:+UseParallelGC
+                                   -XX:+OptimizeFill -XX:+AggressiveHeap       
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500                     
+                    JVM Affinity:  start /NODE [0,1,2,3,4,5] /AFFINITY         
+                                   [0xF,0xF0,0xF00,0xF000,0xF0000,0xF00000,0xF0
+                                   00000,0xF0000000,0xF00000000,0xF000000000,0x
+                                   F0000000000,0xF00000000000]                 
+                   JVM Instances:  72                                          
+           JVM Initial Heap (MB):  1995                                        
+           JVM Maximum Heap (MB):  1995                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  00.14.00                                    
+     Management Firmware Version:  6.05.05                                     
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  Microsoft Windows (KB5039227)               
+
+
+
+                            Boot Firmware Settings                             
+
+* Set "Hardware Prefetcher = Disabled" in BIOS.                                
+* Set "Adjacent Cache  Prefetcher = Enabled" in BIOS.                          
+* Set "DCU Streamer Prefetcher = Disabled" in BIOS.                            
+* Set "Package C-State = C6(retention) State" in BIOS                          
+* Set "Monitor/Mwait = Enabled" in BIOS                                        
+* Set "Memory Patrol Scrub = Disabled"                                         
+* Set "Energy Performance BIAS = Power" in BIOS                                
+* Set CPU maximum frequency to 2.70Ghz                                         
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Set "Turn off hard disk after = 1 Minute" in OS.                             
+* Minimum Processor State:0%.                                                  
+* Maximum Processor State:100%.                                                
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Benchmark was started via Windows Remote Desktop Connection.                 
+* Each JVM instance was affinitized to 4 logical processors                    
+* powercfg /qh scheme_current sub_processor perfboostmode                      
+* powercfg /setacvalueindex scheme_current sub_processor perfboostmode 3       
+* powercfg /setactive scheme_current                                           
+* The system ROM used for this result contains Intel microcode version A0010013
+for the Intel Xeon 6780E processor.                                            
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Hewlett Packard Enterprise                  
+                           Model:  HP EliteBook 640 G10                        
+                 CPU Description:  Intel Core i7-1355U                         
+              Memory amount (GB):  16                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows 10                                  
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.11+7-LTS-207), version 17.0.11  
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT310E                                      
+                   Serial Number:  C3TA11005E                                  
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  China National Accreditation Service for    
+                                   Conformity Assessment (CNAS)                
+                   Accredited by:  Calibration and Testing Center of CEPREI    
+               Calibration Label:  C2406041730287                              
+             Date of Calibration:  19-Jun-2024                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Connected to PSU 0                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi                                        
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  placed in front the main airflow inlet of   
+                                   the SUT less than 50mm.                     
+
+
+
+                                     Notes                                     
+
+SPECpower_ssj.props input.load_level.number_warehouses set to 288 to detect the
+full number of available processors on the SUT                                 
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        727 |          23.6
+        90% |        646 |          23.6
+        80% |        555 |          23.6
+        70% |        497 |          23.6
+        60% |        446 |          23.6
+        50% |        413 |          23.6
+        40% |        376 |          23.6
+        30% |        328 |          23.6
+        20% |        281 |          23.7
+        10% |        247 |          23.8
+Active Idle |        200 |          23.8
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+230V / 50 Hz / 1 phase /  |            23.6 |              57
+         1 wire           |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240923-01439-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        18,284,585
+    Calibration 2 |                   |                   |        18,261,837
+    Calibration 3 |                   |                   |        18,238,370
+                                                ssj_ops@calibrated=18,250,103
+             100% |            100.0% |        18,250,103 |        18,250,813
+              90% |             91.7% |        16,425,093 |        16,728,527
+              80% |             80.2% |        14,600,083 |        14,628,251
+              70% |             70.0% |        12,775,072 |        12,779,231
+              60% |             60.1% |        10,950,062 |        10,966,604
+              50% |             50.0% |         9,125,052 |         9,133,625
+              40% |             40.0% |         7,300,041 |         7,305,694
+              30% |             30.0% |         5,475,031 |         5,476,089
+              20% |             20.0% |         3,650,021 |         3,652,042
+              10% |             10.0% |         1,825,010 |         1,820,971
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240923-01439.WIN-CIOKGHFHLST.txt) for additional details.     
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

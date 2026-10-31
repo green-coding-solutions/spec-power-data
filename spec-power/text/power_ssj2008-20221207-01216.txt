@@ -1,0 +1,297 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+xFusion Digital Technologies Co., Ltd FusionServer 2288H V7                    
+SPECpower_ssj2008 = 16,653 overall ssj_ops/watt                                
+            Test Sponsor:  xFusion Digital Technologies Co., Ltd               
+          SPEC License #:  6488                                                
+               Tested By:  xFusion Digital Technologies Co., Ltd               
+           Test Location:  Shenzhen, Guangdong, China                          
+               Test Date:  Dec 7, 2022                                         
+             Publication:  Jan 10, 2023                                        
+   Hardware Availability:  Jan-2023                                            
+   Software Availability:  Aug-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.9% |    13,687,130 |           836 |        16,376
+          90% |         90.4% |    12,385,909 |           678 |        18,270
+          80% |         80.0% |    10,965,303 |           571 |        19,217
+          70% |         70.0% |     9,590,623 |           426 |        22,496
+          60% |         60.0% |     8,217,873 |           390 |        21,065
+          50% |         50.0% |     6,851,396 |           358 |        19,152
+          40% |         40.0% |     5,485,148 |           327 |        16,749
+          30% |         30.0% |     4,108,917 |           295 |        13,928
+          20% |         20.0% |     2,738,191 |           269 |        10,187
+          10% |         10.0% |     1,367,316 |           231 |         5,927
+                  Active Idle |             0 |           147 |             0
+                              sum of ssj_ops / sum of power = |        16,653
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  Here is a comment for this set.             
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  xFusion Digital Technologies Co., Ltd       
+                           Model:  FusionServer 2288H V7                       
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Platinum 8480+                   
+             CPU Characteristics:  56-Core, 2.0GHz, 105MB L3 Cache             
+             CPU Frequency (MHz):  2000                                        
+                  CPU(s) Enabled:  112 cores, 2 chips, 56 cores/chip           
+                Hardware Threads:  224 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  105 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32 GB                                  
+                  Memory Details:  32GB 2Rx8 PC5-4800B-RE0-1010-NT; slot       
+                                   DIMM000, DIMM010, DIMM020, DIMM030, DIMM040,
+                                   DIMM050, DIMM060, DIMM070, DIMM100, DIMM110,
+                                   DIMM120, DIMM130, DIMM140, DIMM150, DIMM160,
+                                   DIMM170 populated                           
+ Power Supply Quantity and Rating  1 x 1500                                    
+                             (W):                                              
+            Power Supply Details:  xFusion PAC1500S12-B1                       
+                      Disk Drive:  1 x 480GB SSD 2.5" SATA Micron              
+                 Disk Controller:  Integrated SATA controller                  
+  # and type of Network Interface  1 x Dual-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power Saver Mode  enabled in OS             
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                      OS Version:  21H2(OS Build 20348.169)                    
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.16.1+1-LTS-1, mixed mode)       
+        JVM Command-line Options:  -server -Xmn1825m -Xms1995m -Xmx1995m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:UseAVX=0          
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  start /NODE[0-7] /AFFINITY [0x3, 0xC, 0x30, 
+                                   0xC0, 0x300, 0xC00, 0x3000, 0xC000, 0x30000,
+                                   0xC0000, 0x300000, 0xC00000, 0x3000000,     
+                                   0xC000000]                                  
+                   JVM Instances:  112                                         
+           JVM Initial Heap (MB):  1995                                        
+           JVM Maximum Heap (MB):  1995                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  2.00.35                                     
+     Management Firmware Version:  3.06.02.01                                  
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  none                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware prefetcher -Disabled.                                               
+* Adjacent Cache Line Prefetch -Disabled.                                      
+* DCU Streamer Prefetcher -Disabled.                                           
+* Turbo mode -Enabled.                                                         
+* SNC -Enable SNC4 (4-clusters).                                               
+* Power Mode -Efficiency.                                                      
+* Patrol Scrubbing -Disabled.                                                  
+* DEMT -Enabled.                                                               
+* LLC Prefetch -Disabled.                                                      
+* Enable Monitor MWAIT -Enbaled.                                               
+* CPU C6 Report -Enabled.                                                      
+* C1E -Enabled.                                                                
+* Package C-State -Auto.                                                       
+* PCI-E ASPM Support -L1 Only.                                                 
+* CKE Down -Enabled.                                                           
+* Link L0p Enable -Enabled.                                                    
+* Link L1 Enable -Enabled.                                                     
+* VT-d -Disabled.                                                              
+* SR-IOV -Disabled.                                                            
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* The test was started via Remote Desktop.                                     
+* Minimum Processor State: 0%.                                                 
+* Maximum Processor State: 100%.                                               
+* Turn off hard disk after 1 minute .                                          
+* Each JVM instance was affinitized to two logical processors.                 
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* N/A:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5754(Meltdown) is mitigated in the system as tested and documented.   
+* Yes:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5753(Spectre variant 1) is mitigated in the system as tested and      
+documented.                                                                    
+* Yes:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5715(Spectre variant 2) is mitigated in the system as tested and      
+documented.                                                                    
+* The system ROM used for this result contains Intel microcode version         
+0x2b0000c0 for the Intel Xeon Platinum 8480+ processor.                        
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  xFusion Digital Technologies Co., Ltd       
+                           Model:  RH1288 V3                                   
+                 CPU Description:  2 x E5-2637 V4                              
+              Memory amount (GB):  48                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012 R2 Datacenter (64-bit)  
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM 18.9      
+                                   (build 11.0.16.1+1-LTS-1, mixed mode)       
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA Inc.                               
+                           Model:  WT210                                       
+                   Serial Number:  91M838229                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  CNAS (China National Accreditation Service  
+                                   for Conformity Assessment)                  
+                   Accredited by:  Calibration and Testing Center of CEPREI    
+               Calibration Label:  1GA22006887-0003                            
+             Date of Calibration:  18-Jul-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  PCSensor.com                                
+                           Model:  USB9097 + DS18B20                           
+                  Driver Version:  3.1.0.0                                     
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  Use a 2 meters USB extension cable to       
+                                   connect to the controller. And placed in    
+                                   front the main airflow inlet of the SUT less
+                                   than 50mm.                                  
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        836 |          25.3
+        90% |        678 |          25.2
+        80% |        571 |          25.4
+        70% |        426 |          25.5
+        60% |        390 |          25.5
+        50% |        358 |          25.3
+        40% |        327 |          25.2
+        30% |        295 |          25.1
+        20% |        269 |          25.1
+        10% |        231 |          25.1
+Active Idle |        147 |          25.1
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 50 Hz / 1 phase /  |            25.1 |             101
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20221207-01216-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        13,731,241
+    Calibration 2 |                   |                   |        13,693,124
+    Calibration 3 |                   |                   |        13,706,174
+                                                ssj_ops@calibrated=13,699,649
+             100% |             99.9% |        13,699,649 |        13,687,130
+              90% |             90.4% |        12,329,684 |        12,385,909
+              80% |             80.0% |        10,959,719 |        10,965,303
+              70% |             70.0% |         9,589,754 |         9,590,623
+              60% |             60.0% |         8,219,789 |         8,217,873
+              50% |             50.0% |         6,849,824 |         6,851,396
+              40% |             40.0% |         5,479,860 |         5,485,148
+              30% |             30.0% |         4,109,895 |         4,108,917
+              20% |             20.0% |         2,739,930 |         2,738,191
+              10% |             10.0% |         1,369,965 |         1,367,316
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20221207-01216.WIN-0TTTIU0SA6L.txt) for additional details.     
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

@@ -1,0 +1,285 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+ASUSTeK Computer Inc. ESC4000-E11                                              
+SPECpower_ssj2008 = 19,676 overall ssj_ops/watt                                
+            Test Sponsor:  ASUSTeK Computer Inc.                               
+          SPEC License #:  9016                                                
+               Tested By:  ASUSTeK Computer Inc.                               
+           Test Location:  Taipei, Taiwan.                                     
+               Test Date:  May 2, 2024                                         
+             Publication:  Jun 18, 2024                                        
+   Hardware Availability:  Mar-2024                                            
+   Software Availability:  Oct-2023                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |    17,052,218 |           789 |        21,622
+          90% |         90.2% |    15,422,999 |           677 |        22,766
+          80% |         80.0% |    13,689,357 |           575 |        23,798
+          70% |         70.2% |    11,999,678 |           506 |        23,729
+          60% |         59.9% |    10,249,208 |           436 |        23,500
+          50% |         50.0% |     8,550,908 |           392 |        21,814
+          40% |         39.8% |     6,804,180 |           352 |        19,350
+          30% |         29.8% |     5,097,260 |           316 |        16,145
+          20% |         20.0% |     3,423,343 |           284 |        12,054
+          10% |         10.0% |     1,706,364 |           247 |         6,922
+                  Active Idle |             0 |           204 |             0
+                              sum of ssj_ops / sum of power = |        19,676
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  'SUT'                                       
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  ASUSTeK Computer Inc.                       
+                           Model:  ESC4000-E11                                 
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Platinum 8592+                   
+             CPU Characteristics:  64-Core, 1.9GHz, Intel Turbo Boost          
+                                   Technology up to 3.9GHz, 320MB L3 Cache     
+             CPU Frequency (MHz):  1900                                        
+                  CPU(s) Enabled:  128 cores, 2 chips, 64 cores/chip           
+                Hardware Threads:  256 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  320 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  256                                         
+              # and size of DIMM:  16 x 16 GB                                  
+                  Memory Details:  16 x 16GB 1Rx8 PC5-4800B-R ECC RDIMM; all   
+                                   DIMM slots populated                        
+ Power Supply Quantity and Rating  1 x 2600                                    
+                             (W):                                              
+            Power Supply Details:  GOSPOWER G1302-2600WRA REV:0.2 P/N:         
+                                   0A100-00450900                              
+                      Disk Drive:  1 x 512GB Samsung P4X4 M.2 PCIE SSD P/N:    
+                                   03B03-00379600                              
+                 Disk Controller:  Integrated PCIe controller                  
+  # and type of Network Interface  1 x Dual-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  1/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled                                     
+           Operating System (OS):  SUSE Linux Enterprise Server 15 SP4         
+                      OS Version:  5.14.21-150400.22-default                   
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 17.0.9+11-LTS-201, mixed mode)       
+        JVM Command-line Options:  -server -Xmn1300m -Xms1550m -Xmx1550m       
+                                   -XX:+UseParallelGC -XX:ParallelGCThreads=2  
+                                   -XX:+UseLargePages                          
+                                   -XX:LargePageSizeInBytes=2m -XX:UseAVX=0    
+                                   -XX:+OptimizeFill -XX:+AggressiveHeap       
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:AutoBoxCacheMax=20000                   
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500                     
+                    JVM Affinity:  for each physicalCoreId { numactl -C        
+                                   physicalCoreId, physicalCoreId + 128        
+                                   --membind=0,1,2,3 }                         
+                   JVM Instances:  128                                         
+           JVM Initial Heap (MB):  1550                                        
+           JVM Maximum Heap (MB):  1550                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  2201                                        
+     Management Firmware Version:  1.1.9                                       
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  ASUS Control Center V2.2.0.3                
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware Prefetcher = Disabled                                               
+* Adjacent Cache Line Prefetch = Disabled                                      
+* DCU Streamer Prefetcher = Disabled                                           
+* Homeless Prefetch = Disabled                                                 
+* AMP Prefetch = Disabled                                                      
+* Power Balancer = Enabled by ACC                                              
+* UPI Link Speed Mode = Slow                                                   
+* UPI Link L0p Enable = Full L0p Enable                                        
+* UPI Link L1 Enable = Enable                                                  
+* UPI Link Configuration = Single Port Link                                    
+* Patrol Scrubbing = Disabled                                                  
+* Power Performance Tuning = BIOS Controls EPB                                 
+* Energy_PERF_BIAS_CFG mode = Power                                            
+* SR-IOV Support = Disabled                                                    
+* SNC = Enable SNC2 (2-clusters)                                               
+* PCIE Speed = Gen1                                                            
+* SATA Configuration = Disabled                                                
+* PCH LAN Controller = Disabled                                                
+* I350 LAN2 Enable = Disabled                                                  
+* USB Port Disable Override = USB HS Physical Connector #0 & #1 Enabled only   
+* Uncore Frequency = 1500                                                      
+* Hardware P-States = Out of Band Mode                                         
+
+
+                         Management Firmware Settings                          
+
+* cd-media and hd-media service set to disabled.                               
+
+
+                            System Under Test Notes                            
+
+* kernal parameter:pcie_aspm=force pcie_aspm.policy=powersupersave             
+intel_pstate=disable                                                           
+* Benchmark started via ssh                                                    
+* echo 0 > /proc/sys/kernel/nmi_watchdog                                       
+* sysctl -w kernel.sched_migration_cost_ns=6000                                
+* sysctl -w kernel.sched_min_granularity_ns=10000000                           
+* sysctl -w vm.swappiness=50                                                   
+* sysctl -w vm.laptop_mode=5                                                   
+* The system ROM used for this result contains Intel microcode version         
+0x21000200 for the Intel Xeon Platinum 8592+ processor.                        
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  ASUSTeK Computer Inc.                       
+                           Model:  RS200-E9-PS2                                
+                 CPU Description:  1 x E3-1240L V5                             
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012 R2 Datacenter (64-bit)  
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 24.80-b11, mixed mode)               
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA, Inc.                              
+                           Model:  WT210                                       
+                   Serial Number:  91J615902                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  National Measurement Laboratory of the      
+                                   R.O.C.                                      
+                   Accredited by:  OMNIO Calibration Laboratory Ltd.           
+               Calibration Label:  OCL-230602F02201                            
+             Date of Calibration:  2-Jun-2023                                  
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Connected to PSU1                           
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  placed in front the main airflow inlet of   
+                                   the SUT less than 50 mm.                    
+
+
+
+                                     Notes                                     
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 256 due to a   
+known inconsistency in processor reporting with this Java version.             
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        789 |          28.3
+        90% |        677 |          28.2
+        80% |        575 |          28.2
+        70% |        506 |          28.2
+        60% |        436 |          28.3
+        50% |        392 |          28.4
+        40% |        352 |          28.4
+        30% |        316 |          28.4
+        20% |        284 |          28.4
+        10% |        247 |          28.6
+Active Idle |        204 |          28.5
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 1 phase /  |            28.2 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240506-01406-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        17,239,289
+    Calibration 2 |                   |                   |        17,116,206
+    Calibration 3 |                   |                   |        17,094,640
+                                                ssj_ops@calibrated=17,105,423
+             100% |             99.7% |        17,105,423 |        17,052,218
+              90% |             90.2% |        15,394,881 |        15,422,999
+              80% |             80.0% |        13,684,338 |        13,689,357
+              70% |             70.2% |        11,973,796 |        11,999,678
+              60% |             59.9% |        10,263,254 |        10,249,208
+              50% |             50.0% |         8,552,711 |         8,550,908
+              40% |             39.8% |         6,842,169 |         6,804,180
+              30% |             29.8% |         5,131,627 |         5,097,260
+              20% |             20.0% |         3,421,085 |         3,423,343
+              10% |             10.0% |         1,710,542 |         1,706,364
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report (power_ssj2008-20240506-01406.localhost.txt)   
+for additional details.                                                        
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

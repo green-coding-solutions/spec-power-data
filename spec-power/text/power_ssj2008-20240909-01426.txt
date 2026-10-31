@@ -1,0 +1,286 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+Quanta Cloud Technology QuantaGrid D55Q-2U                                     
+SPECpower_ssj2008 = 21,157 overall ssj_ops/watt                                
+            Test Sponsor:  Quanta Computer Inc.                                
+          SPEC License #:  9050                                                
+               Tested By:  Quanta Computer Inc.                                
+           Test Location:  Taoyuan, TW, R.O.C                                  
+               Test Date:  Aug 29, 2024                                        
+             Publication:  Oct 3, 2024                                         
+   Hardware Availability:  Sep-2024                                            
+   Software Availability:  Apr-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |    17,524,136 |           681 |        25,735
+          90% |         90.0% |    15,824,359 |           586 |        27,024
+          80% |         79.9% |    14,053,125 |           542 |        25,934
+          70% |         70.0% |    12,310,643 |           490 |        25,128
+          60% |         60.0% |    10,544,879 |           443 |        23,795
+          50% |         50.0% |     8,792,306 |           404 |        21,745
+          40% |         40.0% |     7,031,451 |           368 |        19,113
+          30% |         30.0% |     5,270,235 |           320 |        16,446
+          20% |         20.0% |     3,513,666 |           287 |        12,228
+          10% |         10.1% |     1,766,862 |           258 |         6,841
+                  Active Idle |             0 |           188 |             0
+                              sum of ssj_ops / sum of power = |        21,157
+
+
+
+                               System Under Test                               
+
+
+
+                                Set: 'D55Q-2U'                                 
+
+                  Set Identifier:  D55Q-2U                                     
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Quanta Cloud Technology                     
+                           Model:  QuantaGrid D55Q-2U                          
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon 6780E 2.2 GHz                    
+             CPU Characteristics:  144 core, 2.2GHz, 108MB L3 Cache            
+             CPU Frequency (MHz):  2200                                        
+                  CPU(s) Enabled:  288 cores, 2 chips, 144 cores/chip          
+                Hardware Threads:  288 (1 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  64 KB I + 32 KB D on chip per core          
+                 Secondary Cache:  4 MB I+D on chip per 4 cores                
+                  Tertiary Cache:  108 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32768 MB                               
+                  Memory Details:  32GB 1Rx4 PC5-6400B-RA0; slots A0, B0, C0,  
+                                   D0, E0, F0, G0 ,H0 populated,Quanta         
+                                   P/N:ATR6XAHR570                             
+ Power Supply Quantity and Rating  1 x 1600                                    
+                             (W):                                              
+            Power Supply Details:  GreatWall CRP1600C2                         
+                      Disk Drive:  1 x 960GB NVMe SSD                          
+                 Disk Controller:  Integrated PCI-e controller                 
+  # and type of Network Interface  1 x Broadcom Ethernet Controller N210tp     
+          Cards (NICs) Installed:  OCP3.0 10G, 2-port,Quanta P/N:ADPC9574021   
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  10000                                       
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power save plan in OS                       
+           Operating System (OS):  Microsoft Windows Server 2022               
+                      OS Version:  Version 21H2 (OS Build 20348.2527)          
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM(build     
+                                   17.0.10+11-LTS-240, mixed mode, sharing)    
+        JVM Command-line Options:  -server -Xmn1825m -Xms1995m -Xmx1995m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelGC -XX:UseAVX=0             
+                                   -XX:BiasedLockingStartupDelay=30000         
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:+UseOptoBiasInlining -XX:+UseFastStosb  
+                                   -XX:MaxInlineLevel=9 -XX:MaxVectorSize=32   
+                                   -XX:-UseSharedSpaces -XX:-UseXMMForObjInit  
+                                   -XX:-UseBASE64Intrinsics -XX:+OptimizeFill  
+                                   -XX:+CriticalJNINatives                     
+                    JVM Affinity:  start /NODE [0,1,2,3,4,5] /AFFINITY         
+                                   [0x3,0xC,0x30,0xC0,0x300,0xC00,0x3000,0xC000
+                                   ,0x30000,0xC0000,0x300000,0xC00000,0x3000000
+                                   ,0xC000000,0x30000000,0xC0000000,...0x300000
+                                   000000,0xC00000000000]                      
+                   JVM Instances:  144                                         
+           JVM Initial Heap (MB):  1995                                        
+           JVM Maximum Heap (MB):  1995                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  3A03.QCT001                                 
+     Management Firmware Version:  3.03                                        
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  Microsoft Windows (KB5039227)               
+
+
+
+                            Boot Firmware Settings                             
+
+* Hardware Prefetcher : Disabled                                               
+* Adjacent Cache Prefetch : Disabled                                           
+* DCU Streamer Prefetcher : Disabled                                           
+* L1 Next Page Perfetcher : Disabled                                           
+* Package C-state Limit : C6[non Retention] State                              
+* Hardware P-States : Disabled                                                 
+* Virtual NUMA : Enabled                                                       
+* Opportunistic LLC SF migration : Disabled                                    
+* LLC Dead Line Alloc : Enabled                                                
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Each JVM instance was bound to 2 physical processors                         
+* SPECpower_ssj.props input.load_level.number_warehouses set to 288 due to a   
+known inconsistency in processor reporting with this Java version.             
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Run initiated via Windows Remote Desktop Connection                          
+* Hard Disk set to turn off after 1 minute                                     
+* Minimum processor state set to 0%                                            
+* Display set to turn off after 1 minute                                       
+* powercfg /qh scheme_current sub_processor perfboostmode                      
+* powercfg /setacvalueindex scheme_current sub_processor perfboostmode 3       
+* powercfg /setactive scheme_current                                           
+* The system ROM used for this result contains Intel microcode version 13000211
+for the Intel Xeon 6780E processor                                             
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Quanta Computer Inc.                        
+                           Model:  S99                                         
+                 CPU Description:  Intel Xeon CPU X5670, 2.93Ghz               
+              Memory amount (GB):  88                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2012 Datacenter    
+                                   64-bit                                      
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Hotspot(TM) Server VM (build                
+                                   17.0.9+11-LTS-201, mixed mode, sharing)     
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation 
+                           Model:  WT310                                       
+                   Serial Number:  C2PM12064V                                  
+                    Connectivity:  USB                                         
+                Input Connection:  Default                                     
+             Metrology Institute:  NML (National Measurement Laboratory)       
+                   Accredited by:  SGS                                         
+               Calibration Label:  ECR2416369                                  
+             Date of Calibration:  08-May-2024                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Connected to power supply                   
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/T                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  25 mm in front of SUT main airflow intake   
+
+
+
+                                     Notes                                     
+
+* None                                                                         
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        681 |          22.7
+        90% |        586 |          22.8
+        80% |        542 |          22.8
+        70% |        490 |          22.8
+        60% |        443 |          22.7
+        50% |        404 |          22.6
+        40% |        368 |          22.6
+        30% |        320 |          22.6
+        20% |        287 |          22.5
+        10% |        258 |          22.5
+Active Idle |        188 |          22.4
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 1 phase /  |            22.4 |             250
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240909-01426-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        17,684,323
+    Calibration 2 |                   |                   |        17,578,261
+    Calibration 3 |                   |                   |        17,580,784
+                                                ssj_ops@calibrated=17,579,523
+             100% |             99.7% |        17,579,523 |        17,524,136
+              90% |             90.0% |        15,821,570 |        15,824,359
+              80% |             79.9% |        14,063,618 |        14,053,125
+              70% |             70.0% |        12,305,666 |        12,310,643
+              60% |             60.0% |        10,547,714 |        10,544,879
+              50% |             50.0% |         8,789,761 |         8,792,306
+              40% |             40.0% |         7,031,809 |         7,031,451
+              30% |             30.0% |         5,273,857 |         5,270,235
+              20% |             20.0% |         3,515,905 |         3,513,666
+              10% |             10.1% |         1,757,952 |         1,766,862
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240909-01426.WINDOWS-07ALLJA.txt) for additional details.     
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

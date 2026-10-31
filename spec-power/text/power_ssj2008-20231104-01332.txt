@@ -1,0 +1,264 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+FALINUX, Inc. AnyStor-700EC-NM                                                 
+SPECpower_ssj2008 = 12,718 overall ssj_ops/watt                                
+            Test Sponsor:  Telecommunications Technology Association           
+          SPEC License #:  83                                                  
+               Tested By:  Telecommunications Technology Association           
+           Test Location:  TTA, Seongnam-city, Korea                           
+               Test Date:  Nov 1, 2023                                         
+             Publication:  Jan 17, 2024                                        
+   Hardware Availability:  Aug-2023                                            
+   Software Availability:  Jul-2023                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.3% |     2,363,656 |           140 |        16,899
+          90% |         90.1% |     2,143,061 |           125 |        17,152
+          80% |         79.9% |     1,900,177 |           114 |        16,625
+          70% |         69.9% |     1,662,801 |           106 |        15,659
+          60% |         60.0% |     1,426,556 |          98.6 |        14,464
+          50% |         50.1% |     1,191,989 |          91.5 |        13,027
+          40% |         40.0% |       951,658 |          84.6 |        11,248
+          30% |         30.1% |       715,611 |          78.1 |         9,165
+          20% |         20.0% |       475,160 |          71.3 |         6,660
+          10% |         10.0% |       237,106 |          64.1 |         3,696
+                  Active Idle |             0 |          53.9 |             0
+                              sum of ssj_ops / sum of power = |        12,718
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  SUT                                         
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  FALINUX, Inc.                               
+                           Model:  AnyStor-700EC-NM                            
+                     Form Factor:  1U                                          
+                        CPU Name:  Ampere® Altra® Q80-30                       
+             CPU Characteristics:  80 Core, 3.0GHz                             
+             CPU Frequency (MHz):  3000                                        
+                  CPU(s) Enabled:  80 cores, 1 chip, 80 cores/chip             
+                Hardware Threads:  80 (1 / core)                               
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  64 KB I + 64 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  None                                        
+                     Other Cache:  32 MB I+D on chip per chip (SLC)            
+              Memory Amount (GB):  64                                          
+              # and size of DIMM:  4 x 16 GB                                   
+                  Memory Details:  4 x 16GB 2Rx8 PC4-25600 DDR4-3200(Micron    
+                                   Technology 18ASF2G72PDZ-3G2E1); slots 0, 2, 
+                                   8, 10 are populated                         
+ Power Supply Quantity and Rating  None                                        
+                             (W):                                              
+            Power Supply Details:  Delta Electronics; DPS-1200AB-4 E Rev.S0F;  
+                                   P/N: ISBD2135007209                         
+                      Disk Drive:  1 X 256GB Samsung NVMe M.2 SSD;             
+                                   P/N:MZVLB256HAHQ-000L7                      
+                 Disk Controller:  Integrated PCIE controller                  
+  # and type of Network Interface  1 x 1Gbps with Intel Corporation I350       
+          Cards (NICs) Installed:  Gigabit Network Connection                  
+  NICs Enabled in Firmware / OS /  1/1/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled                                     
+           Operating System (OS):  Rocky Linux release 8.8 (Green Obsidian)    
+                      OS Version:  Linux edge-sm 4.18.0-477.21.1.el8_8.aarch64 
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  "java version "17.0.8" 2023-07-18 LTS;      
+                                   Java(TM) SE Runtime Environment (build      
+                                   17.0.8+9-LTS-211); Java HotSpot(TM) 64-Bit  
+                                   Server VM (build 17.0.8+9-LTS-211, mixed    
+                                   mode, sharing)                              
+        JVM Command-line Options:  -server -Djava.awt.headless=true -Xms600m   
+                                   -Xmx600m -Djava.net.preferIPv4Stack=true    
+                                   -XX:ParallelGCThreads=15                    
+                                   -XX:SurvivorRatio=60                        
+                                   -XX:TargetSurvivorRatio=90                  
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:LoopUnrollLimit=45 -XX:+UseParallelGC   
+                    JVM Affinity:  numactl --physcpubind=[0-79] --localalloc   
+                   JVM Instances:  80                                          
+           JVM Initial Heap (MB):  600                                         
+           JVM Maximum Heap (MB):  600                                         
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  TianoCore 2.08.100 (SYS: 1.09.20220330)     
+     Management Firmware Version:  AmpereComputing OpenBMC 2.09.100            
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* ACPI support -enabled.                                                       
+* CPPC support -enabled.                                                       
+* PLI support -enabled.                                                        
+* Max performance -disabled                                                    
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* Benchmark started via ssh.                                                   
+* Each JVM instance was bound to each CPU core                                 
+* CPU governor: powersave                                                      
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Nettars tech                                
+                           Model:  NM-R221-K800                                
+                 CPU Description:  Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz    
+              Memory amount (GB):  256                                         
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Red Hat Enterprise Linux Server release 7.8 
+                                   (Maipo)                                     
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  java version "11.0.12" 2021-07-20 LTS       
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA                                    
+                           Model:  WT310E                                      
+                   Serial Number:  C3ZE05055E                                  
+                    Connectivity:  USB                                         
+                Input Connection:  Default                                     
+             Metrology Institute:  Standard Calibration Technology Institute   
+                                   Co., LTD                                    
+                   Accredited by:  KOLAS (Korea Laboratory Accreditation       
+                                   Scheme)                                     
+               Calibration Label:  SC2305-14214-1                              
+             Date of Calibration:  23-May-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-ed9a21d2-20220817                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButtonLink                                 
+                           Model:  LinkUSBi + T-Probe                          
+                  Driver Version:  FTDI USB Serial Device 1.0                  
+                    Connectivity:  USB(UART)                                   
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  5 mm in front of SUT main intake            
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        140 |          29.4
+        90% |        125 |          29.5
+        80% |        114 |          29.4
+        70% |        106 |          29.3
+        60% |       98.6 |          29.2
+        50% |       91.5 |          29.1
+        40% |       84.6 |          29.0
+        30% |       78.1 |          28.9
+        20% |       71.3 |          28.9
+        10% |       64.1 |          29.0
+Active Idle |       53.9 |          29.1
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 2 phase /  |            28.9 |              57
+         1 wire           |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20231104-01332-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         2,369,309
+    Calibration 2 |                   |                   |         2,395,437
+    Calibration 3 |                   |                   |         2,362,869
+                                                 ssj_ops@calibrated=2,379,153
+             100% |             99.3% |         2,379,153 |         2,363,656
+              90% |             90.1% |         2,141,237 |         2,143,061
+              80% |             79.9% |         1,903,322 |         1,900,177
+              70% |             69.9% |         1,665,407 |         1,662,801
+              60% |             60.0% |         1,427,492 |         1,426,556
+              50% |             50.1% |         1,189,576 |         1,191,989
+              40% |             40.0% |           951,661 |           951,658
+              30% |             30.1% |           713,746 |           715,611
+              20% |             20.0% |           475,831 |           475,160
+              10% |             10.0% |           237,915 |           237,106
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report (power_ssj2008-20231104-01332.edge-sm.txt) for 
+additional details.                                                            
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

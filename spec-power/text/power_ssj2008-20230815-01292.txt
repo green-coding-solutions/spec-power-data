@@ -1,0 +1,279 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+Supermicro AS-1015SV-WTNRT                                                     
+SPECpower_ssj2008 = 26,485 overall ssj_ops/watt                                
+            Test Sponsor:  Supermicro                                          
+          SPEC License #:  1176                                                
+               Tested By:  Supermicro                                          
+           Test Location:  Zhonghe Dist, New Taipei City, Taiwan (R.O.C.)      
+               Test Date:  Aug 11, 2023                                        
+             Publication:  Sep 19, 2023                                        
+   Hardware Availability:  Sep-2023                                            
+   Software Availability:  Aug-2023                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.5% |     6,466,181 |           201 |        32,164
+          90% |         89.8% |     5,839,233 |           174 |        33,506
+          80% |         79.3% |     5,157,130 |           150 |        34,340
+          70% |         70.1% |     4,553,000 |           142 |        32,102
+          60% |         60.0% |     3,900,644 |           128 |        30,449
+          50% |         50.0% |     3,249,331 |           119 |        27,357
+          40% |         40.0% |     2,598,249 |           110 |        23,632
+          30% |         30.0% |     1,948,482 |           101 |        19,292
+          20% |         20.0% |     1,300,596 |          90.7 |        14,343
+          10% |         10.0% |       647,211 |          80.0 |         8,092
+                  Active Idle |             0 |          50.6 |             0
+                              sum of ssj_ops / sum of power = |        26,485
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Supermicro                                  
+                           Model:  AS-1015SV-WTNRT                             
+                     Form Factor:  1U                                          
+                        CPU Name:  AMD EPYC 8534P                              
+             CPU Characteristics:  64 Core, 2.30GHz, 128 MB cache              
+             CPU Frequency (MHz):  2300                                        
+                  CPU(s) Enabled:  64 cores, 1 chip, 128 cores/chip            
+                Hardware Threads:  128 (2 / core)                              
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  2 MB I + 2 MB D on chip per core            
+                 Secondary Cache:  64 MB I+D on chip per core                  
+                  Tertiary Cache:  128 MB I+D on chip per chip, 32 MB shared / 
+                                   8 cores                                     
+                     Other Cache:  None                                        
+              Memory Amount (GB):  192                                         
+              # and size of DIMM:  6 x 32 GB                                   
+                  Memory Details:  32GB 2Rx8 PC5-4800B-R; slots A1, B1, C1, D1,
+                                   E1, F1 populated                            
+ Power Supply Quantity and Rating  1 x 860                                     
+                             (W):                                              
+            Power Supply Details:  PWS-861A-1R                                 
+                      Disk Drive:  1x480GB M.2 NVMe GEN4                       
+                                   Micron,HDS-MMN-MTFDKBA480TFR1BC             
+                 Disk Controller:  onboard SCU controller                      
+  # and type of Network Interface  1 x Dual Broadcom 57416 10Gigabit Ethernet  
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power Saver (see SUT Notes)                 
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                      OS Version:  Version 10.0.20348 Build 20348              
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Java HotSpot(TM) 64-Bit Server VM (build    
+                                   17.0.1+12-LTS-39, mixed mode)               
+        JVM Command-line Options:  -server -Xms2048m -Xmx2048m -Xmn1900m       
+                                   -XX:+UseParallelGC -XX:ParallelGCThreads=4  
+                                   -XX:+UseLargePages                          
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:InlineSmallCode=1500 -XX:UseAVX=1       
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap                         
+                    JVM Affinity:  start /NODE [0-15] /AFFINITY [0x3, 0xC,     
+                                   0x30, 0xC0,0x300, 0xC00, 0x3000, 0xC000]    
+                   JVM Instances:  64                                          
+           JVM Initial Heap (MB):  2048                                        
+           JVM Maximum Heap (MB):  2048                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  1.0                                         
+     Management Firmware Version:  01.01.01                                    
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  KB5029250                                   
+
+
+
+                            Boot Firmware Settings                             
+
+* SMT: Enable                                                                  
+* Global C-State Control: Enabled                                              
+* Monitor and MWAIT Disable: Disabled                                          
+*  L1 Stream HW Prefetcher: Disabled                                           
+*  L2 Stream HW Prefetcher: Disabled                                           
+* High Nodes Per Socket: NPS4                                                  
+* ACPI SRAT L3 Cashe As NUMA Domain: Enable                                    
+*  APBDIS:1                                                                    
+*  DfPstate:4                                                                  
+* Df Cstate: Enable                                                            
+* Memory Clock: DDR4000                                                        
+* DDR Power Down Enable: Enable                                                
+*  DRAM Scrub Time:Disable                                                     
+* TSME: Disable                                                                
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 128 due to a   
+known inconsistency in processor reporting with this Java version.             
+* The test was started via Remote Desktop                                      
+* JVM Settings:                                                                
+* Each JVM instance was bound to 2 logical processors                          
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Windows Power Saver Settings:                                                
+* Turn off Hard Disk after 1 minute                                            
+* Turn off Display after 1 minute                                              
+* Using Windows PowerShell, set the following powercfg properties:             
+* Powercfg /setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN 0     
+* Powercfg /setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 100   
+* Powercfg /setacvalueindex scheme_current sub_processor PERFEPP 0             
+* Powercfg /setacvalueindex scheme_current sub_processor perfautonomous 1      
+* Powercfg /setactive scheme_current                                           
+* The system ROM used for this result contains AMD AGESA version               
+0F02A00A00000000 for the AMD EPYC 8354P processor                              
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Supermicro                                  
+                           Model:  X11DPG                                      
+                 CPU Description:  Intel(R) Xeon(R) Gold 6142 2.60G            
+              Memory amount (GB):  96                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2019 Datacenter    
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Jave(TM) SE Runtime Environment (build      
+                                   1.7.0_80-b15) Java HotSpot(TM) 64-Bit Server
+                                   VM(build 24.80-b11)                         
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa Meters and Instruments Corporation.
+                           Model:  WT310                                       
+                   Serial Number:  C3RF27027E                                  
+                    Connectivity:  GPIB                                        
+                Input Connection:  Default                                     
+             Metrology Institute:  NML (National Measurement Laboratory)       
+                   Accredited by:  Omnio Calibration Lab. Co., Ltd.            
+               Calibration Label:  OCL-230203F01008                            
+             Date of Calibration:  03-Feb-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  SUT Power Supply                            
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.10.26.0                                   
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  10 mm in front of SUT main air intake       
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        201 |          27.2
+        90% |        174 |          27.3
+        80% |        150 |          27.4
+        70% |        142 |          27.5
+        60% |        128 |          27.6
+        50% |        119 |          27.6
+        40% |        110 |          27.6
+        30% |        101 |          27.7
+        20% |       90.7 |          27.7
+        10% |       80.0 |          27.8
+Active Idle |       50.6 |          27.8
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+230V / 50 Hz / 1 phase /  |            27.2 |              10
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20230815-01292-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |         6,607,446
+    Calibration 2 |                   |                   |         6,472,073
+    Calibration 3 |                   |                   |         6,526,432
+                                                 ssj_ops@calibrated=6,499,253
+             100% |             99.5% |         6,499,253 |         6,466,181
+              90% |             89.8% |         5,849,327 |         5,839,233
+              80% |             79.3% |         5,199,402 |         5,157,130
+              70% |             70.1% |         4,549,477 |         4,553,000
+              60% |             60.0% |         3,899,552 |         3,900,644
+              50% |             50.0% |         3,249,626 |         3,249,331
+              40% |             40.0% |         2,599,701 |         2,598,249
+              30% |             30.0% |         1,949,776 |         1,948,482
+              20% |             20.0% |         1,299,851 |         1,300,596
+              10% |             10.0% |           649,925 |           647,211
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20230815-01292.WIN-2JPHDHMNEON.txt) for additional details.     
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

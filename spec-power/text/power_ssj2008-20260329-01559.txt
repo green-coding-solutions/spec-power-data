@@ -1,0 +1,297 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2026 Standard Performance Evaluation Corporation      
+
+
+Compal Electronics, Inc. SR224-2A                                              
+SPECpower_ssj2008 = 39,975 overall ssj_ops/watt                                
+            Test Sponsor:  Compal Electronics, Inc.                            
+          SPEC License #:  6857                                                
+               Tested By:  Compal Electronics, Inc.                            
+           Test Location:  Neihu Dist, Taipei City, Taiwan (R.O.C.)            
+               Test Date:  Mar 18, 2026                                        
+             Publication:  Apr 23, 2026                                        
+   Hardware Availability:  Mar-2025                                            
+   Software Availability:  Feb-2026                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |    38,956,420 |           784 |        49,699
+          90% |         90.0% |    35,163,346 |           722 |        48,719
+          80% |         80.1% |    31,285,446 |           667 |        46,920
+          70% |         70.0% |    27,363,002 |           609 |        44,907
+          60% |         60.0% |    23,458,262 |           554 |        42,325
+          50% |         50.0% |    19,533,661 |           500 |        39,082
+          40% |         40.0% |    15,612,673 |           443 |        35,238
+          30% |         30.0% |    11,721,706 |           384 |        30,561
+          20% |         20.0% |     7,813,306 |           321 |        24,309
+          10% |         10.0% |     3,903,699 |           261 |        14,973
+                  Active Idle |             0 |           129 |             0
+                              sum of ssj_ops / sum of power = |        39,975
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  SUT                                         
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Compal Electronics, Inc.                    
+                           Model:  SR224-2A                                    
+                     Form Factor:  2U                                          
+                        CPU Name:  AMD EPYC 9965                               
+             CPU Characteristics:  192 core, 2.25GHz, 384MB L3 Cache, Up to    
+                                   3.7GHz                                      
+             CPU Frequency (MHz):  2250                                        
+                  CPU(s) Enabled:  384 cores, 2 chips, 192 cores/chip          
+                Hardware Threads:  768 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  384 MB I+D on chip per chip, 32 MB shared/16
+                                   cores                                       
+                     Other Cache:  None                                        
+              Memory Amount (GB):  384                                         
+              # and size of DIMM:  24 x 16384 MB                               
+                  Memory Details:  [16GB 1Rx8 PC5-4800; slots A0, B0, C0, D0,  
+                                   E0, F0, G0 ,H0 ,I0 ,J0 ,K0 ,L0 populated]   
+ Power Supply Quantity and Rating  1 x 1300                                    
+                             (W):                                              
+            Power Supply Details:  R1CA2132A-T00A                              
+                      Disk Drive:  1 x 960G M.2 NVMe Express SSD               
+                 Disk Controller:  Integrated PCIe controller                  
+  # and type of Network Interface  1 x PCIE i350 4-port                        
+          Cards (NICs) Installed:                                              
+  NICs Enabled in Firmware / OS /  4/4/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Preferred plans in OS: Balanced (see SUT    
+                                   Notes)                                      
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                                   Evaluation                                  
+                      OS Version:  Version 21H2 (OS Build 20348.4773)          
+                      Filesystem:  NTFS                                        
+                      JVM Vendor:  Oracle                                      
+                     JVM Version:  "17.0.12" 2024-07-16 LTS Java(TM) SE Runtime
+                                   Environment (build 17.0.12+8-LTS-286) Java  
+                                   HotSpot(TM) 64-Bit Server VM (build         
+                                   17.0.12+8-LTS-286, mixed mode, sharing)     
+        JVM Command-line Options:  -server -Xmn1450m -Xms1650m -Xmx1650m       
+                                   -XX:ParallelGCThreads=2 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m -XX:UseAVX=0    
+                                   -XX:AutoBoxCacheMax=20000 -XX:+UseParallelGC
+                                   -XX:+OptimizeFill -XX:+AggressiveHeap       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=8 -XX:+UseNUMA    
+                    JVM Affinity:  start /NODE [0-23] /AFFINITY                
+                                   [0xF,0xF0,0xF00,0xF000,0xF0000,0xF00000,0xF0
+                                   00000,0xF0000000]                           
+                   JVM Instances:  192                                         
+           JVM Initial Heap (MB):  1650                                        
+           JVM Maximum Heap (MB):  1650                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  10.27.0                                     
+     Management Firmware Version:  1.41.0                                      
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+AMI Aptio Setup Utility :                                                      
+* 3-link xGMI max speed = 20Gbps                                               
+* 4-link xGMI max speed = 20Gbps                                               
+* ACPI CST C2 Latency = 18                                                     
+* ACPI SRAT L3 Cache As NUMA Domain = Enabled                                  
+* APBDIS = 1                                                                   
+* BoostFmax = 2100                                                             
+* BoostFmaxEn = Manual                                                         
+* DDR Power Down Enable = Enabled                                              
+* Determinism Enable = Performance                                             
+* DfPstate = 2                                                                 
+* Power Profile Selection	= Balanced Core Memory Performance Mode              
+* L1 Burst Prefetch Mode = Disable                                             
+* L1 Region Prefetcher = Disable                                               
+* L1 Stride Prefetcher = Disable                                               
+* L2 Stream HW Prefetcher = Disable                                            
+* L2 Up/Down Prefetcher = Disable                                              
+* Memory Target Speed = DDR4800                                                
+* PCIE Link Speed Capability = Gen1                                            
+* SATA Enable = Disabled                                                       
+* SMEE = Disable                                                               
+* SR-IOV Support = Disabled                                                    
+* SVM Mode = Disabled                                                          
+* xGMI Link Width Control = Manual                                             
+* xGMI Max Link Width Control = Manual                                         
+* xGMI Max Link Width = 0(x4)                                                  
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Set input.load_level.number_warehouses=768 in the SPECpower_ssj.props due to 
+a known inconsistency in processor reporting with this Java version            
+* Each JVM instance was bound to 4 logical processors                          
+* OS Tunings:                                                                  
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark                                             
+* Hard Disk set to turn off after 1 minute                                     
+* Using Windows PowerShell, set the following powercfg properties:             
+* Powercfg /setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD 95   
+* Powercfg /setactive scheme_current                                           
+* Display set to turn off after 1 minute                                       
+* The system ROM used for this result contains AMD AGESA version 1.0.0.7 and   
+microcode 0xb10104f for the AMD EPYC 9965 processor                            
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Compal Electronics, Inc.                    
+                           Model:  SD223-8A                                    
+                 CPU Description:  AMD EPYC 9455P                              
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2022 Datacenter    
+                                   Evaluation                                  
+                      JVM Vendor:  Oracle                                      
+                     JVM Version:  java version "17.0.12" 2024-07-16 LTS       
+                                   Java(TM) SE Runtime Environment (build      
+                                   17.0.12+8-LTS-286) Java HotSpot(TM) 64-Bit  
+                                   Server VM (build 17.0.12+8-LTS-286, mixed   
+                                   mode, sharing)                              
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Yokogawa                                    
+                           Model:  WT310E                                      
+                   Serial Number:  C3UE28006E                                  
+                    Connectivity:  USB                                         
+                Input Connection:  Default                                     
+             Metrology Institute:  NML (National Measurement Laboratory,Taiwan)
+                   Accredited by:  OMNIO Calibration Laboratory Ltd.           
+               Calibration Label:  OCL-250527T022                              
+             Date of Calibration:  28-May-2025                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.4-5bcc369b-20260119                    
+               Setup Description:  SUT Power Supply                            
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Cleware                                     
+                           Model:  USB-Temp                                    
+                  Driver Version:  5.3.4.0                                     
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  The front top of SUT main intake            
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        784 |          21.3
+        90% |        722 |          21.3
+        80% |        667 |          21.2
+        70% |        609 |          21.1
+        60% |        554 |          20.6
+        50% |        500 |          20.7
+        40% |        443 |          20.5
+        30% |        384 |          20.8
+        20% |        321 |          20.6
+        10% |        261 |          21.0
+Active Idle |        129 |          21.4
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+225V / 60 Hz / 1 phase /  |            20.5 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20260329-01559-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        39,256,586
+    Calibration 2 |                   |                   |        39,070,688
+    Calibration 3 |                   |                   |        39,079,971
+                                                ssj_ops@calibrated=39,075,329
+             100% |             99.7% |        39,075,329 |        38,956,420
+              90% |             90.0% |        35,167,796 |        35,163,346
+              80% |             80.1% |        31,260,263 |        31,285,446
+              70% |             70.0% |        27,352,730 |        27,363,002
+              60% |             60.0% |        23,445,197 |        23,458,262
+              50% |             50.0% |        19,537,665 |        19,533,661
+              40% |             40.0% |        15,630,132 |        15,612,673
+              30% |             30.0% |        11,722,599 |        11,721,706
+              20% |             20.0% |         7,815,066 |         7,813,306
+              10% |             10.0% |         3,907,533 |         3,903,699
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20260329-01559.WIN-MMMK5F7BOIJ.txt) for additional details.     
+
+
+      Copyright (C) 2007-2026 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

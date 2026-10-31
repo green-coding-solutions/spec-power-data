@@ -1,0 +1,293 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+
+
+Fujitsu FUJITSU Server PRIMERGY RX2540 M7                                      
+SPECpower_ssj2008 = 13,836 overall ssj_ops/watt                                
+            Test Sponsor:  Fujitsu                                             
+          SPEC License #:  19                                                  
+               Tested By:  Fujitsu                                             
+           Test Location:  Kawasaki, Kanagawa, Japan                           
+               Test Date:  Dec 6, 2022                                         
+             Publication:  Jan 11, 2023                                        
+   Hardware Availability:  Mar-2023                                            
+   Software Availability:  Aug-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |        100.1% |    15,394,706 |           989 |        15,565
+          90% |         90.1% |    13,855,902 |           889 |        15,593
+          80% |         80.0% |    12,299,422 |           763 |        16,109
+          70% |         70.0% |    10,765,269 |           640 |        16,808
+          60% |         60.0% |     9,226,054 |           567 |        16,269
+          50% |         50.0% |     7,685,128 |           510 |        15,071
+          40% |         40.0% |     6,155,379 |           458 |        13,429
+          30% |         30.0% |     4,619,587 |           414 |        11,159
+          20% |         20.0% |     3,072,652 |           373 |         8,246
+          10% |         10.0% |     1,537,526 |           330 |         4,661
+                  Active Idle |             0 |           182 |             0
+                              sum of ssj_ops / sum of power = |        13,836
+
+
+
+                               System Under Test                               
+
+
+
+                                Set: 'RX2540M7'                                
+
+                  Set Identifier:  RX2540M7                                    
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  Single Node                                 
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Fujitsu                                     
+                           Model:  FUJITSU Server PRIMERGY RX2540 M7           
+                     Form Factor:  2U                                          
+                        CPU Name:  Intel Xeon Platinum 8480+                   
+             CPU Characteristics:  56-Core, 2.0GHz, 105MB L3 Cache             
+             CPU Frequency (MHz):  2000                                        
+                  CPU(s) Enabled:  112 cores, 2 chips, 56 cores/chip           
+                Hardware Threads:  224 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 48 KB D on chip per core          
+                 Secondary Cache:  2 MB I+D on chip per core                   
+                  Tertiary Cache:  105 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  512                                         
+              # and size of DIMM:  16 x 32768 MB                               
+                  Memory Details:  16 x 32 GB 2Rx8 PC5-4800B; slots 1A, 1B, 1C,
+                                   1D, 1E, 1F, 1G, 1H, 1J, 1K, 1L, 1M, 1N, 1P, 
+                                   1Q, 1R populated                            
+ Power Supply Quantity and Rating  2 x 900                                     
+                             (W):                                              
+            Power Supply Details:  S26113-E629-V50-1                           
+                      Disk Drive:  1 x SSD M.2 240GB, S26361-F5787-E240        
+                 Disk Controller:  Integrated SATA Controller                  
+  # and type of Network Interface  2 x Intel I210 Gigabit Network Connection   
+          Cards (NICs) Installed:  (onboard)                                   
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Power saver                                 
+           Operating System (OS):  Windows Server 2022 Standard                
+                      OS Version:  Version 21H2, OS build 20348.169            
+                      Filesystem:  ntfs                                        
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   18.9 (build 11.0.16.1+1-LTS, mixed mode)    
+        JVM Command-line Options:  -server -Xmn1500m -Xms1625m -Xmx1625m       
+                                   -XX:+UseLargePages                          
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:ParallelGCThreads=2 -XX:SurvivorRatio=1 
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:-UseAdaptiveSizePolicy                  
+                                   -XX:+UseParallelOldGC                       
+                                   -XX:FreqInlineSize=2500                     
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:-ThreadLocalHandshakes -XX:UseAVX=0     
+                    JVM Affinity:  start /NODE[0-7] /AFFINITY [0x3, 0xC, 0x30, 
+                                   0xC0, 0x300, 0xC00, 0x3000, 0xC000, 0x30000,
+                                   0xC0000, 0x300000, 0xC00000, 0x3000000,     
+                                   0xC000000]                                  
+                   JVM Instances:  112                                         
+           JVM Initial Heap (MB):  1500                                        
+           JVM Maximum Heap (MB):  1625                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  R1.10.0                                     
+     Management Firmware Version:  v3.06                                       
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+Set the following options in BIOS.                                             
+* "ASPM Support = Auto"                                                        
+* "Hardware Prefetcher = Disabled"                                             
+* "Adjacent Cache Line Prefetch = Disabled"                                    
+* "DCU Streamer Prefetcher = Disabled"                                         
+* "Intel(R) VT-d = Disabled"                                                   
+* "Package C State limit = No limit"                                           
+* "Uncore Frequency Scaling = Power balanced"                                  
+* "CPU Performance Boost = Aggressive"                                         
+* "SNC(Sub NUMA) = Enable SNC4"                                                
+* "SATA Controller = Disabled"                                                 
+* "USB Port Control = Disable all ports"                                       
+* "Serial Port = Disabled"                                                     
+* "Network Stack = Disabled"                                                   
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+Set the following options in OS.                                               
+* "Turn off hard disk after = 1 Minute"                                        
+* "PCI Express Link State Power Management = Maximum power savings"            
+* "Minimum processor state = 0&percnt;"                                        
+* "Maximum processor state = 100&percnt;"                                      
+* "Turn off display after = 1 Minute"Execute the following commands in OS.     
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFBOOSTMODE 4"     
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFINCTHRESHOLD 95" 
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFDECTHRESHOLD 93" 
+* "POWERCFG /SETACVALUEINDEX SCHEME_CURRENT SUB_PROCESSOR PERFDECTIME 1"       
+* "POWERCFG /S SCHEME_CURRENT"                                                 
+* Using the local security settings console, "lock pages in memory" was enabled
+for the user running the benchmark.                                            
+* Benchmark was started via Windows Remote Desktop Connection.                 
+* <Yes> The test sponsor attests, as of date of publication, that CVE-2017-5754
+(Meltdown) is mitigated in the system as tested and documented.                
+* <Yes> The test sponsor attests, as of date of publication, that CVE-2017-5753
+(Spectre variant 1) is mitigated in the system as tested and documented.       
+* <Yes> The test sponsor attests, as of date of publication, that CVE-2017-5715
+(Spectre variant 2) is mitigated in the system as tested and documented.       
+* The system ROM used for this result contains Intel microcode version         
+00000000C000002B for the Intel Xeon Platinum 8480+ processor.                  
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Fujitsu                                     
+                           Model:  PRIMERGY RX2530 M2                          
+                 CPU Description:  2x Intel Xeon E5-2643 v4                    
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2012 R2 Standard   
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 25.211-b12, mixed mode), version     
+                                   1.8.0_211                                   
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  Hioki                                       
+                           Model:  PW3336                                      
+                   Serial Number:  170134584                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  AIST (National Institute of Advanced Science
+                                   and Technology)                             
+                   Accredited by:  Kyosai Technos Co.,Ltd.                     
+               Calibration Label:  CF223000538                                 
+             Date of Calibration:  14-Mar-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Connected to PSU 1                          
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  Watchport Virtual Port 5.70.105.0           
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  5 mm in front of SUT main air intake        
+
+
+
+                                     Notes                                     
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 160.           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        989 |          20.9
+        90% |        889 |          21.1
+        80% |        763 |          21.4
+        70% |        640 |          21.8
+        60% |        567 |          22.1
+        50% |        510 |          22.3
+        40% |        458 |          22.6
+        30% |        414 |          22.8
+        20% |        373 |          23.1
+        10% |        330 |          23.2
+Active Idle |        182 |          23.4
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+200V / 50 Hz / 1 phase /  |            20.9 |              11
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20221206-01211-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        15,358,022
+    Calibration 2 |                   |                   |        15,371,920
+    Calibration 3 |                   |                   |        15,395,101
+                                                ssj_ops@calibrated=15,383,511
+             100% |            100.1% |        15,383,511 |        15,394,706
+              90% |             90.1% |        13,845,160 |        13,855,902
+              80% |             80.0% |        12,306,809 |        12,299,422
+              70% |             70.0% |        10,768,458 |        10,765,269
+              60% |             60.0% |         9,230,106 |         9,226,054
+              50% |             50.0% |         7,691,755 |         7,685,128
+              40% |             40.0% |         6,153,404 |         6,155,379
+              30% |             30.0% |         4,615,053 |         4,619,587
+              20% |             20.0% |         3,076,702 |         3,072,652
+              10% |             10.0% |         1,538,351 |         1,537,526
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20221206-01211.WIN-S302M2T0JCC.txt) for additional details.     
+
+
+      Copyright (C) 2007-2023 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

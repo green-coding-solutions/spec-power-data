@@ -1,0 +1,300 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2022 Standard Performance Evaluation Corporation      
+
+
+ASUSTeK Computer Inc. RS720A-E12-RS12                                          
+SPECpower_ssj2008 = 30,064 overall ssj_ops/watt                                
+            Test Sponsor:  ASUSTeK Computer Inc.                               
+          SPEC License #:  9016                                                
+               Tested By:  ASUSTeK Computer Inc.                               
+           Test Location:  Taipei, Taiwan.                                     
+               Test Date:  Nov 23, 2022                                        
+             Publication:  Dec 21, 2022                                        
+   Hardware Availability:  Nov-2022                                            
+   Software Availability:  Jun-2022                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.4% |    26,359,065 |           817 |        32,269
+          90% |         90.0% |    23,876,083 |           697 |        34,257
+          80% |         80.0% |    21,207,971 |           577 |        36,738
+          70% |         70.0% |    18,562,664 |           498 |        37,274
+          60% |         60.0% |    15,903,373 |           442 |        35,941
+          50% |         50.0% |    13,252,356 |           410 |        32,286
+          40% |         40.0% |    10,613,084 |           378 |        28,059
+          30% |         30.0% |     7,953,143 |           340 |        23,385
+          20% |         20.0% |     5,301,952 |           300 |        17,654
+          10% |         10.0% |     2,644,763 |           257 |        10,280
+                  Active Idle |             0 |           128 |             0
+                              sum of ssj_ops / sum of power = |        30,064
+
+
+
+                               System Under Test                               
+
+
+
+                            Set: 'RS720A-E12-RS12'                             
+
+                  Set Identifier:  RS720A-E12-RS12                             
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  'SUT'                                       
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  ASUSTeK Computer Inc.                       
+                           Model:  RS720A-E12-RS12                             
+                     Form Factor:  2U                                          
+                        CPU Name:  AMD EPYC 9654                               
+             CPU Characteristics:  96-Core, 2.40GHz, AMD Core Performance Boost
+                                   up to 3.70GHz, 384MB L3 Cache               
+             CPU Frequency (MHz):  2400                                        
+                  CPU(s) Enabled:  192 cores, 2 chips, 96 cores/chip           
+                Hardware Threads:  384 (2 / core)                              
+                CPU(s) Orderable:  1,2 chips                                   
+                   Primary Cache:  32 KB I + 32 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  384 MB I+D on chip per chip, 32 MB shared / 
+                                   8 cores                                     
+                     Other Cache:  None                                        
+              Memory Amount (GB):  384                                         
+              # and size of DIMM:  24 x 16 GB                                  
+                  Memory Details:  24 x 16GB 1Rx8 PC5-4800B-R ECC RDIMM; all   
+                                   DIMM slots populated                        
+ Power Supply Quantity and Rating  1 x 1600                                    
+                             (W):                                              
+            Power Supply Details:  CHICONY R18-1K6P1WA REV:01 P/N:             
+                                   0A100-00250800                              
+                      Disk Drive:  1 x 256GB Samsung P4X4 M.2 PCIE SSD P/N:    
+                                   03B03-00420800                              
+                 Disk Controller:  Integrated PCIE controller                  
+  # and type of Network Interface  1 x Quad-port Intel I350 Gigabit Ethernet   
+          Cards (NICs) Installed:  controller                                  
+  NICs Enabled in Firmware / OS /  4/4/2                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (See SUT Notes)                     
+           Operating System (OS):  SUSE Linux Enterprise Server 15 SP4         
+                      OS Version:  5.14.21-150400.22-default                   
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   18.9 (build 11.0.15.1+2-LTS-10, mixed mode),
+                                   version 11.0.15.1                           
+        JVM Command-line Options:  -server -Xmn1825m -Xms1995m -Xmx1995m       
+                                   -XX:SurvivorRatio=1                         
+                                   -XX:TargetSurvivorRatio=99                  
+                                   -XX:ParallelGCThreads=2                     
+                                   -XX:AllocatePrefetchDistance=256            
+                                   -XX:AllocatePrefetchLines=4                 
+                                   -XX:LoopUnrollLimit=45                      
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:InlineSmallCode=3900                    
+                                   -XX:MaxInlineSize=270                       
+                                   -XX:FreqInlineSize=2500 -XX:+UseLargePages  
+                                   -XX:+UseParallelOldGC -XX:+UseHugeTLBFS     
+                                   -XX:+UseTransparentHugePages -XX:UseAVX=1   
+                                   -XX:BiasedLockingStartupDelay=30000         
+                                   -XX:-ThreadLocalHandshakes                  
+                    JVM Affinity:  for each even physicalCoreId { numactl -C   
+                                   physicalCoreId, physicalCoreId+1,           
+                                   physicalCoreId + 192, physicalCoreId + 193  
+                                   --membind=0-23 }                            
+                   JVM Instances:  96                                          
+           JVM Initial Heap (MB):  1995                                        
+           JVM Maximum Heap (MB):  1995                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  0404                                        
+     Management Firmware Version:  1.1.20                                      
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  ASUS Control Center V1.4.3.5                
+
+
+
+                            Boot Firmware Settings                             
+
+* SVM Mode = Disabled                                                          
+* SR-IOV Support = Disabled                                                    
+* SMEE = Disable                                                               
+* L2 Stream HW Prefetcher = Disable                                            
+* Power Balancer = Auto                                                        
+*  NUMA nodes per socket = NPS4                                                
+* DDR Power Down Enable = Enabled                                              
+* APBDIS = 1                                                                   
+* DfPstate = 4                                                                 
+* Memory Target Speed = DDR3600                                                
+* Determinism Control = Manual                                                 
+* Determinism Enable = Power                                                   
+* Power Profile Selection = Efficiency Mode                                    
+* ACPI SRAT L3 Cache As NUMA Domain = Enabled                                  
+* 4-link xGMI max speed = 12Gbps                                               
+* 3-link xGMI max speed = 12Gbps                                               
+* SATA Enable = Disabled                                                       
+
+
+                         Management Firmware Settings                          
+
+None                                                                           
+
+
+                            System Under Test Notes                            
+
+* kernal parameter:pcie_aspm=force pcie_aspm.policy=powersupersave             
+* Benchmark started via ssh                                                    
+* cpupower frequency-set -g ondemand                                           
+* echo -n 98 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold           
+* echo -n 1000000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate     
+* echo 0 > /proc/sys/kernel/nmi_watchdog                                       
+* sysctl -w kernel.sched_migration_cost_ns=6000                                
+* sysctl -w kernel.sched_min_granularity_ns=10000000                           
+* sysctl -w vm.swappiness=50                                                   
+* sysctl -w vm.laptop_mode=5                                                   
+* N/A:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5754(Meltdown) is mitigated in the system as tested and documented.   
+* Yes:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5753(Spectre variant 1) is mitigated in the system as tested and      
+documented.                                                                    
+* Yes:The test sponsor attests, as of date of publication, the                 
+CVE-2017-5715(Spectre variant 2) is mitigated in the system as tested and      
+documented.                                                                    
+* The system ROM used for this result contains AMD AGESA version 1.0.0.1 for   
+the AMD EPYC 9654 processor.                                                   
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  ASUSTeK Computer Inc.                       
+                           Model:  RS200-E9-PS2                                
+                 CPU Description:  1 x E3-1240L V5                             
+              Memory amount (GB):  64                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Windows Server 2012 R2 Datacenter (64-bit)  
+                      JVM Vendor:  Oracle Corporation                          
+                     JVM Version:  Oracle Java HotSpot(TM) 64-Bit Server VM    
+                                   (build 24.80-b11, mixed mode)               
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA, Inc.                              
+                           Model:  WT210                                       
+                   Serial Number:  91J615902                                   
+                    Connectivity:  RS-232                                      
+                Input Connection:  Default                                     
+             Metrology Institute:  National Measurement Laboratory of the      
+                                   R.O.C.                                      
+                   Accredited by:  OMNIO Calibration Laboratory Ltd.           
+               Calibration Label:  OCL-220624F02901                            
+             Date of Calibration:  24-Jun-2022                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.10.0-82175bac-20220817                    
+               Setup Description:  Connected to PSU1                           
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  Digi International Inc.                     
+                           Model:  Watchport/H                                 
+                  Driver Version:  5.70.105.0                                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  placed in front the main airflow inlet of   
+                                   the SUT less than 50 mm.                    
+
+
+
+                                     Notes                                     
+
+* SPECpower_ssj.props input.load_level.number_warehouses set to 384 due to a   
+known inconsistency in processor reporting with this Java version.             
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        817 |          22.0
+        90% |        697 |          21.8
+        80% |        577 |          21.6
+        70% |        498 |          21.4
+        60% |        442 |          21.3
+        50% |        410 |          21.2
+        40% |        378 |          21.2
+        30% |        340 |          21.1
+        20% |        300 |          21.1
+        10% |        257 |          21.0
+Active Idle |        128 |          20.8
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+220V / 60 Hz / 1 phase /  |            20.8 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20221204-01203-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        26,512,985
+    Calibration 2 |                   |                   |        26,522,514
+    Calibration 3 |                   |                   |        26,524,161
+                                                ssj_ops@calibrated=26,523,337
+             100% |             99.4% |        26,523,337 |        26,359,065
+              90% |             90.0% |        23,871,004 |        23,876,083
+              80% |             80.0% |        21,218,670 |        21,207,971
+              70% |             70.0% |        18,566,336 |        18,562,664
+              60% |             60.0% |        15,914,002 |        15,903,373
+              50% |             50.0% |        13,261,669 |        13,252,356
+              40% |             40.0% |        10,609,335 |        10,613,084
+              30% |             30.0% |         7,957,001 |         7,953,143
+              20% |             20.0% |         5,304,667 |         5,301,952
+              10% |             10.0% |         2,652,334 |         2,644,763
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report (power_ssj2008-20221204-01203.localhost.txt)   
+for additional details.                                                        
+
+
+      Copyright (C) 2007-2022 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+

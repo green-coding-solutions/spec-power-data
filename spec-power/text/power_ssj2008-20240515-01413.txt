@@ -1,0 +1,258 @@
+
+                               SPECpower_ssj2008                               
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+
+
+Supermicro SuperServer ARS-221GL-NR                                            
+SPECpower_ssj2008 = 13,218 overall ssj_ops/watt                                
+            Test Sponsor:  Infobell IT Solutions Pvt. Ltd.                     
+          SPEC License #:  6723                                                
+               Tested By:  Infobell IT Solutions Pvt. Ltd.                     
+           Test Location:  San Jose, CA, USA                                   
+               Test Date:  May 3, 2024                                         
+             Publication:  Jul 10, 2024                                        
+   Hardware Availability:  May-2024                                            
+   Software Availability:  Feb-2024                                            
+             Test Method:  Single Node                                         
+           System Source:  Single Supplier                                     
+      System Designation:  Server                                              
+      Power Provisioning:  Line-powered                                        
+
+
+
+
+
+                           Benchmark Results Summary                           
+
+                 Performance                  |     Power     |  Performance 
+                                              |               |   to Power   
+                                              |               |     Ratio    
+ Target Load  |  Actual Load  |    ssj_ops    |    Average    |              
+              |               |               | Active Power  |              
+              |               |               |      (W)      |              
+------------- | ------------- | ------------- | ------------- | -------------
+         100% |         99.7% |    12,250,910 |           619 |        19,789
+          90% |         89.9% |    11,048,905 |           586 |        18,860
+          80% |         80.0% |     9,833,887 |           560 |        17,555
+          70% |         70.0% |     8,600,859 |           527 |        16,309
+          60% |         60.1% |     7,382,139 |           503 |        14,691
+          50% |         50.0% |     6,143,015 |           473 |        12,985
+          40% |         40.0% |     4,913,182 |           445 |        11,048
+          30% |         30.0% |     3,683,805 |           410 |         8,977
+          20% |         20.0% |     2,459,620 |           361 |         6,806
+          10% |         10.0% |     1,229,507 |           327 |         3,757
+                  Active Idle |             0 |           298 |             0
+                              sum of ssj_ops / sum of power = |        13,218
+
+
+
+                               System Under Test                               
+
+
+
+                                  Set: 'sut'                                   
+
+                  Set Identifier:  sut                                         
+                 Set Description:  System Under Test                           
+            # of Identical Nodes:  1                                           
+                         Comment:  None                                        
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  Supermicro                                  
+                           Model:  SuperServer ARS-221GL-NR                    
+                     Form Factor:  1U                                          
+                        CPU Name:  Grace CPU Superchip                         
+             CPU Characteristics:  144-Core, 3.4 GHz, 228 MB L3 Cache          
+             CPU Frequency (MHz):  3400                                        
+                  CPU(s) Enabled:  144 cores, 1 chip, 144 cores/chip           
+                Hardware Threads:  144 (1 / core)                              
+                CPU(s) Orderable:  1 chip                                      
+                   Primary Cache:  64 KB I + 64 KB D on chip per core          
+                 Secondary Cache:  1 MB I+D on chip per core                   
+                  Tertiary Cache:  228 MB I+D on chip per chip                 
+                     Other Cache:  None                                        
+              Memory Amount (GB):  480                                         
+              # and size of DIMM:  0 x 0 GB                                    
+                  Memory Details:  2 x 240 GB on chip                          
+ Power Supply Quantity and Rating  2 x 1800                                    
+                             (W):                                              
+            Power Supply Details:  P/N: PWS-2K09F-1R                           
+                      Disk Drive:  2 x 3.84TB E1.S NVMe SSD (SAMSUNG           
+                                   MZTL23T8HCLS-00A07)                         
+                 Disk Controller:  Integrated controller                       
+  # and type of Network Interface  1 x 1Gbps with Intel Corporation Ethernet   
+          Cards (NICs) Installed:  Controller X550 (rev 01)                    
+  NICs Enabled in Firmware / OS /  2/2/1                                       
+                       Connected:                                              
+            Network Speed (Mbit):  1000                                        
+                        Keyboard:  None                                        
+                           Mouse:  None                                        
+                         Monitor:  None                                        
+                  Optical Drives:  No                                          
+                  Other Hardware:  None                                        
+
+                                   SOFTWARE                                    
+                Power Management:  Enabled (see SUT Notes)                     
+           Operating System (OS):  Ubuntu 22.04                                
+                      OS Version:  Kernel 5.15.0-33-generic                    
+                      Filesystem:  xfs                                         
+                      JVM Vendor:  OpenJDK                                     
+                     JVM Version:  OpenJDK 64-Bit Server VM (build 17.0.2+8-86,
+                                   mixed mode, sharing)                        
+        JVM Command-line Options:  -server -Xms1500m -Xmx1500m -Xmn1300m       
+                                   -XX:NewRatio=2 -XX:+UseParallelGC           
+                                   -XX:TargetSurvivorRatio=90                  
+                                   -XX:FreqInlineSize=2000                     
+                                   -XX:InitialTenuringThreshold=12             
+                                   -XX:MaxInlineSize=35 -XX:SurvivorRatio=30   
+                                   -XX:MaxTenuringThreshold=15                 
+                                   -XX:ParallelGCThreads=1 -XX:+UseLargePages  
+                                   -XX:LargePageSizeInBytes=2m                 
+                                   -XX:+UseTransparentHugePages                
+                                   -XX:+UseBiasedLocking                       
+                                   -XX:InlineSmallCode=1000                    
+                                   -XX:AutoBoxCacheMax=20000 -XX:+OptimizeFill 
+                                   -XX:+AggressiveHeap                         
+                    JVM Affinity:  for each i=1-144 {numactl                   
+                                   --physcpubind=$(i-1) --localalloc }         
+                   JVM Instances:  144                                         
+           JVM Initial Heap (MB):  1500                                        
+           JVM Maximum Heap (MB):  1500                                        
+                JVM Address Bits:  64                                          
+           Boot Firmware Version:  1.1a                                        
+     Management Firmware Version:  01.02.26                                    
+                Workload Version:  SSJ 1.2.10                                  
+               Director Location:  Controller                                  
+                  Other Software:  None                                        
+
+
+
+                            Boot Firmware Settings                             
+
+* Performance Version: Default                                                 
+
+
+                         Management Firmware Settings                          
+
+none                                                                           
+
+
+                            System Under Test Notes                            
+
+* Benchmark started via ssh.                                                   
+* Each JVM instance was bound to one CPU cores                                 
+* CPU governor: conservative                                                   
+* Set CPU Max Frequency as 2.7GHz by cpupower frequency-set --min 2700000      
+* ROM Information: Version 1.1 Release Date 01/26/2024 ROM Size 64 MB BIOS     
+revision 5.31                                                                  
+
+
+                               Controller System                               
+
+                                   HARDWARE                                    
+                 Hardware Vendor:  HP                                          
+                           Model:  HP EliteBook 745 G6                         
+                 CPU Description:  AMD Ryzen 7 PRO 3700U                       
+              Memory amount (GB):  32                                          
+
+                                   SOFTWARE                                    
+           Operating System (OS):  Microsoft Windows Server 2019 Standard      
+                      JVM Vendor:  OpenJDK                                     
+                     JVM Version:  OpenJDK 64-Bit Server VM 18.9 (build        
+                                   11.0.2+9, mixed mode)                       
+                     CCS Version:  1.2.6                                       
+
+
+
+                              Measurement Devices                              
+
+                              POWER ANALYZER PWR1                              
+                 Hardware Vendor:  YOKOGAWA, Inc.                              
+                           Model:  WT310E                                      
+                   Serial Number:  C2XM03068V                                  
+                    Connectivity:  USB2                                        
+                Input Connection:  Default                                     
+             Metrology Institute:  NIST                                        
+                   Accredited by:  TESCOM                                      
+               Calibration Label:  T114528                                     
+             Date of Calibration:  12-May-2023                                 
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+                PTDaemon Version:  1.11.0-a4047d62-20231205                    
+               Setup Description:  Connected to all PSUs                       
+
+                           TEMPERATURE SENSOR TEMP1                            
+                 Hardware Vendor:  iButtonLink, Inc.                           
+                           Model:  LinkUSBi + T-Probe                          
+                  Driver Version:  FTDI USB Serial Device 1.0                  
+                    Connectivity:  USB                                         
+            PTDaemon Host System:  same as CCS                                 
+                PTDaemon Host OS:  same as CCS                                 
+               Setup Description:  50 mm in front of SUT main intake           
+
+
+
+                                     Notes                                     
+
+None                                                                           
+
+
+                  Aggregate Electrical and Environmental Data                  
+
+Target Load |  Average   |    Minimum   
+            |   Active   |    Ambient   
+            | Power (W)  |  Temperature 
+            |            |  (Degrees C) 
+----------- | ---------- | -------------
+       100% |        619 |          20.6
+        90% |        586 |          20.6
+        80% |        560 |          20.6
+        70% |        527 |          20.6
+        60% |        503 |          20.5
+        50% |        473 |          20.4
+        40% |        445 |          20.2
+        30% |        410 |          20.3
+        20% |        361 |          20.3
+        10% |        327 |          20.3
+Active Idle |        298 |          20.4
+
+      Line Standard       |     Minimum     |  Elevation (m) 
+                          |   Temperature   |                
+                          |   (Degrees C)   |                
+------------------------- | --------------- | ---------------
+208V / 60 Hz / 1 phase /  |            20.2 |             132
+         2 wires          |                 |                
+
+See the Power/Temperature Details Report                                       
+(power_ssj2008-20240515-01413-power.txt) for additional details.               
+
+
+                          Aggregate Performance Data                           
+
+   Target Load    |    Actual Load    |                ssj_ops               
+                  |                   |      Target       |      Actual      
+----------------- | ----------------- | ----------------- | -----------------
+    Calibration 1 |                   |                   |        12,580,534
+    Calibration 2 |                   |                   |        12,330,207
+    Calibration 3 |                   |                   |        12,253,389
+                                                ssj_ops@calibrated=12,291,798
+             100% |             99.7% |        12,291,798 |        12,250,910
+              90% |             89.9% |        11,062,618 |        11,048,905
+              80% |             80.0% |         9,833,438 |         9,833,887
+              70% |             70.0% |         8,604,258 |         8,600,859
+              60% |             60.1% |         7,375,079 |         7,382,139
+              50% |             50.0% |         6,145,899 |         6,143,015
+              40% |             40.0% |         4,916,719 |         4,913,182
+              30% |             30.0% |         3,687,539 |         3,683,805
+              20% |             20.0% |         2,458,360 |         2,459,620
+              10% |             10.0% |         1,229,180 |         1,229,507
+      Active Idle |                   |                 0 |                 0
+
+See the Host Performance Report                                                
+(power_ssj2008-20240515-01413.smc6850arm-os.txt) for additional details.       
+
+
+      Copyright (C) 2007-2024 Standard Performance Evaluation Corporation      
+                      http://www.spec.org - info@spec.org                      
+         SPECpower_ssj2008 Reporter Version: [SSJ 1.2.10, May 9, 2012]         
+
