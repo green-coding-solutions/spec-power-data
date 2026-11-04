@@ -1,5 +1,5 @@
-# spec-power-raw-data
-Raw data to be used as submodule in [cloud energy repo](https://github.com/green-coding-solutions/cloud-energy)
+# spec-power-data
+Raw and cleand data to be used as submodule in [cloud energy repo](https://github.com/green-coding-solutions/cloud-energy)
 
 ## SPECpower results
 Just run `bash get_spec_data.sh` and it will get the newest version of the data.
