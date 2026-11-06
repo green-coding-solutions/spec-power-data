@@ -39,8 +39,8 @@ python3 data_cleaning.py
 If the SPECpower data ever gets updated walk through `data_cleaning.py` manually from top to bottom.
 It contains asserts with hard-coded counts and asks for visual checks on the way.
 
-Then copy `data/spec_data_cleaned.csv` to `data/spec_data_cleaned.csv` in the cloud energy repo and update the
-expected values of its tests.
+The cloud energy repo trains directly on `data/spec_data_cleaned.csv` from this repo. So commit the new data here and then
+update the submodule pointer and the expected values of the tests in the cloud energy repo.
 
 
 ## TDP lookup (`data-updates/cpu_tdp_lookup.csv`)

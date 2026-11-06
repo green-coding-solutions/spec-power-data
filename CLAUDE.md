@@ -4,7 +4,7 @@ Guidance for working in `spec-power-data` (formerly `spec-power-raw-data`).
 
 ## What this repo is
 
-It holds raw SPECpower_ssj2008 benchmark results and CPU spec sheets, plus the pipeline that turns them into the training data. It is used as a **git submodule** at `data/raw` in the sibling repo [`cloud-energy`](https://github.com/green-coding-solutions/cloud-energy) (local checkout: `/home/node/cloud-energy`). That repo trains the power model (XGBoost / OLS) from a copy of `data/spec_data_cleaned.csv`.
+It holds raw SPECpower_ssj2008 benchmark results and CPU spec sheets, plus the pipeline that turns them into the training data. It is used as a **git submodule** at `spec-power-data` in the sibling repo [`cloud-energy`](https://github.com/green-coding-solutions/cloud-energy) (local checkout: `/home/node/cloud-energy`). That repo trains the power model (XGBoost / OLS) directly from `data/spec_data_cleaned.csv` in this repo.
 
 ## Layout
 
@@ -21,7 +21,7 @@ scripts/
 data/
   spec_data.csv                   # parser output, pipe-separated, 102 columns, only results with hardware from 2018 on
   spec_data_cleaned_unmelted.csv  # one row per machine
-  spec_data_cleaned.csv           # one row per machine and load level; a copy of this is what cloud-energy trains on
+  spec_data_cleaned.csv           # one row per machine and load level; this is what cloud-energy trains on
   legacy/                         # historical backup of the three CSVs above as built in 2022 (619 machines, TDP from Wikipedia); not read by the pipeline
 spec-power-raw/
   html/   924 x power_ssj2008-YYYYMMDD-NNNNN.html   # curated set, used by the parser
@@ -69,7 +69,7 @@ Notes:
 Things to know:
 1. The parser uses multi-line regexes tied to SPEC's HTML markup (`<td>`, `</a></td>$`, `<div class='freeForm'>`). If a row is missing or the HTML template changed, that whole group of columns is skipped. The parser then fails an assertion that every row has all fields.
 2. TDP comes from `make_tdp_old` (spec sheets). `add_tdp_from_lookup` then fills the rest from `data-updates/cpu_tdp_lookup.csv`, which must only hold CPUs that are in no spec sheet. Never guess a TDP: leave `TDP` and `Source` empty if no source can be found, the user scrapes these by hand. `make_tdp_wikipedia` is deactivated in `main()` and currently fails with HTTP 403 from Wikipedia. The `Architecture` column no longer exists, but `xgb.py` and `hyperparameter_tuning.py` in `cloud-energy` still expect it.
-3. The results include 7 ARM machines (`CPUMake` `ampere` and `nvidia`). They have no spec sheet, so their TDP is empty for now.
+3. The results include 7 ARM machines (`CPUMake` `ampere` and `nvidia`). They have no spec sheet, so their TDP comes from `data-updates/cpu_tdp_lookup.csv`.
 4. `helper_for_bios_and_notes` prints BIOS settings that the regexes do not classify. Many wordings are missed (e.g. `Turbo Mode: Enabled`), so the `BIOS_*` columns are incomplete.
 5. The file header says that after any data update you must walk through `data_cleaning.py` by hand, because it contains hard-coded assertions on counts (e.g. `L3CacheKB` NaN count == 6). New data **will** break those assertions.
 6. `make_l2_cache` only reads the number and ignores "per core" / "per chip", so a total per chip breaks the column. It asserts that no value is above 4 MB. Fix such results with a patch. Many results say "per chip" next to a value per core; that label is wrong but has no effect, so it is not patched.
@@ -78,7 +78,7 @@ Things to know:
 1. Run `bash get_spec_data.sh` (downloads and curates).
 2. Regenerate `data/spec_data.csv`, then work through `scripts/data_cleaning.py` and update the assertions. Add broken values to `data-updates/spec_data_patches.csv`.
 3. Add the new CPUs that `data_cleaning.py` prints to `data-updates/cpu_tdp_lookup.csv`, following the instructions in the README.
-4. In `cloud-energy`: copy `data/spec_data_cleaned.csv` to its `data/` folder, update the expected values in `tests/validate-*.sh` and update the submodule pointer.
+4. Commit and push the new data here. Then in `cloud-energy`: update the submodule pointer and the expected values in `tests/validate-*.sh`.
 
 ## Conventions / housekeeping
 - Data files are tracked directly in git (about 39 MB of results, no LFS).
