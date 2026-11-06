@@ -1,3 +1,4 @@
+import html
 import re
 import pandas as pd
 import include.helper_functions as helper
@@ -714,6 +715,83 @@ def helper_for_bios_and_notes(df):
     check_classified("Prefetchers", c_new, a, b)
 
 
+TURBO_NAME = r'(?:turbo\s*(?:boost|mode)?(?:\s*technol\w*)?|core\s*(?:performance\s*)?boost|\bcpb\b|cpu\s*performance\s*boost)'
+TURBO_NAME_RE = re.compile(TURBO_NAME, re.I)
+TURBO_STATUS_RE = re.compile(r'\b(enabled?|disabled?|off|on|auto|aggressive)\b', re.I)
+TURBO_DISABLED_FIRST_RE = re.compile(r'(?:disabled?|turned\s+off)\s+"?(?:intel\s*(?:\(r\))?\s*)?' + TURBO_NAME, re.I)
+# Other features that only share a word with turbo. They say nothing about turbo being on or off
+TURBO_OTHER_FEATURE_RE = re.compile(r'energy\s*efficient\s*turbo|turbo\s*(?:ratio|power|activation)|ratio\s*limit|up\s*to\s*\d|uncore', re.I)
+# Windows power plan. Values above 0 only allow boost, the BIOS can still have it disabled
+PERF_BOOST_MODE_RE = re.compile(r'setacvalueindex\s+\S+\s+(?:sub_processor\s+)?perfboostmode\s+(\d)', re.I)
+# Windows does not use turbo when the maximum processor state is below 100%
+MAX_PROCESSOR_STATE_RE = re.compile(r'(?:maximum\s*processor\s*state[\s:=]*(?:set\s*to\s*)?(\d{1,3})\s*%|procthrottlemax\s+(\d{1,3})\b)', re.I)
+AMD_BOOST_LIMIT_RE = re.compile(r'(?:boost\s*fmax(?:\s*limit)?|fmax\s*boost\s*limit)\D{0,25}(\d{4})', re.I)
+FREQUENCY_LIMIT_RE = re.compile(
+    r'(?:frequency-set\s+(?:-u|--max)|restrict\s+maximum\s+frequency\s+to|cpu\s+max(?:imum)?\s+frequency\s*(?:=|:|to|as)?)\s*([\d.]+)\s*(ghz|mhz)?', re.I)
+
+def frequency_to_mhz(value, unit):
+    value = float(value)
+    if (unit or '').lower() == 'ghz' or value < 10:
+        return value * 1000
+    if value < 100: # A ratio of the 100 MHz bus clock, e.g. "CPU Max frequency = 26"
+        return value * 100
+    if value >= 100000: # cpupower takes kHz when no unit is given
+        return value / 1000
+    return value
+
+def get_turbo_status(row):
+    base_frequency = row['HW_CPUFreq']
+    enabled, disabled, os_enabled, os_disabled, limited_below_base, boost_limit_above_base = False, False, False, False, False, False
+
+    for column in ('SUT_BIOS', 'SUT_Notes', 'SUT_Firmware'):
+        for line in html.unescape(str(row[column])).split(';;;'):
+            line = re.sub(r'</?\w+>', '', line)
+
+            if match := PERF_BOOST_MODE_RE.search(line):
+                os_disabled = os_disabled or match.group(1) == '0'
+                os_enabled = os_enabled or match.group(1) != '0'
+                continue
+
+            if match := MAX_PROCESSOR_STATE_RE.search(line):
+                limited_below_base = limited_below_base or int(match.group(1) or match.group(2)) < 100
+
+            if match := FREQUENCY_LIMIT_RE.search(line):
+                limited_below_base = limited_below_base or frequency_to_mhz(match.group(1), match.group(2)) <= base_frequency
+                boost_limit_above_base = boost_limit_above_base or frequency_to_mhz(match.group(1), match.group(2)) > base_frequency
+
+            if limits := AMD_BOOST_LIMIT_RE.findall(line):
+                limited_below_base = limited_below_base or max(int(limit) for limit in limits) <= base_frequency
+                boost_limit_above_base = boost_limit_above_base or max(int(limit) for limit in limits) > base_frequency
+
+            if TURBO_OTHER_FEATURE_RE.search(line):
+                continue
+
+            if TURBO_DISABLED_FIRST_RE.search(line):
+                disabled = True
+                continue
+
+            if name := TURBO_NAME_RE.search(line):
+                status = TURBO_STATUS_RE.search(line, name.end())
+                if status and status.start() - name.end() <= 25:
+                    if status.group(1).lower().startswith('disable') or status.group(1).lower() == 'off':
+                        disabled = True
+                    else:
+                        enabled = True
+
+    if limited_below_base:
+        return False
+    if enabled and disabled: # The result states both, so we do not know
+        return None
+    if disabled:
+        return False
+    if enabled or boost_limit_above_base:
+        return True
+    if os_disabled:
+        return False
+    if os_enabled:
+        return True
+    return None
+
 def make_bios_features(df_original):
 
     df = df_original.copy()
@@ -748,33 +826,12 @@ def make_bios_features(df_original):
     df["BIOS_VT_Enabled"].count()
 
 
-    df["BIOS_Turbo_Boost_Enabled"] = None
-    df.loc[df.SUT_Notes.str.match(r".*(Turbo\s*Boost)[^,.<;]*enabled", case=False), "BIOS_Turbo_Boost_Enabled"] = True
-    df.loc[df.SUT_Notes.str.match(r".*(Turbo\s*Boost)[^,.<;]*(disabled|disable$)", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*(Manual Boost FMax set to 2200)", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*disable.*boost", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*boost.*limit", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*boost fmax set to manual", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r"Core Performance Boost: Disable</UL>", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r"Set &quot;Intel Turbo Boost Technology = Disable&quot; in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*(Turbo Mode)[^,.<;]*disabled", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r".*Disable(d)? \"?Turbo", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r"&quot;Turbo Mode&quot; was disabled in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_Notes.str.match(r"Turned off &quot;TURBO mode&quot; in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-
-    df.loc[df.SUT_BIOS.str.match(r".*(Turbo\s*Boost)[^,.<;]*enabled", case=False), "BIOS_Turbo_Boost_Enabled"] = True
-    df.loc[df.SUT_BIOS.str.match(r".*(Turbo\s*Boost)[^,.<;]*(disabled|disable$)", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*(Manual Boost FMax set to 2200)", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*disable.*boost", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*boost.*limit", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*boost fmax set to manual", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r"Core Performance Boost: Disable</UL>", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r"Set &quot;Intel Turbo Boost Technology = Disable&quot; in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*(Turbo Mode)[^,.<;]*disabled", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r".*Disable(d)? \"?Turbo", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r"&quot;Turbo Mode&quot; was disabled in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
-    df.loc[df.SUT_BIOS.str.match(r"Turned off &quot;TURBO mode&quot; in BIOS.", case=False), "BIOS_Turbo_Boost_Enabled"] = False
+    df["BIOS_Turbo_Boost_Enabled"] = df.apply(get_turbo_status, axis=1) # True, False or None if not determined
     df["BIOS_Turbo_Boost_Enabled"].count()
+
+    # Turbo is on by default in the BIOS, so anything not determined is assumed to be on
+    df["Turbo"] = df["BIOS_Turbo_Boost_Enabled"].map(lambda status: status is not False).astype(bool)
+    df["Turbo"].value_counts()
 
 
     df["BIOS_C_States_Enabled"] = None
