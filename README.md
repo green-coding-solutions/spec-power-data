@@ -35,6 +35,12 @@ python3 data_cleaning.py
   from `cpu-spec-sheets/` and, for CPUs that are in no spec sheet, from `data-updates/cpu_tdp_lookup.csv`. It prints which results
   have no TDP, by year and by CPU. The results with no TDP keep an empty `TDP` column. The TDP matching from Wikipedia (`make_tdp_wikipedia`) is
   deactivated for now.
+- `data_cleaning.py` also adds three coarse columns, which `xgb.py` in the cloud energy repo offers as flags. The raw `HW_*` columns stay untouched.
+  - `FormFactor` is `HW_FormFactor` with reported values fixed if they contradict the model or other results of that model.
+  - `Vendor` maps `HW_Vendor` to `hpe`, `lenovo`, `fujitsu`, `supermicro`, `dell` or `other`.
+  - `PowerProfile` mixes Windows power plans, Linux governors and CPU caps to `power-saver`, `balanced` or `performance`. Any cap
+    (`CPUCapped`) means `power-saver`. `PowerProfileDetermined` is false if the result has no clear setting or contradicts itself and
+    was assumed to be `balanced`.
 
 If the SPECpower data ever gets updated walk through `data_cleaning.py` manually from top to bottom.
 It contains asserts with hard-coded counts and asks for visual checks on the way.

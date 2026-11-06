@@ -879,6 +879,149 @@ def make_bios_features(df_original):
 
     return df
 
+
+FORM_FACTORS = ['1U', '2U', '3U', '4U', '5U', '6U', '8U', '10U', 'Tower', 'Blade']
+
+def get_form_factor(row):
+    model = str(row['HW_Model'])
+    form_factor = str(row['HW_FormFactor']).strip()
+
+    # Some models are reported with a form factor that contradicts the model or other results of the same model:
+    # QuantaGrid D43K-1U as 2U, PRIMERGY TX2550 M7 as 2U and 4U (all other PRIMERGY TX are Tower) and ProLiant ML30 as 4U Tower
+    if match := re.search(r'-(\d+)U$', model):
+        return f'{match.group(1)}U'
+    if re.search(r'PRIMERGY TX', model) or 'tower' in form_factor.lower():
+        return 'Tower'
+
+    return form_factor
+
+def make_form_factor(df_original):
+    df = df_original.copy()
+
+    df["FormFactor"] = df.apply(get_form_factor, axis=1)
+    assert df.FormFactor.isin(FORM_FACTORS).all(), f"Unknown form factors: {df.loc[~df.FormFactor.isin(FORM_FACTORS), 'FormFactor'].unique()}"
+    print(df["FormFactor"].value_counts())
+
+    return df
+
+
+# Only the largest vendors get their own value. All others are too small to learn from and go to "other"
+VENDORS = {
+    'hpe': r'Hewlett Packard',
+    'lenovo': r'Lenovo',
+    'fujitsu': r'Fujitsu|Fsas Technologies', # All Fsas results are PRIMERGY servers and have Fujitsu as test sponsor
+    'supermicro': r'Supermicro',
+    'dell': r'Dell',
+}
+
+def get_vendor(row):
+    # The two GIGABYTE R152-P31 results name Supermicro as vendor, although the model is from GIGABYTE
+    if 'GIGABYTE' in str(row['HW_Model']):
+        return 'other'
+
+    for vendor, pattern in VENDORS.items():
+        if re.search(pattern, str(row['HW_Vendor']), re.I):
+            return vendor
+    return 'other'
+
+def make_vendor(df_original):
+    df = df_original.copy()
+
+    df["Vendor"] = df.apply(get_vendor, axis=1)
+    print(df["Vendor"].value_counts())
+
+    return df
+
+
+GOVERNOR_PROFILES = {
+    'conservative': 'power-saver', 'powersave': 'power-saver',
+    'ondemand': 'balanced', 'schedutil': 'balanced', 'balanced': 'balanced',
+    'performance': 'performance', 'throughput-performance': 'performance', 'latency-performance': 'performance',
+}
+GOVERNOR_NAMES = r'(conservative|ondemand|schedutil|powersave|throughput-performance|latency-performance|performance|balanced)'
+GOVERNOR_RE = re.compile(
+    r'(?:frequency-set\s+(?:-g|--governor)|governor(?:\s+(?:set\s+to|to|is))?\s*[:=]?|scaling_governor\s*[:=]?|cpufreq/|cpufreq_|tuned-adm\s+profile)\s*"?'
+    + GOVERNOR_NAMES + r'\b'
+    + r'|\b(conservative|ondemand|schedutil|powersave|performance)\s+(?:cpupower\s+mode|governor|cpufreq)'
+    + r'|^\s*(schedutil)\s*$', re.I)
+OS_PLAN_RE = re.compile(r'\b(power\s*sav(?:er|e|ing)|balanced|balance|high\s*performance)\b', re.I)
+# The notes use the same words for many things, so a plan there must be named as one
+OS_PLAN_CONTEXT_RE = re.compile(r'plan|power\s*option|power\s*scheme|windows|\bmode\b', re.I)
+# These settings use the words of a power plan, but are something else (e.g. "PCIE power management set to maximum power saving")
+NOT_OS_PLAN_RE = re.compile(r'cooling|\bfan\b|bias|epb|ddr|uncore|memory|pcie|pci\s*express|link\s*state|aspm|turbo|determinism|bios', re.I)
+# Only used if the OS settings say nothing. Balanced settings are left out, as balanced is the fallback anyway
+BIOS_EFFICIENCY_RE = re.compile(
+    r'energy[\s/_]*perf\w*[\s_]*bias(?:_cfg)?(?:\s*mode)?\s*[:=]\s*power'
+    r'|energy\s*performance\s*=\s*energy\s*efficient'
+    r'|operating\s*mode\s*:\s*maximum\s*efficiency'
+    r'|system\s*profile\s*set\s*to\s*power\s*saving'
+    r'|application\s*profile\s*:\s*energy\s*efficient'
+    r'|power\s*(?:mode|policy\s*select|profile(?:\s*selection)?)\s*[-:=]?\s*efficiency'
+    r'|energy\s*efficient\s*policy\s*(?:[:=]|set\s*to)\s*(?:power|energy\s*efficient)', re.I)
+
+def get_lines(value):
+    for line in html.unescape(str(value)).split(';;;'):
+        yield re.sub(r'</?\w+>', '', line).strip()
+
+def get_os_plan_profile(text):
+    text = text.lower()
+    if text.startswith('power'):
+        return 'power-saver'
+    return 'balanced' if text.startswith('balance') else 'performance'
+
+def get_os_profiles(row):
+    profiles = set()
+
+    for column in ('SW_PowerManagement', 'SUT_Notes'):
+        for line in get_lines(row[column]):
+            if match := GOVERNOR_RE.search(line):
+                profiles.add(GOVERNOR_PROFILES[next(group for group in match.groups() if group).lower()])
+            elif not NOT_OS_PLAN_RE.search(line) and (match := OS_PLAN_RE.search(line)):
+                if column == 'SW_PowerManagement' or OS_PLAN_CONTEXT_RE.search(line):
+                    profiles.add(get_os_plan_profile(match.group(1)))
+
+    return profiles
+
+def is_cpu_capped(row):
+    for column in ('SUT_BIOS', 'SUT_Notes', 'SUT_Firmware'):
+        for line in get_lines(row[column]):
+            if (match := MAX_PROCESSOR_STATE_RE.search(line)) and int(match.group(1) or match.group(2)) < 100:
+                return True
+            if FREQUENCY_LIMIT_RE.search(line) or AMD_BOOST_LIMIT_RE.search(line):
+                return True
+    return False
+
+def get_power_profile(row):
+    '''Returns a coarse profile that mixes Windows power plans, Linux governors and CPU caps, and if it was determined'''
+
+    # A cap beats the name of the plan. E.g. results with the "High Performance" plan and a Boost Fmax
+    # just above the base frequency draw as little power as the efficiency tuned results of the same CPU
+    if row['CPUCapped']:
+        return 'power-saver', True
+
+    profiles = get_os_profiles(row)
+    if len(profiles) == 1:
+        return profiles.pop(), True
+
+    # We either have no OS setting or the result states different plans, so we do not know
+    if any(BIOS_EFFICIENCY_RE.search(line) for column in ('SUT_BIOS', 'SUT_Notes') for line in get_lines(row[column])):
+        return 'power-saver', True
+
+    return 'balanced', False # Balanced is the default of Windows. Linux defaults are mostly ondemand or schedutil
+
+def make_power_profile(df_original):
+    df = df_original.copy()
+
+    df["CPUCapped"] = df.apply(is_cpu_capped, axis=1)
+
+    result = df.apply(get_power_profile, axis=1)
+    df["PowerProfile"] = result.str[0]
+    df["PowerProfileDetermined"] = result.str[1].astype(bool)
+
+    print(pd.crosstab(df["PowerProfile"], df["PowerProfileDetermined"]))
+
+    return df
+
 def main():
     pd.set_option("display.max_rows", 100)
     pd.set_option("display.max_columns", 20)
@@ -926,6 +1069,10 @@ def main():
     # df = make_tdp_wikipedia(df)
 
     df = make_bios_features(df)
+
+    df = make_form_factor(df)
+    df = make_vendor(df)
+    df = make_power_profile(df)
 
     df["AvgPower"] = df.loc[:,['100_AvgPower', '90_AvgPower', '80_AvgPower', '70_AvgPower',
            '60_AvgPower', '50_AvgPower', '40_AvgPower', '30_AvgPower',

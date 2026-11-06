@@ -73,6 +73,7 @@ Things to know:
 4. `helper_for_bios_and_notes` prints BIOS settings that the regexes do not classify. Many wordings are missed (e.g. `Turbo Mode: Enabled`), so the `BIOS_*` columns are incomplete.
 5. The file header says that after any data update you must walk through `data_cleaning.py` by hand, because it contains hard-coded assertions on counts (e.g. `L3CacheKB` NaN count == 6). New data **will** break those assertions.
 6. `make_l2_cache` only reads the number and ignores "per core" / "per chip", so a total per chip breaks the column. It asserts that no value is above 4 MB. Fix such results with a patch. Many results say "per chip" next to a value per core; that label is wrong but has no effect, so it is not patched.
+7. `FormFactor`, `Vendor` and `PowerProfile` are coarse columns built from free text. `make_form_factor` asserts that all values are known, so a new form factor breaks it. `PowerProfile` has only one `performance` machine. Most results with a High Performance plan also have a CPU cap, which makes them `power-saver`.
 
 ## Updating the data: checklist
 1. Run `bash get_spec_data.sh` (downloads and curates).
